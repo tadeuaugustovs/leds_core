@@ -6,9 +6,6 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -35,7 +32,7 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "{{15}}%",
+  "text": "5",
   "textAlign": "LEFT",
   "textColor": "#fff",
   "topRow": 7,

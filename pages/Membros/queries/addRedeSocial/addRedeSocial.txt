@@ -1,0 +1,13 @@
+{
+  "data": {
+    "nomeRede": "{{ Table2.newRow?.nome || Table2.newRow?.label || '' }}",
+    "usuario": "{{ Table2.newRow?.valor || '' }}",
+    "membro": {
+      "connect": [
+        {
+          "documentId": "{{ Table1.selectedRow?.documentId || appsmith.store.membroSelecionadoDocumentId }}"
+        }
+      ]
+    }
+  }
+}

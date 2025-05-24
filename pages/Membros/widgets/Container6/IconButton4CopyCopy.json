@@ -1,0 +1,37 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#b91c1c",
+  "buttonVariant": "TERTIARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconName": "double-chevron-down",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "sqodq03wsg",
+  "leftColumn": 60,
+  "minWidth": 50,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 8,
+  "mobileRightColumn": 12,
+  "mobileTopRow": 11,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 7.027099609375,
+  "parentId": "fktayp1joh",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "topRow": 2,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "t44z2fn2w2",
+  "widgetName": "IconButton4CopyCopy"
+}

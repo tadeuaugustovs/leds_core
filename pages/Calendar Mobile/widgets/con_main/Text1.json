@@ -1,0 +1,42 @@
+{
+  "borderRadius": "0px",
+  "bottomRow": 31,
+  "boxShadow": "none",
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "System Default",
+  "fontSize": "1rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": "{{getEvents.data && getEvents.data.items ? true : false}}",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 23,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "overflow": "NONE",
+  "parentColumnSpace": 74,
+  "parentId": "0vcfbh3omk",
+  "parentRowSpace": 40,
+  "rightColumn": 43,
+  "text": "{{lst_upcomingMeetings.listData.length === 0 ? \"No Free Slots Today!\" : \"Book time with \".concat(getEvents.data.summary)}}",
+  "textAlign": "CENTER",
+  "textColor": "#2E3D49",
+  "topRow": 27,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "yruiu36lux",
+  "widgetName": "Text1"
+}

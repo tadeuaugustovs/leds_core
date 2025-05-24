@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "681f65b8d8ba125f5109f15a_329d5c79-111e-4d22-9d24-533f352513ab",
+  "id": "Financeiro_JSObject1",
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Financeiro",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

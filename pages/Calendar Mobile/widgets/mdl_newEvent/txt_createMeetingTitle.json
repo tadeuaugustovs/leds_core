@@ -1,0 +1,33 @@
+{
+  "borderRadius": "0px",
+  "bottomRow": 6,
+  "boxShadow": "none",
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "System Default",
+  "fontSize": "1.25rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": true,
+  "labelTextSize": "0.875rem",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "overflow": "SCROLL",
+  "parentId": "vfu48hazu0",
+  "rightColumn": 43,
+  "text": "Block  <b>{{lst_upcomingMeetings.triggeredItem.formattedTime}}</b>",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
+  "topRow": 2,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "magpnyvqgi",
+  "widgetName": "txt_createMeetingTitle"
+}

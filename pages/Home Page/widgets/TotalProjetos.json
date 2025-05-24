@@ -4,7 +4,7 @@
   "animateLoading": true,
   "borderRadius": "1.5rem",
   "bottomRow": 66,
-  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
   "chartData": {
     "9kj93g25do": {
       "color": "#192550",
@@ -65,9 +65,6 @@
   "dynamicBindingPathList": [
     {
       "key": "customEChartConfig"
-    },
-    {
-      "key": "boxShadow"
     },
     {
       "key": "accentColor"

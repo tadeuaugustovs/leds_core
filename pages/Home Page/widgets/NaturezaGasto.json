@@ -4,24 +4,11 @@
   "animateLoading": true,
   "borderRadius": "1.5rem",
   "bottomRow": 66,
-  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
   "chartData": {
     "9kj93g25do": {
-      "data": [
-        {
-          "x": "Product1",
-          "y": 20000
-        },
-        {
-          "x": "Product2",
-          "y": 22000
-        },
-        {
-          "x": "Product3",
-          "y": 32000
-        }
-      ],
-      "seriesName": "2023"
+      "data": "[\n  {\n    \"x\": \"Pessoa Jurídica\",\n    \"y\": 20000\n  },\n  {\n    \"x\": \"Passagem\",\n    \"y\": 22000\n  },\n  {\n    \"x\": \"Material Permanente\",\n    \"y\": 32000\n  }\n]",
+      "seriesName": "2025"
     }
   },
   "chartName": "Natureza de Gasto",
@@ -77,9 +64,6 @@
   "dynamicBindingPathList": [
     {
       "key": "customEChartConfig"
-    },
-    {
-      "key": "boxShadow"
     },
     {
       "key": "accentColor"

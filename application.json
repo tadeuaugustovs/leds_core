@@ -27,10 +27,6 @@
   "icon": "file",
   "pages": [
     {
-      "id": "Calendar Mobile",
-      "isDefault": false
-    },
-    {
       "id": "Authentication",
       "isDefault": false
     },

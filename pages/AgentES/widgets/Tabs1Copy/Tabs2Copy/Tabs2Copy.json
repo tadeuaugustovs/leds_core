@@ -5,12 +5,12 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0\n",
-  "bottomRow": 49,
+  "bottomRow": 55,
   "boxShadow": "none",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 380,
+      "bottomRow": 330,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -56,7 +56,7 @@
     },
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 270,
+      "bottomRow": 330,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -102,7 +102,7 @@
     },
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 270,
+      "bottomRow": 330,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
@@ -147,7 +147,7 @@
     },
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 380,
+      "bottomRow": 330,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
@@ -198,16 +198,42 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "tabsObj.tab1.isVisible"
+    },
+    {
+      "key": "tabsObj.tab2.isVisible"
+    },
+    {
+      "key": "tabsObj.tab2w3oyobihv.isVisible"
+    },
+    {
+      "key": "tabsObj.tabm2404pas8t.isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "tabsObj.tab1.isVisible"
+    },
+    {
+      "key": "tabsObj.tab2.isVisible"
+    },
+    {
+      "key": "tabsObj.tab2w3oyobihv.isVisible"
+    },
+    {
+      "key": "tabsObj.tabm2404pas8t.isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
   "isVisible": true,
   "key": "6jia7x3s1v",
-  "leftColumn": 0,
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 15,
   "minWidth": 450,
@@ -221,14 +247,14 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 64,
   "shouldScrollContents": true,
   "shouldShowTabs": true,
   "tabsObj": {
     "tab1": {
       "id": "tab1",
       "index": 0,
-      "isVisible": true,
+      "isVisible": "{{ DropdownNatureza.selectedOptionValue === 'Pessoa Jurídica' }}",
       "label": "Pessoa Jurídica",
       "positioning": "vertical",
       "widgetId": "sde94rou8i"
@@ -236,7 +262,7 @@
     "tab2": {
       "id": "tab2",
       "index": 1,
-      "isVisible": true,
+      "isVisible": "{{ DropdownNatureza.selectedOptionValue === 'Passagem' }}\n",
       "label": "Passagem",
       "positioning": "vertical",
       "widgetId": "7i30c8gyx5"
@@ -244,14 +270,14 @@
     "tab2w3oyobihv": {
       "id": "tab2w3oyobihv",
       "index": 2,
-      "isVisible": true,
+      "isVisible": "{{ DropdownNatureza.selectedOptionValue === 'Material Permanente' }}",
       "label": "Material Permanente",
       "widgetId": "7zql8aopo9"
     },
     "tabm2404pas8t": {
       "id": "tabm2404pas8t",
       "index": 3,
-      "isVisible": true,
+      "isVisible": "{{ DropdownNatureza.selectedOptionValue === 'Hospedagem e Alimentação' }}",
       "label": "Hospedagem e Alimentação",
       "widgetId": "hn6d2azleo"
     }

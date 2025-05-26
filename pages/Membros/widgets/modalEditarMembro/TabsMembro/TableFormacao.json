@@ -252,6 +252,7 @@
       "boxShadow": "{{TableFormacao.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
       "buttonColor": "{{TableFormacao.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
       "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "SECONDARY",
       "columnType": "iconButton",
       "computedValue": "",
       "currencyCode": "USD",

@@ -45,15 +45,15 @@
   "parentColumnSpace": 12.7784912109375,
   "parentId": "osggc8mvts",
   "parentRowSpace": 10,
-  "placeholderText": "Select option",
+  "placeholderText": "Selecionar",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 21,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"Blue\",\n    \"code\": \"BLUE\"\n  },\n  {\n    \"name\": \"Green\",\n    \"code\": \"GREEN\"\n  },\n  {\n    \"name\": \"Red\",\n    \"code\": \"RED\"\n  }\n]",
+  "sourceData": "[\n  { \"name\": \"Pessoa Jurídica\", \"code\": \"Pessoa Jurídica\" },\n  { \"name\": \"Passagem\", \"code\": \"Passagem\" },\n  { \"name\": \"Material Permanente\", \"code\": \"Material Permanente\" },\n  { \"name\": \"Hospedagem e Alimentação\", \"code\": \"Hospedagem e Alimentação\" }\n]\n",
   "topRow": 3,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "ex8eoe9dfn",
-  "widgetName": "DropdownNaturezaCopy"
+  "widgetName": "DropdownNatureza"
 }

@@ -45,6 +45,14 @@
     {
       "id": "Admin",
       "isDefault": false
+    },
+    {
+      "id": "ConectaFapes",
+      "isDefault": false
+    },
+    {
+      "id": "AgentES",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

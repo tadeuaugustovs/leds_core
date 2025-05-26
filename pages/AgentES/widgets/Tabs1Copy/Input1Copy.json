@@ -3,15 +3,18 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 9,
+  "bottomRow": 6,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultText": "{{\n  getMembros.data?.data\n    ?.flatMap(m => m.planos_de_trabalho || [])\n    ?.filter(p => p?.bolsa?.valor && p.statusBolsa === 'ATIVA')\n    ?.reduce((total, p) => total + Number(p.bolsa.valor || 0), 0)\n    ?.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) || \"R$ 0,00\"\n}}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -22,33 +25,33 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "g8tcaabpz8",
-  "label": "Nº do Documento ",
+  "key": "z0rly7dbym",
+  "label": "Total em Bolsas:",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 34,
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 18,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 21,
-  "mobileTopRow": 11,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 11,
+  "mobileRightColumn": 31,
+  "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "parentColumnSpace": 13.850964355468749,
-  "parentId": "hn6d2azleo",
+  "parentColumnSpace": 12.142578125,
+  "parentId": "qfv964d2nk",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 47,
+  "rightColumn": 17,
   "showStepArrows": false,
-  "topRow": 2,
+  "topRow": 1,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "jgq8lq63m0",
-  "widgetName": "InputNumDocPJCopyCopy"
+  "widgetId": "8rgxzruvec",
+  "widgetName": "Input1Copy"
 }

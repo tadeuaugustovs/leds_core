@@ -13,28 +13,32 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
-  "iconName": "floppy-disk",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "cross",
+  "iconSize": 24,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "z847lvni8a",
-  "leftColumn": 60,
+  "key": "9f8kxj53wm",
+  "leftColumn": 58,
   "minWidth": 50,
   "mobileBottomRow": 4,
   "mobileLeftColumn": 58,
-  "mobileRightColumn": 62,
+  "mobileRightColumn": 64,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "parentColumnSpace": 14.388281249999999,
-  "parentId": "osggc8mvts",
-  "parentRowSpace": 10,
+  "onClick": "{{closeModal(Modal2.name);}}",
+  "parentId": "wg2p639ewa",
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
-  "rightColumn": 62,
+  "rightColumn": 64,
   "topRow": 0,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "6l7pvjh3kk",
-  "widgetName": "IconButton2Copy"
+  "widgetId": "39fjsvhh1g",
+  "widgetName": "IconButton4"
 }

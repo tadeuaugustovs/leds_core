@@ -1,9 +1,9 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 22,
   "boxShadow": "none",
-  "buttonColor": "#fafafa",
+  "buttonColor": "#71717a",
   "buttonVariant": "TERTIARY",
   "displayName": "Icon Button",
   "dynamicBindingPathList": [
@@ -20,19 +20,19 @@
   "isLoading": false,
   "isVisible": true,
   "key": "vjvwmgy6hf",
-  "leftColumn": 0,
+  "leftColumn": 1,
   "parentColumnSpace": 12.01953125,
-  "parentId": "7fhljhffe0",
+  "parentId": "6thz0umvhi",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 4,
+  "rightColumn": 5,
   "searchTags": [
     "click",
     "submit"
   ],
-  "topRow": 0,
+  "topRow": 18,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "y8iyqckh6b",
-  "widgetName": "App_icon"
+  "widgetId": "902h6qgfom",
+  "widgetName": "App_iconCopy"
 }

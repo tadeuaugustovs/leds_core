@@ -47,7 +47,7 @@
       "rightColumn": 324.31874999999997,
       "shouldScrollContents": false,
       "tabId": "tab1",
-      "tabName": "Dashboard",
+      "tabName": "Geral",
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
@@ -183,7 +183,7 @@
       "responsiveBehavior": "fill",
       "rightColumn": 864.8499999999999,
       "tabId": "tabwry5djxiun",
-      "tabName": "Notas Lançadas",
+      "tabName": "Histórico de Notas ",
       "topRow": 1,
       "type": "CANVAS_WIDGET",
       "version": 1,
@@ -232,7 +232,7 @@
       "index": 0,
       "isDuplicateLabel": false,
       "isVisible": true,
-      "label": "Dashboard",
+      "label": "Geral",
       "positioning": "vertical",
       "widgetId": "xgua19vlpl"
     },
@@ -258,7 +258,7 @@
       "index": 2,
       "isDuplicateLabel": false,
       "isVisible": true,
-      "label": "Notas Lançadas",
+      "label": "Histórico de Notas ",
       "widgetId": "qfv964d2nk"
     }
   },

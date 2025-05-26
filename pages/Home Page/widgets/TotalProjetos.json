@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "1.5rem",
-  "bottomRow": 66,
+  "bottomRow": 65,
   "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
   "chartData": {
     "9kj93g25do": {
@@ -92,13 +92,14 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 45,
+  "rightColumn": 44,
+  "setAdaptiveYMin": false,
   "showDataPointLabel": false,
-  "topRow": 36,
+  "topRow": 35,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "uh93hwosw4",
   "widgetName": "TotalProjetos",
-  "xAxisName": "Product Line",
-  "yAxisName": "Revenue($)"
+  "xAxisName": "Projeto",
+  "yAxisName": "Gasto($)"
 }

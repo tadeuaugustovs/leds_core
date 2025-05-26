@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 22,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -19,15 +19,15 @@
   "isLoading": false,
   "isVisible": true,
   "key": "xx7obgmjct",
-  "leftColumn": 4,
+  "leftColumn": 5,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "overflow": "NONE",
   "parentColumnSpace": 12.01953125,
-  "parentId": "7fhljhffe0",
+  "parentId": "6thz0umvhi",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 61,
+  "rightColumn": 23,
   "searchTags": [
     "typography",
     "paragraph"
@@ -35,11 +35,11 @@
   "shouldTruncate": false,
   "text": "Usuários do LEDSCORE",
   "textAlign": "LEFT",
-  "textColor": "#fafafa",
-  "topRow": 0,
+  "textColor": "#3f3f46",
+  "topRow": 18,
   "truncateButtonColor": "#FFC13D",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "osgrrkh1vx",
-  "widgetName": "Title"
+  "widgetId": "6eeanjjswm",
+  "widgetName": "TitleCopy"
 }

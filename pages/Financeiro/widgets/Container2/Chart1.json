@@ -7,6 +7,7 @@
   "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
   "chartData": {
     "in8m5ge8zd": {
+      "color": "#1d4ed8",
       "data": [
         {
           "x": "Product1",

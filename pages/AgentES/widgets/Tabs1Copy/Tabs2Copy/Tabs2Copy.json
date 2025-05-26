@@ -144,9 +144,54 @@
       "version": 1,
       "widgetId": "7zql8aopo9",
       "widgetName": "Canvas7Copy"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 380,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "1h0at61qky",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 310,
+      "minWidth": 450,
+      "mobileBottomRow": 311,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 877.5195556640624,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "qk75cofi32",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 877.5195556640624,
+      "tabId": "tabm2404pas8t",
+      "tabName": "Hospedagem e Alimentação",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "hn6d2azleo",
+      "widgetName": "Canvas1"
     }
   ],
-  "defaultTab": "Tab 1",
+  "defaultTab": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -202,6 +247,13 @@
       "isVisible": true,
       "label": "Material Permanente",
       "widgetId": "7zql8aopo9"
+    },
+    "tabm2404pas8t": {
+      "id": "tabm2404pas8t",
+      "index": 3,
+      "isVisible": true,
+      "label": "Hospedagem e Alimentação",
+      "widgetId": "hn6d2azleo"
     }
   },
   "topRow": 18,

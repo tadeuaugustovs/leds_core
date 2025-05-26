@@ -7,7 +7,11 @@
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
@@ -20,6 +24,7 @@
   "mobileRightColumn": 53,
   "mobileTopRow": 12,
   "needsErrorInfo": false,
+  "onClick": "{{navigateTo('AgentES', {}, 'SAME_WINDOW');}}",
   "parentColumnSpace": 14.234375,
   "parentId": "l8qs98arpx",
   "parentRowSpace": 10,

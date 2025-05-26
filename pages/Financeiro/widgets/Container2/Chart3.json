@@ -7,21 +7,8 @@
   "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
   "chartData": {
     "in8m5ge8zd": {
-      "data": [
-        {
-          "x": "Product1",
-          "y": 20000
-        },
-        {
-          "x": "Product2",
-          "y": 22000
-        },
-        {
-          "x": "Product3",
-          "y": 32000
-        }
-      ],
-      "seriesName": "2023"
+      "data": "[\n  {\n    \"x\": \"ConectaFapes\",\n    \"y\": 20000\n  },\n  {\n    \"x\": \"AgentES\",\n    \"y\": 25000\n  }\n]",
+      "seriesName": "Total"
     }
   },
   "chartName": "Bolsas",

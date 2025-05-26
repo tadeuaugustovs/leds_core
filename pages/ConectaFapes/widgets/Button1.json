@@ -14,7 +14,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "iconAlign": "left",
   "iconName": "chevron-left",
   "isDefaultClickDisabled": true,
@@ -29,6 +33,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
+  "onClick": "{{navigateTo('Financeiro', {}, 'SAME_WINDOW');}}",
   "parentColumnSpace": 14.234375,
   "parentId": "0",
   "parentRowSpace": 10,

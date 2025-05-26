@@ -3,7 +3,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 15,
   "boxShadow": "none",
-  "defaultImage": "http://localhost:1337/uploads/2_603027ff76.png",
+  "defaultImage": "http://localhost:1337/uploads/2_64fe6feb47.png",
   "displayName": "Image",
   "dynamicBindingPathList": [
     {
@@ -23,7 +23,7 @@
   "key": "20b6vlid8h",
   "leftColumn": 0,
   "maxZoomLevel": 1,
-  "objectFit": "contain",
+  "objectFit": "cover",
   "parentColumnSpace": 3.7119140625,
   "parentId": "xenf7vbvpy",
   "parentRowSpace": 10,

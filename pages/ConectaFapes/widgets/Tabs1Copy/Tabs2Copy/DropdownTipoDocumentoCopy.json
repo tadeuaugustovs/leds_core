@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 9,
+  "bottomRow": 4,
   "boxShadow": "none",
   "defaultOptionValue": "Tipo de Documento ",
   "dynamicBindingPathList": [
@@ -51,7 +51,7 @@
   "rightColumn": 63,
   "serverSideFiltering": false,
   "sourceData": "[\n  {\n    \"name\": \"Nota Fiscal\",\n    \"code\": \"Nota Fiscal\"\n  },\n  {\n    \"name\": \"Fatura\",\n    \"code\": \"Fatura\"\n  },\n  {\n    \"name\": \"Duplicata\",\n    \"code\": \"Duplicata\"\n  },\n  {\n    \"name\": \"Proforma Invoice\",\n    \"code\": \"Proforma Invoice\"\n  }\n\n]",
-  "topRow": 2,
+  "topRow": 0,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "wumsp5g940",

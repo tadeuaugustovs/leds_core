@@ -1,9 +1,9 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 70,
+  "bottomRow": 71,
   "boxShadow": "none",
-  "defaultImage": "http://localhost:1337/uploads/1740701605520_1_7ebfd63097.jpeg",
+  "defaultImage": "http://localhost:1337/uploads/1740701605520_1_2_01da19979b.jpeg",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"

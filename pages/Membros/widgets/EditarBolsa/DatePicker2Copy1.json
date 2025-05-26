@@ -2,12 +2,12 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 23,
+  "bottomRow": 30,
   "boxShadow": "none",
   "closeOnSelection": true,
   "dateFormat": "DD-MM-YYYY",
   "datePickerType": "DATE_PICKER",
-  "defaultDate": "2025-05-14T02:41:26.235Z",
+  "defaultDate": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -17,6 +17,11 @@
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultDate"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "firstDayOfWeek": 0,
   "isDisabled": false,
@@ -24,12 +29,12 @@
   "isRequired": false,
   "isVisible": true,
   "key": "io3p6nl0gp",
-  "label": "Data de Inicio",
+  "label": "Data de Fim",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 3,
+  "leftColumn": 24,
   "maxDate": "2121-12-31T18:29:00.000Z",
   "maxDynamicHeight": 9000,
   "minDate": "1920-12-31T18:30:00.000Z",
@@ -40,17 +45,19 @@
   "mobileRightColumn": 23,
   "mobileTopRow": 17,
   "needsErrorInfo": false,
+  "originalBottomRow": 30,
+  "originalTopRow": 23,
   "parentColumnSpace": 8.013281249999999,
-  "parentId": "goql19eei1",
+  "parentId": "fy1dmivih0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 23,
+  "rightColumn": 43,
   "shortcuts": false,
   "timePrecision": "minute",
-  "topRow": 16,
+  "topRow": 23,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
-  "widgetId": "7qj6tx6so6",
-  "widgetName": "DatePicker1Copy1Copy"
+  "widgetId": "mwvi0vqknp",
+  "widgetName": "DatePicker2Copy1"
 }

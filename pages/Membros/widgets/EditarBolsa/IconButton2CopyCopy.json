@@ -31,14 +31,14 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{closeModal(Adicionar_bolsaCopy.name);}}",
-  "parentId": "goql19eei1",
+  "onClick": "{{closeModal(EditarBolsa.name);}}",
+  "parentId": "fy1dmivih0",
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
   "rightColumn": 64,
   "topRow": 0,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "nc59mm87pb",
+  "widgetId": "kh3jsrjxkd",
   "widgetName": "IconButton2CopyCopy"
 }

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "bottomRow": 4,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,12 +11,15 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
+  "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
@@ -34,19 +37,19 @@
   "originalTopRow": 0,
   "overflow": "NONE",
   "parentColumnSpace": 1.8828964233398438,
-  "parentId": "kim11wbles",
+  "parentId": "pydc23nc3w",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 58,
   "shouldTruncate": false,
-  "text": "10",
-  "textAlign": "LEFT",
-  "textColor": "#231F20",
+  "text": "{{ \n(() => {\n  const hoje = new Date();\n  const limite = new Date();\n  limite.setDate(hoje.getDate() + 30);\n\n  return getMembros.data?.data?.flatMap(m => m.planos_de_trabalho || [])\n    .filter(p => p.statusBolsa === \"ATIVA\" && p.fimBolsa && new Date(p.fimBolsa) <= limite && new Date(p.fimBolsa) >= hoje).length;\n})()\n}}",
+  "textAlign": "CENTER",
+  "textColor": "#7f1d1d",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "kcrsmus885",
-  "widgetName": "Text6Copy1"
+  "widgetId": "f8fix7gqaj",
+  "widgetName": "Text6Copy1Copy"
 }

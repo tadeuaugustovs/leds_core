@@ -39,10 +39,9 @@
     "status",
     "motivo",
     "projeto",
-    "financiador",
-    "EditActions1"
+    "financiador"
   ],
-  "columnUpdatedAt": 1747981323441,
+  "columnUpdatedAt": 1748285916735,
   "columnWidthMap": {
     "bolsa": 99,
     "fim": 98,
@@ -56,7 +55,7 @@
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
-  "defaultSelectedRowIndex": 0,
+  "defaultSelectedRowIndex": "0",
   "defaultSelectedRowIndices": [
     0
   ],
@@ -73,21 +72,6 @@
     },
     {
       "key": "primaryColumns.bolsa.computedValue"
-    },
-    {
-      "key": "primaryColumns.EditActions1.saveButtonColor"
-    },
-    {
-      "key": "primaryColumns.EditActions1.saveBorderRadius"
-    },
-    {
-      "key": "primaryColumns.EditActions1.discardBorderRadius"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isSaveDisabled"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isDiscardDisabled"
     },
     {
       "key": "primaryColumns.valor.computedValue"
@@ -125,19 +109,20 @@
       "key": "tableData"
     },
     {
-      "key": "primaryColumns.EditActions1.isSaveDisabled"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isDiscardDisabled"
-    },
-    {
       "key": "primaryColumns.status.cellBackground"
     },
     {
       "key": "primaryColumns.status.textColor"
+    },
+    {
+      "key": "onRowSelected"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onRowSelected"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -159,52 +144,13 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 20,
   "needsErrorInfo": false,
+  "onRowSelected": "{{storeValue(\"bolsaSelecionada\", TableBolsas.selectedRow);\nshowModal(\"EditarBolsa\");\n}}",
   "originalBottomRow": 39,
   "originalTopRow": 6,
   "parentColumnSpace": 10.7940673828125,
   "parentId": "zo72vx8b5r",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "EditActions1": {
-      "alias": "EditActions1",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "buttonStyle": "rgb(3, 179, 101)",
-      "columnType": "editActions",
-      "computedValue": "",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "discardActionLabel": "Discard",
-      "discardBorderRadius": "{{TableBolsas.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "discardButtonColor": "#F22B2B",
-      "discardButtonVariant": "TERTIARY",
-      "discardIconAlign": "left",
-      "enableFilter": true,
-      "enableSort": true,
-      "id": "EditActions1",
-      "index": 10,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": true,
-      "isDisabled": false,
-      "isDiscardDisabled": "{{(() => { const tableData = TableBolsas.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (TableBolsas.processedTableData.map((currentRow, currentIndex) => ( !TableBolsas.updatedRowIndices.includes(currentIndex))))) : TableBolsas.processedTableData.map((currentRow, currentIndex) => ( !TableBolsas.updatedRowIndices.includes(currentIndex))) })()}}",
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveDisabled": "{{(() => { const tableData = TableBolsas.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \nTableBolsas.processedTableData.map((currentRow, currentIndex) => (\n  !TableBolsas.updatedRowIndices.includes(currentIndex)\n)) \n)) :  \nTableBolsas.processedTableData.map((currentRow, currentIndex) => (\n  !TableBolsas.updatedRowIndices.includes(currentIndex)\n)) \n })()}}",
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "Save / Discard",
-      "notation": "standard",
-      "originalId": "EditActions1",
-      "saveActionLabel": "Save",
-      "saveBorderRadius": "{{TableBolsas.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "saveButtonColor": "{{TableBolsas.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
-      "saveIconAlign": "left",
-      "sticky": "right",
-      "thousandSeparator": true,
-      "validation": {},
-      "width": 150
-    },
     "bolsa": {
       "alias": "bolsa",
       "allowCellWrapping": false,
@@ -220,12 +166,12 @@
       "horizontalAlignment": "LEFT",
       "id": "bolsa",
       "index": 9,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "bolsa",
@@ -254,12 +200,12 @@
       "horizontalAlignment": "LEFT",
       "id": "fim",
       "index": 3,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "fim",
@@ -290,7 +236,7 @@
       "id": "financiador",
       "index": 7,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": false,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -323,12 +269,12 @@
       "horizontalAlignment": "LEFT",
       "id": "inicio",
       "index": 2,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "inicio",
@@ -392,12 +338,12 @@
       "horizontalAlignment": "LEFT",
       "id": "projeto",
       "index": 6,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "projeto",
@@ -426,12 +372,12 @@
       "horizontalAlignment": "LEFT",
       "id": "status",
       "index": 4,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "status",
@@ -460,12 +406,12 @@
       "horizontalAlignment": "LEFT",
       "id": "valor",
       "index": 1,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "valor",

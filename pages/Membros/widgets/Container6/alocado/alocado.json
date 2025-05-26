@@ -45,14 +45,14 @@
   "isLoading": false,
   "isVisible": true,
   "key": "r9eox4eglz",
-  "leftColumn": 2,
+  "leftColumn": 15,
   "maxDynamicHeight": 12,
   "minDynamicHeight": 10,
   "parentColumnSpace": 19.8125,
   "parentId": "fktayp1joh",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 14,
+  "rightColumn": 25,
   "searchTags": [
     "div",
     "parent",
@@ -63,5 +63,5 @@
   "type": "CONTAINER_WIDGET",
   "version": 1,
   "widgetId": "h5s1iyvr0s",
-  "widgetName": "Container7"
+  "widgetName": "alocado"
 }

@@ -3,12 +3,9 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 5,
   "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#231f20",
   "buttonVariant": "TERTIARY",
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     }
@@ -28,23 +25,23 @@
   "isLoading": false,
   "isVisible": true,
   "key": "sqodq03wsg",
-  "leftColumn": 43,
+  "leftColumn": 10,
   "minWidth": 50,
   "mobileBottomRow": 15,
   "mobileLeftColumn": 8,
   "mobileRightColumn": 12,
   "mobileTopRow": 11,
   "needsErrorInfo": false,
-  "onClick": "{{ storeValue('filtroTabelaMembros', 'PLANEJADA') }}",
+  "onClick": "{{ storeValue('filtroTabelaMembros', 'TODOS') }} ",
   "parentColumnSpace": 7.027099609375,
   "parentId": "fktayp1joh",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
-  "rightColumn": 47,
+  "rightColumn": 13,
   "topRow": 1,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "kh4e4q3kah",
-  "widgetName": "IconButton4Copy"
+  "widgetId": "yl1hjhal0o",
+  "widgetName": "IconButton4Copy1"
 }

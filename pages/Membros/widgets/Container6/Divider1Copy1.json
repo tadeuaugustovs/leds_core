@@ -13,13 +13,13 @@
   "isLoading": false,
   "isVisible": true,
   "key": "y4oi538ptw",
-  "leftColumn": 30,
+  "leftColumn": 13,
   "orientation": "vertical",
   "parentColumnSpace": 19.8125,
   "parentId": "fktayp1joh",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 32,
+  "rightColumn": 15,
   "searchTags": [
     "line"
   ],
@@ -28,6 +28,6 @@
   "topRow": 0,
   "type": "DIVIDER_WIDGET",
   "version": 1,
-  "widgetId": "519u5rq1is",
-  "widgetName": "Divider1"
+  "widgetId": "2o7uyjmbx0",
+  "widgetName": "Divider1Copy1"
 }

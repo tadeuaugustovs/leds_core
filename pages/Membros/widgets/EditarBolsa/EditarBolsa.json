@@ -1,6 +1,6 @@
 {
   "animateLoading": true,
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderRadius": "0.375rem",
   "bottomRow": 431,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
@@ -37,7 +37,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "ynjn2pfxlj",
+      "parentId": "oypadd95r9",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,16 +46,12 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "goql19eei1",
+      "widgetId": "fy1dmivih0",
       "widgetName": "Canvas7CopyCopy"
     }
   ],
   "detachFromLayout": true,
-  "dynamicBindingPathList": [
-    {
-      "key": "borderRadius"
-    }
-  ],
+  "dynamicBindingPathList": [],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "height": 432,
@@ -79,7 +75,7 @@
   "topRow": 41,
   "type": "MODAL_WIDGET",
   "version": 2,
-  "widgetId": "ynjn2pfxlj",
-  "widgetName": "Adicionar_bolsaCopy",
+  "widgetId": "oypadd95r9",
+  "widgetName": "EditarBolsa",
   "width": 560.8499999999999
 }

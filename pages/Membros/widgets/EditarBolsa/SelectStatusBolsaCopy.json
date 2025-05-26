@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 32,
+  "bottomRow": 22,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -17,6 +17,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
+    },
+    {
+      "key": "optionValue"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -31,7 +34,7 @@
   "labelText": "Status",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 3,
+  "leftColumn": 24,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -42,18 +45,20 @@
   "needsErrorInfo": false,
   "optionLabel": "name",
   "optionValue": "code",
+  "originalBottomRow": 22,
+  "originalTopRow": 15,
   "parentColumnSpace": 8.357031249999999,
-  "parentId": "goql19eei1",
+  "parentId": "fy1dmivih0",
   "parentRowSpace": 10,
-  "placeholderText": "Select option",
+  "placeholderText": "Selecionar",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 26,
+  "rightColumn": 40,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"Blue\",\n    \"code\": \"BLUE\"\n  },\n  {\n    \"name\": \"Green\",\n    \"code\": \"GREEN\"\n  },\n  {\n    \"name\": \"Red\",\n    \"code\": \"RED\"\n  }\n]",
-  "topRow": 25,
+  "sourceData": "[\n  {\n    \"name\": \"Ativa\",\n    \"code\": \"ATIVA\"\n  },\n  {\n    \"name\": \"Inativa\",\n    \"code\": \"INATIVA\"\n  },\n  {\n    \"name\": \"Planejada\",\n    \"code\": \"PLANEJADA\"\n  }\n]",
+  "topRow": 15,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "5f0gqigak3",
-  "widgetName": "Select2Copy"
+  "widgetId": "4jmz4yxxbi",
+  "widgetName": "SelectStatusBolsaCopy"
 }

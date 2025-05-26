@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 14,
   "boxShadow": "none",
-  "defaultOptionValue": "GREEN",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -34,7 +34,7 @@
   "labelText": "Bolsa",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 3,
+  "leftColumn": 4,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -43,20 +43,22 @@
   "mobileRightColumn": 22,
   "mobileTopRow": 8,
   "needsErrorInfo": false,
-  "optionLabel": "name",
-  "optionValue": "code",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 14,
+  "originalTopRow": 7,
   "parentColumnSpace": 8.013281249999999,
-  "parentId": "goql19eei1",
+  "parentId": "fy1dmivih0",
   "parentRowSpace": 10,
-  "placeholderText": "Select option",
+  "placeholderText": "Selecionar ",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 34,
+  "rightColumn": 27,
   "serverSideFiltering": false,
-  "sourceData": "{{ GetBolsas.data.data.map(b => ({ label: b.nome + \" - R$\" + b.valor, value: b.id })) }}\n",
+  "sourceData": "{{ appsmith.store.bolsaSelecionada.bolsa.nome }}\n",
   "topRow": 7,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "ctzb5e21lo",
-  "widgetName": "Select1Copy"
+  "widgetId": "8dw7nlngk6",
+  "widgetName": "SelectBolsaCopy"
 }

@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "0.375rem",
-  "bottomRow": 54,
+  "bottomRow": 55,
   "boxShadow": "none",
   "chartData": {
     "in8m5ge8zd": {
@@ -100,8 +100,8 @@
   "mobileRightColumn": 60,
   "mobileTopRow": 36,
   "needsErrorInfo": true,
-  "originalBottomRow": 68,
-  "originalTopRow": 36,
+  "originalBottomRow": 55,
+  "originalTopRow": 23,
   "parentColumnSpace": 14.234375,
   "parentId": "xhsnsj5yrb",
   "parentRowSpace": 10,

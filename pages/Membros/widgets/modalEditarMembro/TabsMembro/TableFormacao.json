@@ -41,10 +41,11 @@
     "id",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1748060160590,
+  "columnUpdatedAt": 1748356804272,
   "columnWidthMap": {
     "campo": 182,
-    "label": 236
+    "label": 311,
+    "valor": 229
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -261,7 +262,7 @@
       "enableFilter": true,
       "enableSort": true,
       "horizontalAlignment": "LEFT",
-      "iconName": "cross",
+      "iconName": "small-cross",
       "id": "customColumn1",
       "index": 5,
       "isCellEditable": false,
@@ -304,7 +305,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "documentId",
       "notation": "standard",
       "originalId": "documentId",
@@ -337,7 +338,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "id",
       "notation": "standard",
       "originalId": "id",

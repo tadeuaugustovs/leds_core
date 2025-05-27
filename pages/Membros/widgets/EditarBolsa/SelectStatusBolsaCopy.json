@@ -4,13 +4,16 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 22,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  (() => {\n    const status = appsmith.store.bolsaSelecionada?.status;\n    if (!status) return undefined;\n    return { label: status, value: status };\n  })()\n))(SelectStatusBolsaCopy.options, SelectStatusBolsaCopy.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",

@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 14,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  (() => {\n    const nome = TableBolsas.selectedRow?.bolsa;\n    const bolsa = getBolsas.data?.data?.find(b => b.nome === nome);\n    return bolsa ? { label: bolsa.nome, value: bolsa.documentId } : undefined;\n  })()\n))(SelectBolsaCopy.options, SelectBolsaCopy.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -14,6 +14,9 @@
     },
     {
       "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -55,7 +58,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 27,
   "serverSideFiltering": false,
-  "sourceData": "{{ appsmith.store.bolsaSelecionada.bolsa.nome }}\n",
+  "sourceData": "{{ \n  getBolsas.data?.data.map(b => ({\n    label: b.nome,\n    value: b.documentId\n  })) \n}}\n",
   "topRow": 7,
   "type": "SELECT_WIDGET",
   "version": 1,

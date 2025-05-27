@@ -5,15 +5,18 @@
   "bottomRow": 30,
   "boxShadow": "none",
   "closeOnSelection": true,
-  "dateFormat": "DD-MM-YYYY",
+  "dateFormat": "DD/MM/YYYY",
   "datePickerType": "DATE_PICKER",
-  "defaultDate": "",
+  "defaultDate": "{{ \n  (() => {\n    const data = appsmith.store.bolsaSelecionada?.inicio;\n    return data ? moment(data).format(\"YYYY-MM-DD\") : undefined;\n  })()\n}}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "defaultDate"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -29,12 +32,12 @@
   "isRequired": false,
   "isVisible": true,
   "key": "io3p6nl0gp",
-  "label": "Data de Fim",
+  "label": "Data de Inicio",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 24,
+  "leftColumn": 4,
   "maxDate": "2121-12-31T18:29:00.000Z",
   "maxDynamicHeight": 9000,
   "minDate": "1920-12-31T18:30:00.000Z",
@@ -52,12 +55,12 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 43,
+  "rightColumn": 24,
   "shortcuts": false,
   "timePrecision": "minute",
   "topRow": 23,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
-  "widgetId": "mwvi0vqknp",
-  "widgetName": "DatePicker2Copy1"
+  "widgetId": "zp4ah3kho8",
+  "widgetName": "DatePicker1_1"
 }

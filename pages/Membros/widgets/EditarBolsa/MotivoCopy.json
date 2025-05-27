@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 22,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  (() => {\n    const motivo = appsmith.store.bolsaSelecionada?.motivo;\n    if (!motivo) return undefined;\n    return { label: motivo, value: motivo };\n  })()\n))(MotivoCopy.options, MotivoCopy.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -17,6 +17,9 @@
     },
     {
       "key": "isVisible"
+    },
+    {
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",

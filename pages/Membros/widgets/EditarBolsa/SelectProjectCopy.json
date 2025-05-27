@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 14,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  (() => {\n    const nome = TableBolsas.selectedRow?.projeto?.[0]; // se for múltiplo, pega o primeiro\n    const projeto = getProjetos.data?.data?.find(p => p.nome === nome);\n    return projeto ? { label: projeto.nome, value: projeto.id } : undefined;\n  })()\n))(SelectProjectCopy.options, SelectProjectCopy.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -14,6 +14,9 @@
     },
     {
       "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",

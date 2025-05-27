@@ -25,6 +25,8 @@
   "mobileTopRow": 12,
   "needsErrorInfo": false,
   "onClick": "{{navigateTo('AgentES', {}, 'SAME_WINDOW');}}",
+  "originalBottomRow": 15,
+  "originalTopRow": 4,
   "parentColumnSpace": 14.234375,
   "parentId": "l8qs98arpx",
   "parentRowSpace": 10,

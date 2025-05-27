@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 6,
+  "bottomRow": 7,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -19,13 +19,13 @@
   "isLoading": false,
   "isVisible": true,
   "key": "j0z4cpigeh",
-  "leftColumn": 12,
+  "leftColumn": 11,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "overflow": "NONE",
   "parentId": "fbyqhmz6dm",
   "renderMode": "CANVAS",
-  "rightColumn": 56,
+  "rightColumn": 55,
   "searchTags": [
     "typography",
     "paragraph",
@@ -35,7 +35,7 @@
   "text": "Bolsas a Vencer",
   "textAlign": "LEFT",
   "textColor": "#fff",
-  "topRow": 0,
+  "topRow": 1,
   "truncateButtonColor": "#FFC13D",
   "type": "TEXT_WIDGET",
   "version": 1,

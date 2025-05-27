@@ -39,9 +39,10 @@
     "status",
     "motivo",
     "projeto",
-    "financiador"
+    "financiador",
+    "documentId"
   ],
-  "columnUpdatedAt": 1748285916735,
+  "columnUpdatedAt": 1748356584491,
   "columnWidthMap": {
     "bolsa": 99,
     "fim": 98,
@@ -102,6 +103,9 @@
     },
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.documentId.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -144,7 +148,7 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 20,
   "needsErrorInfo": false,
-  "onRowSelected": "{{storeValue(\"bolsaSelecionada\", TableBolsas.selectedRow);\nshowModal(\"EditarBolsa\");\n}}",
+  "onRowSelected": "{{\nstoreValue(\"idBolsaSelecionada\", TableBolsas.selectedRow.documentId);\nshowModal(\"EditarBolsa\");\n\n}}",
   "originalBottomRow": 39,
   "originalTopRow": 6,
   "parentColumnSpace": 10.7940673828125,
@@ -185,6 +189,40 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "documentId": {
+      "alias": "documentId",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{TableBolsas.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"documentId\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "documentId",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "documentId",
+      "notation": "standard",
+      "originalId": "documentId",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "fim": {
       "alias": "fim",
       "allowCellWrapping": false,
@@ -200,6 +238,7 @@
       "horizontalAlignment": "LEFT",
       "id": "fim",
       "index": 3,
+      "inputFormat": "Do MMM YYYY",
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -432,7 +471,7 @@
   "searchKey": "",
   "serverSidePaginationEnabled": false,
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{ \n  Array.isArray(getPlanoDeTrabalho.data?.data)\n    ? getPlanoDeTrabalho.data.data\n        .filter(plano => plano?.membro?.documentId === appsmith.store.documentIdSelecionado)\n        .sort((a, b) => {\n          const ordem = { \"ATIVA\": 0, \"PLANEJADA\": 1, \"INATIVA\": 2 };\n          return (ordem[a.statusBolsa] ?? 3) - (ordem[b.statusBolsa] ?? 3);\n        })\n        .map(plano => {\n          const bolsa = plano?.bolsa ?? {};\n          const financiador = bolsa?.financiador ?? {};\n          const projetos = plano?.projetos ?? [];\n\n          return {\n            bolsa: bolsa.nome || '-',\n            valor: bolsa.valor || 0,\n            inicio: plano.inicioBolsa || '-',\n            fim: plano.fimBolsa || '-',\n            status: plano.statusBolsa || '-',\n            motivo: plano.motivoInatividade || '-',\n            projeto: projetos.map(p => p.nome).join(', ') || '-',\n            financiador: financiador.nome || '-'\n          };\n        })\n    : []\n}}\n",
+  "tableData": "{{ \n  Array.isArray(getPlanoDeTrabalho.data?.data)\n    ? getPlanoDeTrabalho.data.data\n        .filter(plano => plano?.membro?.documentId === appsmith.store.documentIdSelecionado)\n        .sort((a, b) => {\n          const ordem = { \"ATIVA\": 0, \"PLANEJADA\": 1, \"INATIVA\": 2 };\n          return (ordem[a.statusBolsa] ?? 3) - (ordem[b.statusBolsa] ?? 3);\n        })\n        .map(plano => {\n          const bolsa = plano?.bolsa ?? {};\n          const financiador = bolsa?.financiador ?? {};\n          const projetos = plano?.projetos ?? [];\n\n          return {\n            documentId: plano.documentId, // 🔥 ESSENCIAL PARA O DELETE FUNCIONAR\n            bolsa: bolsa.nome || '-',\n            valor: bolsa.valor || 0,\n            inicio: plano.inicioBolsa || '-',\n            fim: plano.fimBolsa || '-',\n            status: plano.statusBolsa || '-',\n            motivo: plano.motivoInatividade || '-',\n            projeto: projetos.map(p => p.nome).join(', ') || '-',\n            financiador: financiador.nome || '-'\n          };\n        })\n    : []\n}}\n",
   "textSize": "0.875rem",
   "topRow": 6,
   "totalRecordsCount": 0,

@@ -25,14 +25,14 @@
   "overflow": "NONE",
   "parentId": "cs40w79ahp",
   "renderMode": "CANVAS",
-  "rightColumn": 42,
+  "rightColumn": 54,
   "searchTags": [
     "typography",
     "paragraph",
     "label"
   ],
   "shouldTruncate": false,
-  "text": "Caixa Total",
+  "text": "Total em Caixa",
   "textAlign": "LEFT",
   "textColor": "#fff",
   "topRow": 2,

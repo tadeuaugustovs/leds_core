@@ -250,7 +250,7 @@
       "enableFilter": true,
       "enableSort": true,
       "horizontalAlignment": "LEFT",
-      "iconName": "cross",
+      "iconName": "small-cross",
       "id": "customColumn1",
       "index": 4,
       "isCellEditable": false,

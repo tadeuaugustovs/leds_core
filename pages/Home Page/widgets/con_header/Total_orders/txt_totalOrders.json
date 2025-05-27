@@ -25,14 +25,14 @@
   "overflow": "NONE",
   "parentId": "n0pzvdohxm",
   "renderMode": "CANVAS",
-  "rightColumn": 56,
+  "rightColumn": 64,
   "searchTags": [
     "typography",
     "paragraph",
     "label"
   ],
   "shouldTruncate": false,
-  "text": "Total em bolsas",
+  "text": "Valor  para bolsas",
   "textAlign": "LEFT",
   "textColor": "#fff",
   "topRow": 2,

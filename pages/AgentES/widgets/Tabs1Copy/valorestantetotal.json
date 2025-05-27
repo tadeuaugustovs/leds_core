@@ -1,0 +1,57 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 18,
+  "boxShadow": "none",
+  "defaultText": "{{\n(() => {\n  const totalOrcamento = getValorOrcamento.data?.data?.find(item => item.tipo === \"geral\")?.valor || 0;\n  const totalBolsas = getMembros.data?.data\n    ?.flatMap(m => m.planos_de_trabalho || [])\n    ?.filter(p => p?.bolsa?.valor && p?.statusBolsa === \"ATIVA\")\n    ?.reduce((total, p) => total + Number(p.bolsa.valor || 0), 0) || 0;\n\n  const totalNotas = getNotas.data?.data\n    ?.reduce((acc, nota) => acc + (Number(nota.valor_liquido) || 0), 0) || 0;\n\n  const restanteTotal = totalOrcamento - totalBolsas - totalNotas;\n\n  return restanteTotal.toLocaleString('pt-BR', {\n    style: 'currency',\n    currency: 'BRL'\n  });\n})()\n}}\n",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "hfx1o27397",
+  "label": "Valor Restante Total",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 38,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 17,
+  "mobileLeftColumn": 31,
+  "mobileRightColumn": 51,
+  "mobileTopRow": 10,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 12.142578125,
+  "parentId": "xgua19vlpl",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 58,
+  "showStepArrows": false,
+  "topRow": 11,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "y7czwbn9v4",
+  "widgetName": "valorestantetotal"
+}

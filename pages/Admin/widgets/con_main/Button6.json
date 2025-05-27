@@ -14,7 +14,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "iconAlign": "left",
   "iconName": "add",
   "isDefaultClickDisabled": true,
@@ -29,6 +33,7 @@
   "mobileRightColumn": 60,
   "mobileTopRow": 20,
   "needsErrorInfo": false,
+  "onClick": "{{showModal(Modal2.name);}}",
   "parentColumnSpace": 11.2529296875,
   "parentId": "6thz0umvhi",
   "parentRowSpace": 10,

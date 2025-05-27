@@ -23,7 +23,7 @@
   "key": "20b6vlid8h",
   "leftColumn": 0,
   "maxZoomLevel": 1,
-  "objectFit": "contain",
+  "objectFit": "cover",
   "parentColumnSpace": 3.7119140625,
   "parentId": "t4f8eeoiuo",
   "parentRowSpace": 10,

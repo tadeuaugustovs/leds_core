@@ -1,6 +1,6 @@
 {
   "gitSyncId": "681f65b8d8ba125f5109f15a_ffad6ab3-e5a2-45dd-a7c4-f191662a3873",
-  "id": "Admin_getUsers",
+  "id": "Admin_getUsuarios",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -14,7 +14,7 @@
       "headers": [],
       "httpMethod": "GET",
       "paginationType": "NONE",
-      "path": "/api/local",
+      "path": "/api/usuarios",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -33,8 +33,8 @@
       "pluginId": "restapi-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": false,
-    "name": "getUsers",
+    "executeOnLoad": true,
+    "name": "getUsuarios",
     "pageId": "Admin",
     "userSetOnLoad": false
   }

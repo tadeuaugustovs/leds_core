@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "681f65b8d8ba125f5109f15a_7dabd0d4-74e6-40e0-9c85-1585ab2cb547",
-  "id": "Authentication_LoginUsuario",
+  "gitSyncId": "681f65b8d8ba125f5109f15a_acfed986-5e8d-496d-9f17-247e97132ec2",
+  "id": "AgentES_getNotas",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -16,7 +16,7 @@
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/api/usuarios",
+      "path": "/api/nota-fiscals",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -24,12 +24,8 @@
       ],
       "queryParameters": [
         {
-          "key": "filters[email][$eq]",
-          "value": "{{ InputEmail.text }}"
-        },
-        {
-          "key": "filters[senha][$eq]",
-          "value": "{{ InputSenha.text }}"
+          "key": "pagination[pageSize]",
+          "value": "100\n"
         }
       ],
       "timeoutInMillisecond": 10000
@@ -43,20 +39,10 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "path"
-      },
-      {
-        "key": "queryParameters[0].value"
-      },
-      {
-        "key": "queryParameters[1].value"
-      }
-    ],
-    "executeOnLoad": false,
-    "name": "LoginUsuario",
-    "pageId": "Authentication",
+    "dynamicBindingPathList": [],
+    "executeOnLoad": true,
+    "name": "getNotas",
+    "pageId": "AgentES",
     "userSetOnLoad": false
   }
 }

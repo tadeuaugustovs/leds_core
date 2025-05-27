@@ -32,11 +32,13 @@
     }
   },
   "columnOrder": [
-    "value",
-    "label"
+    "nome",
+    "email"
   ],
-  "columnUpdatedAt": 1748279252643,
-  "columnWidthMap": {},
+  "columnUpdatedAt": 1748361345395,
+  "columnWidthMap": {
+    "nome": 267
+  },
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
@@ -56,13 +58,13 @@
       "key": "boxShadow"
     },
     {
-      "key": "primaryColumns.label.computedValue"
-    },
-    {
-      "key": "primaryColumns.value.computedValue"
-    },
-    {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.nome.computedValue"
+    },
+    {
+      "key": "primaryColumns.email.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -96,54 +98,20 @@
   "parentId": "6thz0umvhi",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "label": {
-      "alias": "label",
+    "email": {
+      "alias": "email",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ('tadeuaugustocontato@gmail.com')) : 'tadeuaugustocontato@gmail.com' })()}}",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "label",
-      "index": 0,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Email",
-      "notation": "standard",
-      "originalId": "label",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "value": {
-      "alias": "value",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ('Tadeu Augusto')) : 'Tadeu Augusto' })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "value",
+      "id": "email",
       "index": 1,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -153,9 +121,43 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Ususários",
+      "label": "email",
       "notation": "standard",
-      "originalId": "value",
+      "originalId": "email",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "nome": {
+      "alias": "nome",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nome\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "nome",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "nome",
+      "notation": "standard",
+      "originalId": "nome",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -169,7 +171,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 61,
   "searchKey": "",
-  "tableData": "{{editCompleted.options}}",
+  "tableData": "{{ \n  getUsuarios.data?.data.map(u => ({\n    nome: u.nome,\n    email: u.email\n  })) || []\n}}\n",
   "textSize": "0.875rem",
   "topRow": 22,
   "totalRecordsCount": 0,

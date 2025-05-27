@@ -3,18 +3,15 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 6,
+  "bottomRow": 23,
   "boxShadow": "none",
-  "defaultText": "{{ \n  getNotas.data?.data\n    ?.reduce((acc, nota) => acc + (Number(nota.valor_liquido) || 0), 0)\n    .toLocaleString('pt-BR', {\n      style: 'currency',\n      currency: 'BRL'\n    }) || \"R$ 0,00\"\n}}\n",
+  "defaultText": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -26,32 +23,32 @@
   "isRequired": false,
   "isVisible": true,
   "key": "z0rly7dbym",
-  "label": "Total em Notas:",
+  "label": "Confirmar Senha",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 1,
+  "leftColumn": 31,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 9,
-  "mobileLeftColumn": 11,
-  "mobileRightColumn": 31,
-  "mobileTopRow": 2,
+  "mobileBottomRow": 32,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 25,
   "needsErrorInfo": false,
-  "parentColumnSpace": 12.142578125,
-  "parentId": "qfv964d2nk",
+  "parentColumnSpace": 8.3125,
+  "parentId": "wg2p639ewa",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 17,
+  "rightColumn": 58,
   "showStepArrows": false,
-  "topRow": 1,
+  "topRow": 16,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "8rgxzruvec",
-  "widgetName": "Input1Copy"
+  "widgetId": "2vkhlmr96m",
+  "widgetName": "Input2Copy"
 }

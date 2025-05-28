@@ -35,9 +35,9 @@
       "pluginId": "restapi-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": false,
     "name": "getProjetos",
     "pageId": "Financeiro",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

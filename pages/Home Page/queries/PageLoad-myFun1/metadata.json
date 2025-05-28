@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "PageLoad.myFun1",
     "name": "myFun1",
     "pageId": "Home Page",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

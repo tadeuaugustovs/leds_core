@@ -44,9 +44,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "name": "addFormacaoMembro",
     "pageId": "Membros",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

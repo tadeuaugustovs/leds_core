@@ -23,10 +23,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "JSObject1.search_my_orders",
     "name": "search_my_orders",
     "pageId": "Financeiro",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

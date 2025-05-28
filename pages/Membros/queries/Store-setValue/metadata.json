@@ -26,10 +26,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "Store.setValue",
     "name": "setValue",
     "pageId": "Membros",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

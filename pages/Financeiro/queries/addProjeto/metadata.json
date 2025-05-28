@@ -44,9 +44,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "name": "addProjeto",
     "pageId": "Financeiro",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

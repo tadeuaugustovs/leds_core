@@ -47,9 +47,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "name": "updateRedeSocial",
     "pageId": "Membros",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

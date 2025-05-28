@@ -33,9 +33,9 @@
       "pluginId": "restapi-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": false,
     "name": "API_URL",
     "pageId": "ConectaFapes",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

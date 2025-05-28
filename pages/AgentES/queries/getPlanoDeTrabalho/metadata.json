@@ -74,9 +74,9 @@
         "key": "headers[0].value"
       }
     ],
-    "executeOnLoad": false,
     "name": "getPlanoDeTrabalho",
     "pageId": "AgentES",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

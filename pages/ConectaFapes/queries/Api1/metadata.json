@@ -48,9 +48,9 @@
         "key": "path"
       }
     ],
-    "executeOnLoad": false,
     "name": "Api1",
     "pageId": "ConectaFapes",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

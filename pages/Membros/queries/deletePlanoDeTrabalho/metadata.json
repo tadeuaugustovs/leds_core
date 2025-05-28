@@ -44,9 +44,9 @@
         "key": "path"
       }
     ],
-    "executeOnLoad": false,
     "name": "deletePlanoDeTrabalho",
     "pageId": "Membros",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

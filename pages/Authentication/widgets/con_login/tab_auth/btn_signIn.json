@@ -31,7 +31,7 @@
   "isVisible": true,
   "key": "d80868s2dr",
   "leftColumn": 8,
-  "onClick": "{{ \n  LoginUsuario.run(() => {\n    const usuario = LoginUsuario.data?.data?.[0];\n\n    if (usuario) {\n      storeValue(\"user\", usuario);\n      navigateTo(\"http://localhost:8080/app/leds-core/home-page-6824f0605d08da37cb928219\", \"SAME_WINDOW\");\n    } else {\n      showAlert(\"Email ou senha incorretos\", \"error\");\n    }\n  }, (err) => {\n    showAlert(\"Erro na autenticação: \" + err.message, \"error\");\n  })\n}}\n",
+  "onClick": "{{\n  LoginUsuario.run(() => {\n    const usuario = LoginUsuario.data?.data?.[0];\n\n    if (usuario) {\n      storeValue(\"user\", usuario);\n      \n      setTimeout(() => {\n        navigateTo(\"home-page-6824f0605d08da37cb928219\", \"SAME_WINDOW\");\n      }, 300); // espera 300ms para garantir que o valor foi salvo\n    } else {\n      showAlert(\"Email ou senha incorretos\", \"error\");\n    }\n  }, (err) => {\n    showAlert(\"Erro na autenticação: \" + err.message, \"error\");\n  })\n}}\n",
   "originalBottomRow": 45,
   "originalTopRow": 39,
   "parentColumnSpace": 18.1875,

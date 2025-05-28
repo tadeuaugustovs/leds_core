@@ -53,6 +53,10 @@
     {
       "id": "AgentES",
       "isDefault": false
+    },
+    {
+      "id": "ProjetoTemplate",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 6,
+  "bottomRow": 18,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -13,7 +13,7 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1rem",
@@ -21,7 +21,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "gv6ekfz2u8",
-  "leftColumn": 2,
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -30,23 +30,21 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 26,
   "needsErrorInfo": false,
-  "originalBottomRow": 8,
-  "originalTopRow": 3,
   "overflow": "NONE",
   "parentColumnSpace": 12.7784912109375,
-  "parentId": "muje0opio2",
+  "parentId": "xgua19vlpl",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 31,
+  "rightColumn": 30,
   "shouldTruncate": false,
-  "text": "CAPITAL, CUSTEIO E TERCEIROS",
+  "text": "CAPITAL, CUSTEIO (Terceiros fica dentro)",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 2,
+  "topRow": 14,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "wfehjvetq4",
+  "widgetId": "6gs1tq3pvc",
   "widgetName": "Text3Copy"
 }

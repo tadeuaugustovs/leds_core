@@ -1,9 +1,9 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 30,
+  "bottomRow": 39,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-  "defaultText": "",
+  "defaultText": "This is the initial <b>content</b> of the editor",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
@@ -36,14 +36,14 @@
   "mobileTopRow": 10,
   "needsErrorInfo": false,
   "parentColumnSpace": 13.850964355468749,
-  "parentId": "hn6d2azleo",
+  "parentId": "n2npipcpaw",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 61,
-  "topRow": 10,
+  "rightColumn": 62,
+  "topRow": 7,
   "type": "RICH_TEXT_EDITOR_WIDGET",
   "version": 1,
-  "widgetId": "s59qhjisa8",
+  "widgetId": "1s03ht3vr8",
   "widgetName": "InputDescricaoServicoCopyCopy"
 }

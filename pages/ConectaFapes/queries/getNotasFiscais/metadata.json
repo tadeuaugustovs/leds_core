@@ -1,6 +1,6 @@
 {
   "gitSyncId": "681f65b8d8ba125f5109f15a_f0b4de20-5490-4cce-861a-9103483131f4",
-  "id": "AgentES_getNotasFiscais",
+  "id": "ConectaFapes_getNotasFiscais",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -45,7 +45,7 @@
     },
     "dynamicBindingPathList": [],
     "name": "getNotasFiscais",
-    "pageId": "AgentES",
+    "pageId": "ConectaFapes",
     "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }

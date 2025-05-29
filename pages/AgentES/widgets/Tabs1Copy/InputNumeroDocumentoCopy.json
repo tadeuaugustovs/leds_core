@@ -39,7 +39,7 @@
   "mobileTopRow": 2,
   "needsErrorInfo": false,
   "parentColumnSpace": 13.9288818359375,
-  "parentId": "osggc8mvts",
+  "parentId": "lzgtc22x78",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
@@ -49,6 +49,6 @@
   "topRow": 3,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "x7edrt8726",
+  "widgetId": "j44lfhade8",
   "widgetName": "InputNumeroDocumentoCopy"
 }

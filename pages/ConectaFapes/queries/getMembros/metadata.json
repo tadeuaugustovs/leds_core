@@ -1,6 +1,6 @@
 {
   "gitSyncId": "681f65b8d8ba125f5109f15a_bb96f3a5-f859-4454-8a95-35def7092182",
-  "id": "AgentES_getMembros",
+  "id": "ConectaFapes_getMembros",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -81,7 +81,7 @@
     },
     "dynamicBindingPathList": [],
     "name": "getMembros",
-    "pageId": "AgentES",
+    "pageId": "ConectaFapes",
     "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }

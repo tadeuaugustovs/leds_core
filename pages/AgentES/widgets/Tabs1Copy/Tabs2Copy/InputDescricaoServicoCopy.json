@@ -1,9 +1,9 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 31,
+  "bottomRow": 40,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-  "defaultText": "",
+  "defaultText": "This is the initial <b>content</b> of the editor",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
@@ -26,7 +26,7 @@
   "labelPosition": "Top",
   "labelText": " Descrição do Serviço",
   "labelWidth": 5,
-  "leftColumn": 0,
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -36,14 +36,14 @@
   "mobileTopRow": 10,
   "needsErrorInfo": false,
   "parentColumnSpace": 13.850964355468749,
-  "parentId": "sde94rou8i",
+  "parentId": "z1hvkc7dim",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
-  "topRow": 9,
+  "rightColumn": 63,
+  "topRow": 8,
   "type": "RICH_TEXT_EDITOR_WIDGET",
   "version": 1,
-  "widgetId": "4md61f5p7d",
+  "widgetId": "7xjzc0zfvr",
   "widgetName": "InputDescricaoServicoCopy"
 }

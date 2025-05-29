@@ -1,15 +1,13 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 12,
+  "bottomRow": 22,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-  "buttonVariant": "SECONDARY",
+  "buttonColor": "#1d4ed8",
+  "buttonStyle": "PRIMARY",
+  "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     }
@@ -19,34 +17,32 @@
       "key": "onClick"
     }
   ],
-  "iconAlign": "left",
-  "iconName": "chevron-left",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "48gu3yt69f",
-  "leftColumn": 57,
+  "key": "no6wusy2ve",
+  "leftColumn": 21,
   "minWidth": 120,
-  "mobileBottomRow": 10,
-  "mobileLeftColumn": 47,
-  "mobileRightColumn": 63,
-  "mobileTopRow": 6,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 31,
+  "mobileRightColumn": 47,
+  "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Financeiro', {}, 'SAME_WINDOW');}}",
-  "parentColumnSpace": 14.234375,
-  "parentId": "0",
-  "parentRowSpace": 10,
+  "onClick": "{{closeModal(Aviso.name);}}",
+  "originalBottomRow": 22,
+  "originalTopRow": 18,
+  "parentId": "2fozeb9b5c",
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 64,
-  "text": "Voltar",
-  "topRow": 8,
+  "rightColumn": 42,
+  "text": "Fechar",
+  "topRow": 18,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "yrhnzcr4k5",
-  "widgetName": "Button1"
+  "widgetId": "e4hsa1wqpz",
+  "widgetName": "Button9"
 }

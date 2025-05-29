@@ -5,12 +5,12 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0\n",
-  "bottomRow": 55,
+  "bottomRow": 51,
   "boxShadow": "none",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 330,
+      "bottomRow": 400,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -40,23 +40,23 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "qk75cofi32",
+      "parentId": "2yhdx3iu0c",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
       "rightColumn": 334.29316406249995,
       "shouldScrollContents": false,
       "tabId": "tab1",
-      "tabName": "Pessoa Jurídica",
+      "tabName": "PessoaJuridica",
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "sde94rou8i",
+      "widgetId": "z1hvkc7dim",
       "widgetName": "Canvas5Copy"
     },
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 330,
+      "bottomRow": 290,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -86,7 +86,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "qk75cofi32",
+      "parentId": "2yhdx3iu0c",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -97,12 +97,12 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "7i30c8gyx5",
+      "widgetId": "ieiueynu6c",
       "widgetName": "Canvas6Copy"
     },
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 330,
+      "bottomRow": 290,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
@@ -132,7 +132,7 @@
       "mobileTopRow": 1,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "qk75cofi32",
+      "parentId": "2yhdx3iu0c",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -142,12 +142,12 @@
       "topRow": 1,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "7zql8aopo9",
+      "widgetId": "wznmehblpt",
       "widgetName": "Canvas7Copy"
     },
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 330,
+      "bottomRow": 390,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
@@ -169,25 +169,25 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 310,
+      "minHeight": 330,
       "minWidth": 450,
-      "mobileBottomRow": 311,
+      "mobileBottomRow": 331,
       "mobileLeftColumn": 0,
       "mobileRightColumn": 877.5195556640624,
       "mobileTopRow": 1,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "qk75cofi32",
+      "parentId": "2yhdx3iu0c",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
       "rightColumn": 877.5195556640624,
-      "tabId": "tabm2404pas8t",
+      "tabId": "tabiu28vdr8d7",
       "tabName": "Hospedagem e Alimentação",
       "topRow": 1,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "hn6d2azleo",
+      "widgetId": "n2npipcpaw",
       "widgetName": "Canvas1"
     }
   ],
@@ -198,42 +198,16 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "tabsObj.tab1.isVisible"
-    },
-    {
-      "key": "tabsObj.tab2.isVisible"
-    },
-    {
-      "key": "tabsObj.tab2w3oyobihv.isVisible"
-    },
-    {
-      "key": "tabsObj.tabm2404pas8t.isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicPropertyPathList": [
-    {
-      "key": "tabsObj.tab1.isVisible"
-    },
-    {
-      "key": "tabsObj.tab2.isVisible"
-    },
-    {
-      "key": "tabsObj.tab2w3oyobihv.isVisible"
-    },
-    {
-      "key": "tabsObj.tabm2404pas8t.isVisible"
-    }
-  ],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
   "isVisible": true,
   "key": "6jia7x3s1v",
-  "leftColumn": 1,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 15,
   "minWidth": 450,
@@ -243,48 +217,48 @@
   "mobileTopRow": 18,
   "needsErrorInfo": false,
   "parentColumnSpace": 13.9288818359375,
-  "parentId": "osggc8mvts",
+  "parentId": "lzgtc22x78",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 63,
   "shouldScrollContents": true,
   "shouldShowTabs": true,
   "tabsObj": {
     "tab1": {
       "id": "tab1",
       "index": 0,
-      "isVisible": "{{ DropdownNatureza.selectedOptionValue === 'Pessoa Jurídica' }}",
-      "label": "Pessoa Jurídica",
+      "isVisible": true,
+      "label": "PessoaJuridica",
       "positioning": "vertical",
-      "widgetId": "sde94rou8i"
+      "widgetId": "z1hvkc7dim"
     },
     "tab2": {
       "id": "tab2",
       "index": 1,
-      "isVisible": "{{ DropdownNatureza.selectedOptionValue === 'Passagem' }}\n",
+      "isVisible": true,
       "label": "Passagem",
       "positioning": "vertical",
-      "widgetId": "7i30c8gyx5"
+      "widgetId": "ieiueynu6c"
     },
     "tab2w3oyobihv": {
       "id": "tab2w3oyobihv",
       "index": 2,
-      "isVisible": "{{ DropdownNatureza.selectedOptionValue === 'Material Permanente' }}",
+      "isVisible": true,
       "label": "Material Permanente",
-      "widgetId": "7zql8aopo9"
+      "widgetId": "wznmehblpt"
     },
-    "tabm2404pas8t": {
-      "id": "tabm2404pas8t",
+    "tabiu28vdr8d7": {
+      "id": "tabiu28vdr8d7",
       "index": 3,
-      "isVisible": "{{ DropdownNatureza.selectedOptionValue === 'Hospedagem e Alimentação' }}",
+      "isVisible": true,
       "label": "Hospedagem e Alimentação",
-      "widgetId": "hn6d2azleo"
+      "widgetId": "n2npipcpaw"
     }
   },
   "topRow": 18,
   "type": "TABS_WIDGET",
   "version": 3,
-  "widgetId": "qk75cofi32",
+  "widgetId": "2yhdx3iu0c",
   "widgetName": "Tabs2Copy"
 }

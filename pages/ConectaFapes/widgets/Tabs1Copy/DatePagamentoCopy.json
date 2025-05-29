@@ -46,7 +46,7 @@
   "mobileTopRow": 10,
   "needsErrorInfo": false,
   "parentColumnSpace": 12.7784912109375,
-  "parentId": "lzgtc22x78",
+  "parentId": "osggc8mvts",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
@@ -56,6 +56,6 @@
   "topRow": 10,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
-  "widgetId": "nyyq4b8t3a",
+  "widgetId": "ju4pn5pn11",
   "widgetName": "DatePagamentoCopy"
 }

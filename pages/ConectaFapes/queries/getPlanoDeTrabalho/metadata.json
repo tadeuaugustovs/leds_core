@@ -1,6 +1,6 @@
 {
   "gitSyncId": "681f65b8d8ba125f5109f15a_3d0dec1b-2487-4d6f-a2ea-9f2503848895",
-  "id": "AgentES_getPlanoDeTrabalho",
+  "id": "ConectaFapes_getPlanoDeTrabalho",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -75,7 +75,7 @@
       }
     ],
     "name": "getPlanoDeTrabalho",
-    "pageId": "AgentES",
+    "pageId": "ConectaFapes",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

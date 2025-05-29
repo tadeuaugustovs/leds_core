@@ -3,7 +3,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 70,
   "boxShadow": "none",
-  "defaultImage": "http://10.128.128.20:1337/uploads/1740701605520_1_2_07bb48b784.jpeg",
+  "defaultImage": "https://raw.githubusercontent.com/tadeuaugustovs/leds_core/refs/heads/main/site-imagens/1740701605520%20(1)%20(2).jpeg",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"

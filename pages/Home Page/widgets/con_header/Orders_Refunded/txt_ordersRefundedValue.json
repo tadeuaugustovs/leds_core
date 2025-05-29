@@ -6,6 +6,9 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -32,7 +35,7 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "10",
+  "text": "{{ \n(() => {\n  const hoje = new Date();\n  const limite = new Date();\n  limite.setDate(hoje.getDate() + 30);\n\n  return getMembros.data?.data?.flatMap(m => m.planos_de_trabalho || [])\n    .filter(p => p.statusBolsa === \"ATIVA\" && p.fimBolsa && new Date(p.fimBolsa) <= limite && new Date(p.fimBolsa) >= hoje).length;\n})()\n}}",
   "textAlign": "LEFT",
   "textColor": "#fff",
   "topRow": 7,

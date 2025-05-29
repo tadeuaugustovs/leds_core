@@ -6,6 +6,9 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -32,9 +35,9 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "5",
+  "text": "{{ \ngetMembros.data?.data?.flatMap(m => m.planos_de_trabalho || [])\n  .filter(p => p.statusBolsa === \"PLANEJADA\").length \n}}\n",
   "textAlign": "LEFT",
-  "textColor": "#fff",
+  "textColor": "#ffffff",
   "topRow": 7,
   "truncateButtonColor": "#FFC13D",
   "type": "TEXT_WIDGET",

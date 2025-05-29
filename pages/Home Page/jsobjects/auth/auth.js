@@ -1,40 +1,30 @@
 export default {
-  /**
-   * Verifica se o usuário está logado e redireciona se não estiver
-   * Use em `onPageLoad` nas páginas protegidas
-   */
-  protegerPagina() {
-    if (!appsmith.store.user) {
+  async verificarAcesso() {
+    // Verifica se existe algo na store
+    const usuarioSalvo = appsmith.store.usuario;
+
+    // Se não existir, redireciona
+    if (!usuarioSalvo || !usuarioSalvo.email) {
+      navigateTo("authentication-68375c2c56cad916c8fc38f1", "SAME_WINDOW");
+      return;
+    }
+
+    // Faz nova consulta ao Strapi confirmando que o usuário ainda está ativo
+    const url = `http://10.128.128.20:1337/api/usuarios?filters[email][$eq]=${usuarioSalvo.email}&filters[status][$eq]=Published`;
+
+    try {
+      const response = await fetch(url);
+      const json = await response.json();
+      const usuarioValido = json?.data?.length > 0;
+
+      if (!usuarioValido) {
+        clearStore();
+        navigateTo("authentication-68375c2c56cad916c8fc38f1", "SAME_WINDOW");
+      }
+    } catch (e) {
+      showAlert("Erro ao verificar login", "error");
+      clearStore();
       navigateTo("authentication-68375c2c56cad916c8fc38f1", "SAME_WINDOW");
     }
-  },
-
-  /**
-   * Faz login do usuário com base na query LoginUsuario
-   * Salva o usuário e redireciona para Home
-   */
-  async login() {
-    try {
-      await LoginUsuario.run();
-      const usuario = LoginUsuario.data?.data?.[0];
-
-      if (usuario) {
-        storeValue("user", usuario);
-        navigateTo("home-page-6824f0605d08da37cb928219", "SAME_WINDOW");
-      } else {
-        showAlert("Email ou senha incorretos", "error");
-      }
-    } catch (err) {
-      showAlert("Erro na autenticação: " + err.message, "error");
-    }
-  },
-
-  /**
-   * Função para deslogar
-   * Limpa a store e redireciona para o login
-   */
-  logout() {
-    clearStore();
-    navigateTo("authentication-68375c2c56cad916c8fc38f1", "SAME_WINDOW");
-  },
+  }
 };

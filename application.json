@@ -25,7 +25,7 @@
   "color": "#C7F3F0",
   "embedSetting": {
     "height": "720px",
-    "showNavigationBar": true,
+    "showNavigationBar": false,
     "width": "1024px"
   },
   "evaluationVersion": 2,
@@ -33,11 +33,11 @@
   "pages": [
     {
       "id": "Authentication",
-      "isDefault": false
+      "isDefault": true
     },
     {
       "id": "Home Page",
-      "isDefault": true
+      "isDefault": false
     },
     {
       "id": "Membros",

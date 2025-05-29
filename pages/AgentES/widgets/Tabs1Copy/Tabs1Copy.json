@@ -191,7 +191,7 @@
       "widgetName": "Canvas8Copy"
     }
   ],
-  "defaultTab": "Tab 1",
+  "defaultTab": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

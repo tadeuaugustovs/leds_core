@@ -24,8 +24,12 @@
       ],
       "queryParameters": [
         {
-          "key": "populate",
-          "value": "projetos"
+          "key": "populate[projetos][fields][0]",
+          "value": "nome"
+        },
+        {
+          "key": "populate[arquivos][fields][0]",
+          "value": "url"
         }
       ],
       "timeoutInMillisecond": 10000

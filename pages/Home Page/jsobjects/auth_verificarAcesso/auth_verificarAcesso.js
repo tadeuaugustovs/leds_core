@@ -2,9 +2,9 @@ export default {
   async verificarAcesso() {
     const usuarioSalvo = appsmith.store.usuario;
 
-    // Se não tiver usuário salvo, apenas retorna false (sem redirecionar)
     if (!usuarioSalvo || !usuarioSalvo.email) {
       clearStore();
+      navigateTo("Authentication", "SAME_WINDOW");
       return false;
     }
 
@@ -24,6 +24,7 @@ export default {
 
       if (!usuarioValido) {
         clearStore();
+        navigateTo("Authentication", "SAME_WINDOW");
         return false;
       }
 
@@ -31,6 +32,7 @@ export default {
     } catch (e) {
       showAlert("Erro ao verificar acesso: " + e.message, "error");
       clearStore();
+      navigateTo("Authentication", "SAME_WINDOW");
       return false;
     }
   }

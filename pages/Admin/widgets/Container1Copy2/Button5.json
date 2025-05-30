@@ -38,7 +38,7 @@
   "mobileRightColumn": 41,
   "mobileTopRow": 65,
   "needsErrorInfo": false,
-  "onClick": "{{storeValue(\"jwt\", undefined);\nstoreValue(\"user\", undefined);\nnavigateTo(\"http://localhost:8080/app/leds-core/authentication-6824f0995d08da37cb92823f\", \"SAME_WINDOW\");\n}}",
+  "onClick": "{{ \n  clearStore(); \n  showAlert(\"Logout realizado com sucesso\", \"success\");\n  navigateTo(\"Authentication\", \"SAME_WINDOW\");\n}}\n",
   "parentColumnSpace": 2.3564453125,
   "parentId": "xenf7vbvpy",
   "parentRowSpace": 10,

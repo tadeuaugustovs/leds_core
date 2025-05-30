@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68375c2c56cad916c8fc38e2_fad60e27-be72-44f7-a3f0-8804f3869274",
+  "id": "AgentES_auth_verificarAcesso",
+  "unpublishedCollection": {
+    "name": "auth_verificarAcesso",
+    "pageId": "AgentES",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

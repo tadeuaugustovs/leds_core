@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68375c2c56cad916c8fc38e2_b3e9a7d1-22d6-48a3-bd7d-2566647b8009",
+  "id": "Financeiro_auth_verificarAcesso",
+  "unpublishedCollection": {
+    "name": "auth_verificarAcesso",
+    "pageId": "Financeiro",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

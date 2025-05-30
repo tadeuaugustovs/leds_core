@@ -1,19 +1,28 @@
 export default {
   async verificarAcesso() {
-    // Verifica se existe algo na store
     const usuarioSalvo = appsmith.store.usuario;
 
-    // Se não existir, redireciona
+    // 1. Verificação básica da store
     if (!usuarioSalvo || !usuarioSalvo.email) {
+      clearStore();
       navigateTo("authentication-68375c2c56cad916c8fc38f1", "SAME_WINDOW");
       return;
     }
 
-    // Faz nova consulta ao Strapi confirmando que o usuário ainda está ativo
-    const url = `http://10.128.128.20:1337/api/usuarios?filters[email][$eq]=${usuarioSalvo.email}&filters[status][$eq]=Published`;
+    // 2. Monta URL da API do Strapi
+    const url = `http://10.128.128.20:1337/api/usuarios?filters[email][$eq]=${encodeURIComponent(usuarioSalvo.email)}&pagination[pageSize]=1`;
 
     try {
-      const response = await fetch(url);
+      const response = await fetch(url, {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error("Falha ao consultar o backend");
+      }
+
       const json = await response.json();
       const usuarioValido = json?.data?.length > 0;
 
@@ -22,9 +31,9 @@ export default {
         navigateTo("authentication-68375c2c56cad916c8fc38f1", "SAME_WINDOW");
       }
     } catch (e) {
-      showAlert("Erro ao verificar login", "error");
+      showAlert("Erro ao verificar acesso: " + e.message, "error");
       clearStore();
       navigateTo("authentication-68375c2c56cad916c8fc38f1", "SAME_WINDOW");
     }
   }
-};
+}

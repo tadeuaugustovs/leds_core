@@ -189,6 +189,186 @@
       "version": 1,
       "widgetId": "qfv964d2nk",
       "widgetName": "Canvas8Copy"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 580,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "eueeymxrnu",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 620,
+      "minWidth": 450,
+      "mobileBottomRow": 621,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 756.7437499999999,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "va3wvxdqn3",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 756.7437499999999,
+      "tabId": "tabnokmukutm9",
+      "tabName": "Projeção de bolsistas",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "6f8i29fcn9",
+      "widgetName": "Canvas2"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 580,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "eueeymxrnu",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 620,
+      "minWidth": 450,
+      "mobileBottomRow": 621,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 756.7437499999999,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "va3wvxdqn3",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 756.7437499999999,
+      "tabId": "tabvv58rhy5a8",
+      "tabName": "Sala do LEDS",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "rgfoy12b2u",
+      "widgetName": "Canvas3"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 580,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "eueeymxrnu",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 620,
+      "minWidth": 450,
+      "mobileBottomRow": 621,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 756.7437499999999,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "va3wvxdqn3",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 756.7437499999999,
+      "tabId": "tabr4w4jknhyy",
+      "tabName": "AgentES",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "1mk0t2nqwp",
+      "widgetName": "Canvas4"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 580,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "eueeymxrnu",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 620,
+      "minWidth": 450,
+      "mobileBottomRow": 621,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 756.7437499999999,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "va3wvxdqn3",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 756.7437499999999,
+      "tabId": "tabz4t36ac31y",
+      "tabName": "Planos e Assinaturas",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "pr0ehrj3xn",
+      "widgetName": "Canvas5"
     }
   ],
   "defaultTab": "",
@@ -245,21 +425,51 @@
       "positioning": "vertical",
       "widgetId": "avj9r3m22d"
     },
+    "tabnokmukutm9": {
+      "id": "tabnokmukutm9",
+      "index": 2,
+      "isDuplicateLabel": false,
+      "isVisible": true,
+      "label": "Projeção de bolsistas",
+      "widgetId": "6f8i29fcn9"
+    },
     "tabq2pcx9w8oh": {
       "id": "tabq2pcx9w8oh",
-      "index": 3,
+      "index": 4,
       "isDuplicateLabel": false,
       "isVisible": true,
       "label": "Lançar notas",
       "widgetId": "osggc8mvts"
     },
+    "tabr4w4jknhyy": {
+      "id": "tabr4w4jknhyy",
+      "index": 6,
+      "isVisible": true,
+      "label": "AgentES",
+      "widgetId": "1mk0t2nqwp"
+    },
+    "tabvv58rhy5a8": {
+      "id": "tabvv58rhy5a8",
+      "index": 5,
+      "isDuplicateLabel": false,
+      "isVisible": true,
+      "label": "Sala do LEDS",
+      "widgetId": "rgfoy12b2u"
+    },
     "tabwry5djxiun": {
       "id": "tabwry5djxiun",
-      "index": 2,
+      "index": 3,
       "isDuplicateLabel": false,
       "isVisible": true,
       "label": "Histórico de Notas ",
       "widgetId": "qfv964d2nk"
+    },
+    "tabz4t36ac31y": {
+      "id": "tabz4t36ac31y",
+      "index": 7,
+      "isVisible": true,
+      "label": "Planos e Assinaturas",
+      "widgetId": "pr0ehrj3xn"
     }
   },
   "topRow": 9,

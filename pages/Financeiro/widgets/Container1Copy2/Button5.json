@@ -47,7 +47,7 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 29,
+  "rightColumn": 33,
   "text": "Sair",
   "topRow": 61,
   "type": "BUTTON_WIDGET",

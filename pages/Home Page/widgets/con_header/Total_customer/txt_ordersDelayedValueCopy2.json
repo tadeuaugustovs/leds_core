@@ -22,7 +22,7 @@
   "leftColumn": 3,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
-  "overflow": "NONE",
+  "overflow": "SCROLL",
   "parentId": "cs40w79ahp",
   "renderMode": "CANVAS",
   "rightColumn": 59,
@@ -32,7 +32,7 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "R$2.450,20",
+  "text": "R$185.556",
   "textAlign": "LEFT",
   "textColor": "#fff",
   "topRow": 7,

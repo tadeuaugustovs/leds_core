@@ -42,10 +42,10 @@
     "financiador",
     "documentId"
   ],
-  "columnUpdatedAt": 1748356584491,
+  "columnUpdatedAt": 1748644498512,
   "columnWidthMap": {
-    "bolsa": 99,
-    "fim": 98,
+    "bolsa": 151,
+    "fim": 204,
     "financiador": 120,
     "inicio": 112,
     "inicioBolsa": 161,
@@ -384,7 +384,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "projeto",
       "notation": "standard",
       "originalId": "projeto",

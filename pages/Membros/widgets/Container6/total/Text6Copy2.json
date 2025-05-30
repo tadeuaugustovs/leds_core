@@ -48,7 +48,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 58,
   "shouldTruncate": false,
-  "text": "{{ \ngetMembros.data?.data\n  ?.flatMap(m => m.planos_de_trabalho || [])\n  ?.filter(p => [\"ATIVA\", \"PLANEJADA\"].includes(p.statusBolsa)).length \n}}\n\n",
+  "text": "{{ \n  Array.isArray(getMembros.data?.data) \n    ? getMembros.data.data.reduce((total, membro) => {\n        const planos = membro.planos_de_trabalho || [];\n        const bolsasValidas = planos.filter(p => p?.bolsa?.nome);\n        return total + bolsasValidas.length;\n      }, 0)\n    : 0 \n}}\n",
   "textAlign": "CENTER",
   "textColor": "{{appsmith.theme.colors.backgroundColor}}",
   "topRow": 0,

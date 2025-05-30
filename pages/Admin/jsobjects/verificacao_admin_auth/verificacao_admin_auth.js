@@ -35,5 +35,10 @@ export default {
       navigateTo("Authentication", "SAME_WINDOW");
       return false;
     }
-  }
+  },
+
+  // Executa automaticamente ao abrir a página
+  __forcarExecucao__: (async () => {
+    await this.verificarAcesso();
+  })()
 }

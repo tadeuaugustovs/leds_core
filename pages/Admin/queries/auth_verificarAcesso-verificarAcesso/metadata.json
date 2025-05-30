@@ -25,7 +25,7 @@
     "fullyQualifiedName": "auth_verificarAcesso.verificarAcesso",
     "name": "verificarAcesso",
     "pageId": "Admin",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
 }

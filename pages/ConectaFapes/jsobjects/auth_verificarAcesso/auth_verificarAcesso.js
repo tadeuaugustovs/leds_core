@@ -5,7 +5,7 @@ export default {
     if (!usuarioSalvo || !usuarioSalvo.email) {
       clearStore();
       navigateTo("Authentication", "SAME_WINDOW");
-      return;
+      return false;
     }
 
     const url = `http://10.128.128.20:1337/api/usuarios?filters[email][$eq]=${encodeURIComponent(usuarioSalvo.email)}&pagination[pageSize]=1`;
@@ -15,7 +15,9 @@ export default {
         headers: { "Content-Type": "application/json" }
       });
 
-      if (!response.ok) throw new Error("Falha ao consultar o backend");
+      if (!response.ok) {
+        throw new Error("Falha ao consultar o backend");
+      }
 
       const json = await response.json();
       const usuarioValido = json?.data?.length > 0;
@@ -23,11 +25,15 @@ export default {
       if (!usuarioValido) {
         clearStore();
         navigateTo("Authentication", "SAME_WINDOW");
+        return false;
       }
+
+      return true;
     } catch (e) {
       showAlert("Erro ao verificar acesso: " + e.message, "error");
       clearStore();
       navigateTo("Authentication", "SAME_WINDOW");
+      return false;
     }
   }
 }

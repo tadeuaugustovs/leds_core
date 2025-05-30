@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "68375c2c56cad916c8fc38e2_f326176d-a4de-4cf1-994e-8bc2345ba1cb",
+  "id": "ConectaFapes_verificacao_conectafapes",
+  "unpublishedCollection": {
+    "name": "verificacao_conectafapes",
+    "pageId": "ConectaFapes",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "__forcarExecucao__",
+        "value": "(async () => {\n  await verificacao_conectafapes.verificarAcesso();\n})()"
+      }
+    ]
+  }
+}

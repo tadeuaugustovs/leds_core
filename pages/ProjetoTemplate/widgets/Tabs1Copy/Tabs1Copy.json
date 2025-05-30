@@ -5,7 +5,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0",
-  "bottomRow": 71,
+  "bottomRow": 92,
   "boxShadow": "none",
   "children": [
     {
@@ -262,7 +262,7 @@
       "widgetId": "qfv964d2nk"
     }
   },
-  "topRow": 9,
+  "topRow": 30,
   "type": "TABS_WIDGET",
   "version": 3,
   "widgetId": "va3wvxdqn3",

@@ -35,5 +35,9 @@ export default {
       navigateTo("Authentication", "SAME_WINDOW");
       return false;
     }
-  }
+  },
+
+  __forcarExecucao__: (async () => {
+    await this.verificarAcesso();
+  })()
 }

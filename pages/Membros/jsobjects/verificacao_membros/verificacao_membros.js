@@ -35,5 +35,10 @@ export default {
       navigateTo("Authentication", "SAME_WINDOW");
       return false;
     }
-  }
+  },
+
+  // ⚠️ IIFE: executa imediatamente ao abrir a página
+  __forcarExecucao__ : (async () => {
+    await this.verificarAcesso();
+  })()
 }

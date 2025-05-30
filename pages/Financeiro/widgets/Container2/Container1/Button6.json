@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "0.375rem",
-  "bottomRow": 15,
+  "bottomRow": 31,
   "boxShadow": "none",
   "buttonColor": "#1d4ed8",
   "buttonVariant": "SECONDARY",
@@ -40,7 +40,7 @@
   "rightColumn": 60,
   "text": "Adicionar",
   "tooltip": "",
-  "topRow": 4,
+  "topRow": 20,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "a1lu7u1t7o",

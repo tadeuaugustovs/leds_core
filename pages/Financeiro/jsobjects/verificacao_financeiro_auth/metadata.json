@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "68375c2c56cad916c8fc38e2_7bbd935b-ceda-4ebf-8c97-18b8baf7706d",
+  "id": "Financeiro_verificacao_financeiro_auth",
+  "unpublishedCollection": {
+    "name": "verificacao_financeiro_auth",
+    "pageId": "Financeiro",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "__forcarExecucao__",
+        "value": "(async () => {\n  await verificacao_financeiro_auth.verificarAcesso();\n})()"
+      }
+    ]
+  }
+}

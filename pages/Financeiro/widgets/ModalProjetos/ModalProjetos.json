@@ -8,7 +8,7 @@
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 570,
+      "bottomRow": 800,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -29,7 +29,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 572,
+      "minHeight": 806,
       "minWidth": 450,
       "mobileBottomRow": 240,
       "mobileLeftColumn": 0,
@@ -54,7 +54,7 @@
   "dynamicBindingPathList": [],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
-  "height": 572,
+  "height": 806,
   "isCanvas": true,
   "isLoading": false,
   "key": "t93nz36q1g",
@@ -77,5 +77,5 @@
   "version": 2,
   "widgetId": "7mdoyvce9i",
   "widgetName": "ModalProjetos",
-  "width": 952.8499999999999
+  "width": 1108.85
 }

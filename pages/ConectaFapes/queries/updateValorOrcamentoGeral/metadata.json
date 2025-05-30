@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "68375c2c56cad916c8fc38e2_ce582ec5-2189-4482-8f35-2574391ee540",
-  "id": "ConectaFapes_updateValorOrcamentoBolsa",
+  "gitSyncId": "68375c2c56cad916c8fc38e2_34956bcb-2997-404c-b3e2-d6f319d201b8",
+  "id": "ConectaFapes_updateValorOrcamentoGeral",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"data\": {\n    \"valor\": {{ Number(orcamentobolsas.text.replace(/\\./g, '').replace(',', '.')) }}\n  }\n}\n",
+      "body": "{\n  \"data\": {\n    \"valor\": {{ Number(valortotal.text.replace(/\\./g, '').replace(',', '.')) }}\n  }\n}\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
@@ -21,7 +21,7 @@
       "httpMethod": "PUT",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "{{ \"http://10.128.128.20:1337/api/valor-orcamentos/\" + getValorOrcamento.data?.data?.find(i => i.tipo === \"bolsas\")?.documentId }}",
+      "path": "{{ \"http://10.128.128.20:1337/api/valor-orcamentos/\" + getValorOrcamento.data?.data?.find(i => i.tipo === \"geral\")?.documentId }}",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -41,13 +41,13 @@
     },
     "dynamicBindingPathList": [
       {
-        "key": "body"
+        "key": "path"
       },
       {
-        "key": "path"
+        "key": "body"
       }
     ],
-    "name": "updateValorOrcamentoBolsa",
+    "name": "updateValorOrcamentoGeral",
     "pageId": "ConectaFapes",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

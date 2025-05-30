@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 6,
+  "bottomRow": 7,
   "boxShadow": "none",
   "defaultText": "{{ \n  getNotas.data?.data\n    ?.reduce((acc, nota) => acc + (Number(nota.valor_liquido) || 0), 0)\n    .toLocaleString('pt-BR', {\n      style: 'currency',\n      currency: 'BRL'\n    }) || \"R$ 0,00\"\n}}\n",
   "dynamicBindingPathList": [
@@ -49,7 +49,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 17,
   "showStepArrows": false,
-  "topRow": 1,
+  "topRow": 2,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "8rgxzruvec",

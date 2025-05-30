@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 55,
+  "bottomRow": 59,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -37,12 +37,20 @@
     "gasto",
     "restante",
     "qtde",
-    "valorOrcado",
     "valorUnitario",
+    "total",
+    "documentId",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1748632933493,
-  "columnWidthMap": {},
+  "columnUpdatedAt": 1748641927035,
+  "columnWidthMap": {
+    "EditActions1": 60,
+    "gasto": 153,
+    "item": 168,
+    "orcamento": 136,
+    "restante": 171,
+    "total": 185
+  },
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
@@ -71,15 +79,6 @@
       "key": "primaryColumns.item.computedValue"
     },
     {
-      "key": "primaryColumns.qtde.computedValue"
-    },
-    {
-      "key": "primaryColumns.valorUnitario.computedValue"
-    },
-    {
-      "key": "primaryColumns.valorOrcado.computedValue"
-    },
-    {
       "key": "primaryColumns.gasto.computedValue"
     },
     {
@@ -105,6 +104,18 @@
     },
     {
       "key": "primaryColumns.orcamento.textColor"
+    },
+    {
+      "key": "primaryColumns.qtde.computedValue"
+    },
+    {
+      "key": "primaryColumns.valorUnitario.computedValue"
+    },
+    {
+      "key": "primaryColumns.total.computedValue"
+    },
+    {
+      "key": "primaryColumns.documentId.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -122,9 +133,16 @@
     },
     {
       "key": "primaryColumns.orcamento.textColor"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onSave"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.EditActions1.onSave"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -146,10 +164,10 @@
   "mobileRightColumn": 36,
   "mobileTopRow": 24,
   "needsErrorInfo": false,
-  "originalBottomRow": 49,
-  "originalTopRow": 8,
+  "originalBottomRow": 59,
+  "originalTopRow": 11,
   "parentColumnSpace": 14.388281249999999,
-  "parentId": "xgua19vlpl",
+  "parentId": "f6garpcig4",
   "parentRowSpace": 10,
   "primaryColumns": {
     "EditActions1": {
@@ -182,6 +200,7 @@
       "isVisible": true,
       "label": "Save / Discard",
       "notation": "standard",
+      "onSave": "{{ updateFluxoCaixa.run() }}",
       "originalId": "EditActions1",
       "saveActionLabel": "Save",
       "saveBorderRadius": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -190,6 +209,40 @@
       "sticky": "right",
       "thousandSeparator": true,
       "validation": {},
+      "width": 150
+    },
+    "documentId": {
+      "alias": "documentId",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"documentId\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "documentId",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "documentId",
+      "notation": "standard",
+      "originalId": "documentId",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
       "width": 150
     },
     "gasto": {
@@ -308,16 +361,16 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "qtde",
-      "index": 2,
-      "isCellEditable": true,
+      "index": 4,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Quantidade",
+      "isVisible": false,
+      "label": "qtde",
       "notation": "standard",
       "originalId": "qtde",
       "sticky": "",
@@ -350,7 +403,7 @@
       "isDiscardVisible": true,
       "isEditable": true,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "Restante",
       "notation": "standard",
       "originalId": "restante",
@@ -362,32 +415,32 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "valorOrcado": {
-      "alias": "valorOrcado",
+    "total": {
+      "alias": "total",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
-      "computedValue": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"valorOrcado\"]))}}",
+      "computedValue": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"total\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "valorOrcado",
-      "index": 4,
-      "isCellEditable": true,
+      "id": "total",
+      "index": 6,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "valorOrcado",
+      "label": "total",
       "notation": "standard",
-      "originalId": "valorOrcado",
+      "originalId": "total",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -410,15 +463,15 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "valorUnitario",
-      "index": 3,
-      "isCellEditable": true,
+      "index": 5,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "valorUnitario",
       "notation": "standard",
       "originalId": "valorUnitario",
@@ -433,16 +486,16 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
+  "rightColumn": 64,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{\n  getNotasFiscais.data?.data\n    ?.reduce((acc, nota) => {\n      const natureza = nota.natureza_despesa || '-';\n      const valor = nota.valor_liquido || 0;\n\n      // Força \"TERCEIROS\" como CUSTEIO\n      const tipoDespesa = nota.tipoDespesa || '';\n      const tipoOrcamento =\n        tipoDespesa === \"TERCEIROS\"\n          ? \"CUSTEIO\"\n          : nota.tipoOrcamento || (\n              ['Passagem', 'Diária', 'Hospedagem/Alimentação', 'Cursos'].includes(natureza)\n                ? 'CUSTEIO'\n                : 'CAPITAL'\n            );\n\n      const existente = acc.find(e => e.item === natureza && e.orcamento === tipoOrcamento);\n\n      if (existente) {\n        existente.gasto += valor;\n      } else {\n        acc.push({\n          orcamento: tipoOrcamento,\n          item: natureza,\n          qtde: '-',\n          valorUnitario: '-',\n          valorOrcado: 0,\n          gasto: valor,\n          restante: 0,\n        });\n      }\n\n      return acc;\n    }, [])\n    .map(item => {\n      item.restante = item.valorOrcado - item.gasto;\n      return item;\n    })\n    .sort((a, b) => {\n      const ordem = { 'CAPITAL': 0, 'CUSTEIO': 1, 'TERCEIROS': 2 };\n      return ordem[a.orcamento] - ordem[b.orcamento];\n    })\n}}\n",
+  "tableData": "{{\n  getFluxoCaixaProjeto.data?.data.map(item => ({\n    documentId: item.documentId, // <- ESSENCIAL para o PUT funcionar\n    orcamento: item.Capital ? \"CAPITAL\" : item.Custeio ? \"CUSTEIO\" : \"DOACI\",\n    item: item.Capital || item.Custeio || \"-\",\n    qtde: item.quantidade ?? \"-\",\n    valorUnitario: item.valor_unitario ?? \"-\",\n    total: item.total || 0,\n    gasto: item.gasto || 0,\n    restante: item.restante || 0,\n  }))\n}}\n",
   "textSize": "0.875rem",
-  "topRow": 16,
+  "topRow": 9,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "bvre1jizif",
+  "widgetId": "g70fes8w72",
   "widgetName": "capitalcusteioterceiros"
 }

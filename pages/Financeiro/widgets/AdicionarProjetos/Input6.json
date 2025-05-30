@@ -3,18 +3,15 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 19,
+  "bottomRow": 30,
   "boxShadow": "none",
-  "defaultText": "{{ Table1.selectedRow?.bairroMunicipio?.toString() || '' }}",
+  "defaultText": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -25,33 +22,36 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "803ubygy2z",
-  "label": "Bairro/Município",
+  "key": "j76dsrr9w2",
+  "label": "Valor total para Bolsas",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
+  "labelTextColor": "#14532d",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 46,
+  "leftColumn": 2,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
   "mobileBottomRow": 30,
-  "mobileLeftColumn": 41,
-  "mobileRightColumn": 61,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 22,
   "mobileTopRow": 23,
   "needsErrorInfo": false,
-  "parentColumnSpace": 27.57421875,
-  "parentId": "acxj6ii9r3",
+  "originalBottomRow": 32,
+  "originalTopRow": 25,
+  "parentColumnSpace": 17.13828125,
+  "parentId": "nppuuo9jxe",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 59,
+  "rightColumn": 37,
   "showStepArrows": false,
-  "topRow": 12,
+  "topRow": 23,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "w3yhze7mwe",
-  "widgetName": "InputBairroMunicipioEdit"
+  "widgetId": "pt4tipovu4",
+  "widgetName": "Input6"
 }

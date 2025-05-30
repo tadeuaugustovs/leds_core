@@ -25,7 +25,7 @@
   "overflow": "NONE",
   "parentId": "cs40w79ahp",
   "renderMode": "CANVAS",
-  "rightColumn": 54,
+  "rightColumn": 59,
   "searchTags": [
     "typography",
     "paragraph",
@@ -35,7 +35,7 @@
   "text": "Restante em Caixa",
   "textAlign": "LEFT",
   "textColor": "#fff",
-  "topRow": 2,
+  "topRow": 1,
   "truncateButtonColor": "#FFC13D",
   "type": "TEXT_WIDGET",
   "version": 1,

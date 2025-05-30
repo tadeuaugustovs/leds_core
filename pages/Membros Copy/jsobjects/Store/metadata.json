@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "68375c2c56cad916c8fc38e2_d5d40fd5-b8f2-4966-92b5-cc158152290c",
+  "id": "Membros Copy_Store",
+  "unpublishedCollection": {
+    "name": "Store",
+    "pageId": "Membros Copy",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "showTabs",
+        "value": "false"
+      }
+    ]
+  }
+}

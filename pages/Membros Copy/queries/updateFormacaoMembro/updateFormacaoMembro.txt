@@ -1,0 +1,13 @@
+{
+  "data": {
+    "label": "{{ TableFormacao.processedTableData[TableFormacao.updatedRowIndices[0]]?.label || '' }}",
+    "valor": "{{ TableFormacao.processedTableData[TableFormacao.updatedRowIndices[0]]?.valor || '' }}",
+    "membro": {
+      "connect": [
+        {
+          "documentId": "{{ Table1.selectedRow?.documentId || appsmith.store.membroSelecionadoDocumentId }}"
+        }
+      ]
+    }
+  }
+}

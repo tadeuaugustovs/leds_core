@@ -10,7 +10,16 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "iconName": "floppy-disk",
   "isDisabled": false,
   "isLoading": false,
@@ -23,6 +32,7 @@
   "mobileRightColumn": 31,
   "mobileTopRow": 4,
   "needsErrorInfo": false,
+  "onClick": "{{updateValorOrcamentoBolsa.run(() => {\n  showAlert(\"Valor de bolsa atualizado com sucesso!\", \"success\");\n  getValorOrcamento.run(); // Recarrega os dados atualizados\n}, (err) => {\n  showAlert(\"Erro ao atualizar o valor: \" + err.message, \"error\");\n});\n}}",
   "parentColumnSpace": 12.142578125,
   "parentId": "xgua19vlpl",
   "parentRowSpace": 10,

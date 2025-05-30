@@ -1,0 +1,13 @@
+{
+  "data": {
+    "label": "{{ TableFormacao.newRow?.label || TableFormacao.newRow?.campo || '' }}",
+    "valor": "{{ TableFormacao.newRow?.valor || '' }}",
+    "membro": {
+      "connect": [
+        {
+          "documentId": "{{ Table1.selectedRow?.documentId || appsmith.store.membroSelecionadoDocumentId }}"
+        }
+      ]
+    }
+  }
+}

@@ -4,11 +4,11 @@
   "borderColor": "#dde8ff",
   "borderRadius": "1.5rem",
   "borderWidth": "1",
-  "bottomRow": 66,
+  "bottomRow": 57,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
-      "bottomRow": 650,
+      "bottomRow": 430,
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
@@ -85,7 +85,7 @@
   "tags": [
     "Layout"
   ],
-  "topRow": 1,
+  "topRow": 14,
   "type": "CONTAINER_WIDGET",
   "version": 1,
   "widgetId": "fvbrdivtth",

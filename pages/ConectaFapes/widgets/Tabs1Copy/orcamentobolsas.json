@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 10,
   "boxShadow": "none",
-  "defaultText": "{{ \n  getValorOrcamento.data?.data?.find(item => item.tipo === \"bolsas\")?.valor?.toLocaleString('pt-BR', {\n    minimumFractionDigits: 2\n  }) || \"R$ 0,00\"\n}}\n",
+  "defaultText": "{{ \ngetValorOrcamento.data?.data?.find(item => item.tipo === \"bolsas\")?.valor?.toLocaleString('pt-BR', {\n  minimumFractionDigits: 2\n}) || \"R$ 0,00\"\n\n}}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

@@ -16,6 +16,11 @@
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isRequired"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "hideCard": false,
   "iconAlign": "left",
@@ -24,7 +29,7 @@
   "isDeprecated": false,
   "isDisabled": false,
   "isLoading": false,
-  "isRequired": true,
+  "isRequired": "true",
   "isVisible": true,
   "key": "2use2p5sva",
   "label": "Email",
@@ -53,6 +58,7 @@
   ],
   "topRow": 18,
   "type": "INPUT_WIDGET_V2",
+  "validation": "",
   "version": 2,
   "widgetId": "nckbq8kovr",
   "widgetName": "InputEmail"

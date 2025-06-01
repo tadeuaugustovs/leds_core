@@ -1,0 +1,59 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "fnsmu1mwy9",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Custeio",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 33,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 28,
+  "mobileLeftColumn": 32,
+  "mobileRightColumn": 52,
+  "mobileTopRow": 21,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "code",
+  "parentColumnSpace": 13.513281249999999,
+  "parentId": "nu0xqln3dw",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  { \"name\": \"Passagem\", \"code\": \"PASSAGEM\" },\n  { \"name\": \"Diária\", \"code\": \"DIARIA\" },\n  { \"name\": \"Inscrição\", \"code\": \"INSCRICAO\" },\n  { \"name\": \"Material de Consumo\", \"code\": \"MATERIAL_CONSUMO\" },\n  { \"name\": \"Salas\", \"code\": \"SALAS\" },\n  { \"name\": \"Serviços de Desenvolvimento e Treinamento: Apoiar em demandas específicas de desenvolvimento de software\", \"code\": \"SERV_DESENVOLVIMENTO\" },\n  { \"name\": \"Cursos e Treinamentos da Equipe: Capacitar a equipe em tecnologias e outros aspectos relacionados ao projeto\", \"code\": \"CURSOS_EQUIPE\" },\n  { \"name\": \"Serviços de Terceiros\", \"code\": \"SERV_TERCEIROS\" },\n  { \"name\": \"Consultores IA, gestão e soluções web\", \"code\": \"CONSULTORES_IA_GESTAO_WEB\" },\n  { \"name\": \"Serviço de adequação física\", \"code\": \"ADEQUACAO_FISICA\" },\n  { \"name\": \"Contratação de serviços de PaaS e IaaS de terceiros\", \"code\": \"PAAS_IAAS_TERCEIROS\" }\n]\n",
+  "topRow": 0,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "65ttsro5m8",
+  "widgetName": "Select2"
+}

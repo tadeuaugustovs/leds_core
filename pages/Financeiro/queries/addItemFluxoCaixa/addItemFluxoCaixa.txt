@@ -4,20 +4,8 @@
     "total": {{ InputTotal.text || 0 }},
     "restante": {{ InputRestante.text || 0 }},
     "gasto": {{ InputGasto.text || 0 }},
-    "capital": {
-      "connect": [
-        {
-          "documentId": "{{ SelectCapital.selectedOptionValue }}"
-        }
-      ]
-    },
-    "custeio": {
-      "connect": [
-        {
-          "documentId": "{{ Select2.selectedOptionValue }}"
-        }
-      ]
-    },
+    "Capital": "{{ SelectCapital.selectedOptionValue || null }}",
+    "Custeio": "{{ Select2.selectedOptionValue || null }}",
     "projeto": {
       "connect": [
         {

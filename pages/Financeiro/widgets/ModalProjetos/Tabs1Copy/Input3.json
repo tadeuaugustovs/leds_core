@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 7,
   "boxShadow": "none",
-  "defaultText": "{{\n(() => {\n  const valorOrcado = getValorOrcamento.data?.data?.[0]?.valor || 0;\n\n  const totalPrevisto = getFluxoCaixaProjeto.data?.data.reduce((acc, item) => {\n    return acc + (item.total || 0);\n  }, 0);\n\n  const restante = valorOrcado - totalPrevisto;\n\n  return \"R$ \" + restante.toLocaleString(\"pt-BR\");\n})()\n}}\n",
+  "defaultText": "{{\n(() => {\n  const dados = capitalcusteioterceiros.tableData || [];\n  const somaRestante = dados.reduce((acc, item) => acc + (Number(item.restante) || 0), 0);\n  const valorTotal = getValorOrcamento.data?.[0]?.valor || 0;\n  const resultado = somaRestante - valorTotal;\n  return \"R$ \" + resultado.toLocaleString(\"pt-BR\");\n})()\n\n\n}}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -26,7 +26,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "j76dsrr9w2",
-  "label": "Restante",
+  "label": "Restante Total",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",

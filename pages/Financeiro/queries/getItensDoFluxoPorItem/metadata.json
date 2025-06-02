@@ -1,6 +1,6 @@
 {
   "gitSyncId": "68375c2c56cad916c8fc38e2_5e275e01-3bd2-4201-b237-b74f2b094f16",
-  "id": "Financeiro_getFluxoCaixaProjeto",
+  "id": "Financeiro_getItensDoFluxoPorItem",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -24,12 +24,12 @@
       ],
       "queryParameters": [
         {
-          "key": "filters[projeto][id][$eq]",
-          "value": "{{ Table5.selectedRow.id }}"
+          "key": "populate",
+          "value": "*"
         },
         {
-          "key": "pagination[pageSize]",
-          "value": "100"
+          "key": "filters[capital_custeio_item][documentId][$eq]",
+          "value": "{{ appsmith.store.documentoDoItemSelecionado }}"
         }
       ],
       "timeoutInMillisecond": 10000
@@ -48,10 +48,10 @@
         "key": "path"
       },
       {
-        "key": "queryParameters[0].value"
+        "key": "queryParameters[1].value"
       }
     ],
-    "name": "getFluxoCaixaProjeto",
+    "name": "getItensDoFluxoPorItem",
     "pageId": "Financeiro",
     "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false

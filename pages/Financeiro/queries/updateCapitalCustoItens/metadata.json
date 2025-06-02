@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "68375c2c56cad916c8fc38e2_7664847d-2322-4963-82b5-1ba78d044bff",
-  "id": "Financeiro_addItemFluxoCaixa",
+  "gitSyncId": "68375c2c56cad916c8fc38e2_d6c509b6-e54c-4115-bd84-2192e458e7c7",
+  "id": "Financeiro_updateCapitalCustoItens",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,17 +11,17 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"data\": {\n    \"nome_item\": \"{{ InputItem.text || '' }}\",\n    \"total\": {{ InputTotal.text || 0 }},\n    \"restante\": {{ InputRestante.text || 0 }},\n    \"gasto\": {{ InputGasto.text || 0 }},\n    \"Capital\": \"{{ SelectCapital.selectedOptionValue || null }}\",\n    \"Custeio\": \"{{ Select2.selectedOptionValue || null }}\",\n    \"projeto\": {\n      \"connect\": [\n        {\n          \"documentId\": \"{{ appsmith.store.projetoSelecionadoDocumentId }}\"\n        }\n      ]\n    }\n  }\n}\n",
+      "body": "{\n  \"data\": {\n    \"gasto\": {{ capitalcusteioterceiros.updatedRow.gasto || 0 }}\n  }\n}\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
         "apiContentType": "application/json"
       },
       "headers": [],
-      "httpMethod": "POST",
+      "httpMethod": "PUT",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/api/item-fluxo-caixas",
+      "path": "/api/item-fluxo-caixas/{{ TableFluxoCaixa.updatedRow.documentId }}",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -42,9 +42,12 @@
     "dynamicBindingPathList": [
       {
         "key": "body"
+      },
+      {
+        "key": "path"
       }
     ],
-    "name": "addItemFluxoCaixa",
+    "name": "updateCapitalCustoItens",
     "pageId": "Financeiro",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

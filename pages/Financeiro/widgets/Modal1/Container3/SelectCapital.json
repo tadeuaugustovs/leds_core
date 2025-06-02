@@ -50,7 +50,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 33,
   "serverSideFiltering": false,
-  "sourceData": "[\n  { \"name\": \"Computador e Notebook\", \"code\": \"COMPUTADOR_NOTEBOOK\" },\n  { \"name\": \"Quadro e Livro\", \"code\": \"QUADRO_LIVRO\" },\n  { \"name\": \"Servidor\", \"code\": \"SERVIDOR\" },\n  { \"name\": \"Projetor\", \"code\": \"PROJETOR\" },\n  { \"name\": \"Nobreak\", \"code\": \"NOBREAK\" },\n  { \"name\": \"Impressora\", \"code\": \"IMPRESSORA\" },\n  { \"name\": \"Aquisição e instalação de Fonte de Alimentação de Initerrupta (UPS)\", \"code\": \"UPS\" },\n  { \"name\": \"Estações de trabalho\", \"code\": \"ESTACOES_TRABALHO\" },\n  { \"name\": \"Aquisição de Servidores de teste e deployments de MVPs\", \"code\": \"SERVIDORES_TESTE_MVP\" }\n]\n",
+  "sourceData": "[\n  { \"name\": \"Computador e Notebook\", \"code\": \"Computador e Notebook\" },\n  { \"name\": \"Quadro e Livro\", \"code\": \"Quadro e Livro\" },\n  { \"name\": \"Servidor\", \"code\": \"Servidor\" },\n  { \"name\": \"Projetor\", \"code\": \"Projetor\" },\n  { \"name\": \"Nobreak\", \"code\": \"Nobreak\" },\n  { \"name\": \"Impressora\", \"code\": \"Impressora\" },\n  { \"name\": \"Aquisição e instalação de Fonte de Alimentação de Initerrupta (UPS)\", \"code\": \"Aquisição e instalação de Fonte de Alimentação de Initerrupta (UPS)\" },\n  { \"name\": \"Estações de trabalho\", \"code\": \"Estações de trabalho\" },\n  { \"name\": \"Aquisição de Servidores de teste e deployments de MVPs\", \"code\": \"Aquisição de Servidores de teste e deployments de MVPs\" }\n]\n",
   "topRow": 0,
   "type": "SELECT_WIDGET",
   "version": 1,

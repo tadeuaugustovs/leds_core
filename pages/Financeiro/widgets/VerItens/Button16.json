@@ -1,20 +1,18 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 34,
+  "bottomRow": 11,
   "boxShadow": "none",
-  "buttonColor": "#1d4ed8",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonStyle": "PRIMARY_BUTTON",
-  "buttonVariant": "PRIMARY",
+  "buttonVariant": "SECONDARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
-      "key": "borderRadius"
-    }
-  ],
-  "dynamicPropertyPathList": [
+      "key": "buttonColor"
+    },
     {
-      "key": "onClick"
+      "key": "borderRadius"
     }
   ],
   "dynamicTriggerPathList": [
@@ -22,32 +20,32 @@
       "key": "onClick"
     }
   ],
+  "iconAlign": "left",
+  "iconName": "add",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "vj7pwtsy6m",
-  "leftColumn": 49,
+  "key": "erg03e2uo6",
+  "leftColumn": 53,
   "minWidth": 120,
   "mobileBottomRow": 22,
   "mobileLeftColumn": 47,
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{addItemFluxoCaixa.run(() => {\n  showAlert(\"Item adicionado com sucesso\", \"success\");\n  closeModal(\"Modal1\"); // se quiser fechar o modal\n}, (err) => {\n  const msg = err?.message || \"Erro inesperado ao adicionar item.\";\n  showAlert(\"Erro ao adicionar item: \" + msg, \"error\");\n});\n\n}}",
-  "originalBottomRow": 34,
-  "originalTopRow": 30,
-  "parentId": "sdoeqowvy1",
+  "onClick": "{{showModal(Modal1.name);}}",
+  "parentId": "altxndycxd",
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 62,
-  "text": "Salvar",
-  "topRow": 30,
+  "rightColumn": 63,
+  "text": "Adicionar",
+  "topRow": 7,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "jflcdsbfdt",
-  "widgetName": "Button14"
+  "widgetId": "j0j8gjudia",
+  "widgetName": "Button16"
 }

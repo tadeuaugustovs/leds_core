@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 8,
   "boxShadow": "none",
-  "defaultText": "{{ \n  \"R$ \" + (getValorOrcamento.data?.data?.[0]?.valor || 0).toLocaleString(\"pt-BR\")\n}}\n",
+  "defaultText": "{{ \n\"R$ \" + (\n  getCapitalCusteioItens.data?.data\n    ?.filter(item => item.projetos?.some(p => p.documentId === appsmith.store.projetoSelecionadoDocumentId))\n    ?.reduce((acc, item) => acc + (item.valorTotal || 0), 0)\n).toLocaleString(\"pt-BR\")\n\n}}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -54,5 +54,5 @@
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "mp8udxp1y1",
-  "widgetName": "valortotalCopyCopy"
+  "widgetName": "valortotal"
 }

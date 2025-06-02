@@ -34,16 +34,16 @@
   "columnOrder": [
     "nome",
     "bolsas",
+    "valor",
     "inicio",
-    "fim",
-    "valor"
+    "fim"
   ],
-  "columnUpdatedAt": 1748645474407,
+  "columnUpdatedAt": 1748896183007,
   "columnWidthMap": {
     "fim": 110,
     "inicio": 109,
     "nome": 193,
-    "valor": 258
+    "valor": 217
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",

@@ -1,10 +1,10 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#FFFFFF",
-  "borderColor": "#E0DEDE",
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "backgroundColor": "#f4f4f5",
+  "borderColor": "#d4d4d8",
+  "borderRadius": "0.375rem",
   "borderWidth": "1",
-  "bottomRow": 18,
+  "bottomRow": 23,
   "boxShadow": "none",
   "children": [
     {
@@ -35,11 +35,7 @@
   ],
   "containerStyle": "card",
   "displayName": "Container",
-  "dynamicBindingPathList": [
-    {
-      "key": "borderRadius"
-    }
-  ],
+  "dynamicBindingPathList": [],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "hideCard": false,
@@ -52,8 +48,8 @@
   "leftColumn": 16,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 10,
-  "originalBottomRow": 18,
-  "originalTopRow": 8,
+  "originalBottomRow": 23,
+  "originalTopRow": 13,
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -65,7 +61,7 @@
     "group"
   ],
   "shouldScrollContents": true,
-  "topRow": 8,
+  "topRow": 13,
   "type": "CONTAINER_WIDGET",
   "version": 1,
   "widgetId": "wyomf1bd4z",

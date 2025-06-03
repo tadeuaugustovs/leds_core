@@ -1,47 +1,26 @@
 export default {
+  defaultTab: "Sign In", // tem que bater com o nome exato da aba no tab_auth
 
-	defaultTab: 'Sign In',
+  setDefaultTab: (newTab) => {
+    this.defaultTab = newTab;
+  },
 
-	setDefaultTab: (newTab) => {
-		this.defaultTab = newTab;
-	},
+  signIn: async () => {
+    const email = InputEmail.text?.trim().toLowerCase();
+    const senha = InputSenha.text;
 
-	generatePasswordHash: async () => {
-		return dcodeIO.bcrypt.hashSync(inp_registerPassword.text, 10);
-	},
+    const resposta = await LoginUsuario.run();
+    const usuario = resposta?.data?.find(u => u.email?.toLowerCase() === email);
 
-	verifyHash: async (password, hash) => {
-		return dcodeIO.bcrypt.compareSync(password, hash)
-	},
+    if (!usuario) {
+      throw new Error("Email não encontrado");
+    }
 
-	createToken: async (user) => {
-		return jsonwebtoken.sign(user, 'secret', {expiresIn: 60*60});
-	},
+    if (usuario.senha !== senha) {
+      throw new Error("Senha incorreta");
+    }
 
-	signIn: async () => {
-		const password = InputSenha.text;
-
-		const [user] = await findUserByEmail.run();
-
-		if (user && this.verifyHash(password, user?.password_hash)) {
-			storeValue('token', await this.createToken(user))
-				.then(() => updateLogin.run({
-				id: user.id
-			}))
-				.then(() => showAlert('Register Success', 'success'))
-		} else {
-			return showAlert('Invalid emaill/password combination', 'error');
-		}
-	},
-
-	register: async () => {
-		const passwordHash = await this.generatePasswordHash();
-		const [user] = await createUser.run({passwordHash});
-		if (user) {
-			storeValue('token', await this.createToken(user))
-			showAlert('Register Success', 'success');
-		} else {
-			return showAlert('Error creating new user', 'error');
-		}
-	},
-}
+    await storeValue("usuario", usuario);
+    return usuario;
+  }
+};

@@ -10,7 +10,16 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "iconName": "double-chevron-down",
   "isDisabled": false,
   "isLoading": false,
@@ -23,6 +32,7 @@
   "mobileRightColumn": 18,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
+  "onClick": "{{ storeValue('filtroTabelaMembros', 'TODOS') }}",
   "parentColumnSpace": 2.134033203125,
   "parentId": "ovkq94ic0w",
   "parentRowSpace": 10,
@@ -33,5 +43,5 @@
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
   "widgetId": "o3zh7lmaar",
-  "widgetName": "IconButton5"
+  "widgetName": "verTodosMembros"
 }

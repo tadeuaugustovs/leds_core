@@ -43,7 +43,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 58,
+  "rightColumn": 64,
   "shouldTruncate": false,
   "text": "\n{{ \ngetMembros.data?.data?.flatMap(m => m.planos_de_trabalho || [])\n  .filter(p => p.statusBolsa === \"ATIVA\").length \n}}\n",
   "textAlign": "CENTER",

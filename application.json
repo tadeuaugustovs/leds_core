@@ -32,6 +32,10 @@
   "icon": "file",
   "pages": [
     {
+      "id": "Dashboard",
+      "isDefault": false
+    },
+    {
       "id": "Authentication",
       "isDefault": true
     },

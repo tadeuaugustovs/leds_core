@@ -2,10 +2,15 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 6,
-  "displayName": "Text",
   "dynamicBindingPathList": [
     {
+      "key": "truncateButtonColor"
+    },
+    {
       "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -13,33 +18,33 @@
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1rem",
   "fontStyle": "BOLD",
-  "hideCard": false,
-  "iconSVG": "/static/media/icon.97c59b52.svg",
-  "isDeprecated": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "xx7obgmjct",
-  "leftColumn": 1,
+  "key": "29q66lor0p",
+  "leftColumn": 2,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 4,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
   "overflow": "NONE",
-  "parentColumnSpace": 12.01953125,
-  "parentId": "6thz0umvhi",
+  "parentColumnSpace": 3.468505859375,
+  "parentId": "uffmcndf0u",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 19,
-  "searchTags": [
-    "typography",
-    "paragraph"
-  ],
+  "responsiveBehavior": "fill",
+  "rightColumn": 56,
   "shouldTruncate": false,
-  "text": "Usuários do LEDSCORE",
+  "text": "Total de algo filtrado: R$450,000",
   "textAlign": "LEFT",
-  "textColor": "#3f3f46",
+  "textColor": "#1e3a8a",
   "topRow": 2,
-  "truncateButtonColor": "#FFC13D",
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "6eeanjjswm",
-  "widgetName": "TitleCopy"
+  "widgetId": "9d6tact6f7",
+  "widgetName": "Text18"
 }

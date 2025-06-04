@@ -39,11 +39,9 @@
     "descricao",
     "createdAt",
     "updatedAt",
-    "publishedAt",
-    "valorTotalProjeto",
-    "valorBolsaProjeto"
+    "publishedAt"
   ],
-  "columnUpdatedAt": 1748924452055,
+  "columnUpdatedAt": 1749067142152,
   "columnWidthMap": {},
   "compactMode": "TALL",
   "customIsLoading": false,
@@ -83,12 +81,6 @@
       "key": "primaryColumns.publishedAt.computedValue"
     },
     {
-      "key": "primaryColumns.valorTotalProjeto.computedValue"
-    },
-    {
-      "key": "primaryColumns.valorBolsaProjeto.computedValue"
-    },
-    {
       "key": "cellBackground"
     },
     {
@@ -111,12 +103,6 @@
     },
     {
       "key": "primaryColumns.publishedAt.cellBackground"
-    },
-    {
-      "key": "primaryColumns.valorTotalProjeto.cellBackground"
-    },
-    {
-      "key": "primaryColumns.valorBolsaProjeto.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -154,7 +140,7 @@
   "mobileRightColumn": 36,
   "mobileTopRow": 23,
   "needsErrorInfo": false,
-  "onRowSelected": "{{\n  storeValue(\"projetoSelecionadoDocumentId\", Table5.selectedRow?.documentId);\n\n  setTimeout(() => {\n    Promise.all([\n      getValorOrcamento.run(),\n      getCapitalCusteioItens.run()\n    ])\n    .then(() => {\n      showModal(\"ModalProjetos\");\n    })\n    .catch((err) => {\n      showAlert(\"Erro ao carregar dados do projeto: \" + err.message, \"error\");\n    });\n  }, 5); // Delay de 5ms para garantir que o storeValue seja aplicado\n}}\n",
+  "onRowSelected": "{{\n  storeValue(\"projetoSelecionadoDocumentId\", Table5.selectedRow?.documentId);\n\n  setTimeout(() => {\n    Promise.all([\n getCapitalCusteioItens.run()\n    ])\n    .then(() => {\n      showModal(\"ModalProjetos\");\n    })\n    .catch((err) => {\n      showAlert(\"Erro ao carregar dados do projeto: \" + err.message, \"error\");\n    });\n  }, 5); // Delay de 5ms para garantir que o storeValue seja aplicado\n}}\n",
   "originalBottomRow": 38,
   "originalTopRow": 7,
   "parentColumnSpace": 24.265625,
@@ -391,74 +377,6 @@
       "label": "updatedAt",
       "notation": "standard",
       "originalId": "updatedAt",
-      "sticky": "",
-      "textColor": "#231f20",
-      "textSize": "1rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "valorBolsaProjeto": {
-      "alias": "valorBolsaProjeto",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
-      "columnType": "text",
-      "computedValue": "{{Table5.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"valorBolsaProjeto\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "valorBolsaProjeto",
-      "index": 8,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "valorBolsaProjeto",
-      "notation": "standard",
-      "originalId": "valorBolsaProjeto",
-      "sticky": "",
-      "textColor": "#231f20",
-      "textSize": "1rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "valorTotalProjeto": {
-      "alias": "valorTotalProjeto",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
-      "columnType": "text",
-      "computedValue": "{{Table5.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"valorTotalProjeto\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "valorTotalProjeto",
-      "index": 7,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "valorTotalProjeto",
-      "notation": "standard",
-      "originalId": "valorTotalProjeto",
       "sticky": "",
       "textColor": "#231f20",
       "textSize": "1rem",

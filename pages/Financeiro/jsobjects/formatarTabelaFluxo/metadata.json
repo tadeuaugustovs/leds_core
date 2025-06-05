@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68375c2c56cad916c8fc38e2_95a0c37b-a1b2-4fcf-a44e-3bd54374b16b",
+  "id": "Financeiro_formatarTabelaFluxo",
+  "unpublishedCollection": {
+    "name": "formatarTabelaFluxo",
+    "pageId": "Financeiro",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

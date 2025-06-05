@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 53,
+  "bottomRow": 54,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "7nud6wet66": {
@@ -95,7 +95,7 @@
   "mobileRightColumn": 33,
   "mobileTopRow": 85,
   "needsErrorInfo": true,
-  "originalBottomRow": 53,
+  "originalBottomRow": 54,
   "originalTopRow": 11,
   "parentColumnSpace": 14.234375,
   "parentId": "0",

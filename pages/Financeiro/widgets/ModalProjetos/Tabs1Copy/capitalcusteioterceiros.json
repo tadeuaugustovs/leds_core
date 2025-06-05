@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 68,
+  "bottomRow": 71,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -36,18 +36,15 @@
     "item",
     "total",
     "gasto",
-    "restante",
-    "documentId",
-    "projetos",
-    "EditActions1"
+    "restante"
   ],
-  "columnUpdatedAt": 1749102951946,
+  "columnUpdatedAt": 1749155339601,
   "columnWidthMap": {
     "EditActions1": 60,
     "gasto": 145,
-    "item": 215,
+    "item": 603,
     "orcamento": 136,
-    "restante": 266,
+    "restante": 211,
     "tipo": 102,
     "total": 164
   },
@@ -82,48 +79,18 @@
       "key": "primaryColumns.restante.computedValue"
     },
     {
-      "key": "primaryColumns.EditActions1.saveButtonColor"
-    },
-    {
-      "key": "primaryColumns.EditActions1.saveBorderRadius"
-    },
-    {
-      "key": "primaryColumns.EditActions1.discardBorderRadius"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isSaveDisabled"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isDiscardDisabled"
-    },
-    {
       "key": "primaryColumns.total.computedValue"
-    },
-    {
-      "key": "primaryColumns.documentId.computedValue"
     },
     {
       "key": "primaryColumns.tipo.computedValue"
     },
     {
       "key": "primaryColumns.tipo.cellBackground"
-    },
-    {
-      "key": "primaryColumns.projetos.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isSaveDisabled"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isDiscardDisabled"
-    },
-    {
-      "key": "primaryColumns.EditActions1.onSave"
     },
     {
       "key": "primaryColumns.tipo.cellBackground"
@@ -133,9 +100,6 @@
     }
   ],
   "dynamicTriggerPathList": [
-    {
-      "key": "primaryColumns.EditActions1.onSave"
-    },
     {
       "key": "onRowSelected"
     }
@@ -161,88 +125,13 @@
   "mobileRightColumn": 36,
   "mobileTopRow": 24,
   "needsErrorInfo": false,
-  "onRowSelected": "{{storeValue(\"nomeItemSelecionado\", capitalcusteioterceiros.selectedRow?.item);\nstoreValue(\"documentoDoItemSelecionado\", capitalcusteioterceiros.selectedRow?.documentId);\ngetItensDoFluxoPorItem.run(() => {\n  showModal(\"VerItens\");\n});\n\n}}",
+  "onRowSelected": "{{\n  getCapitalCusteio.data?.data.map(item => {\n    const id = item.id;\n    const documentId = item.documentId;\n    const tipo = item.tipo || \"-\";\n    const descricao = item.descricao || \"-\";\n\n    const relacionados = getItensDoFluxoPorItem.data?.data?.filter(\n      fluxo => fluxo.capital_custeio_item?.documentId === documentId\n    ) || [];\n\n    const total = relacionados.reduce((soma, fluxo) => {\n      const receita = Number(fluxo.receita) || 0;\n      const despesa = Number(fluxo.despesa) || 0;\n      return soma + receita + despesa;\n    }, 0);\n\n    const gasto = relacionados.reduce((soma, fluxo) => {\n      const despesa = Number(fluxo.despesa) || 0;\n      return soma + despesa;\n    }, 0);\n\n    const restante = relacionados.reduce((soma, fluxo) => {\n      return soma + (Number(fluxo.contacorrente) || 0);\n    }, 0);\n\n    return {\n      tipo,\n      item: descricao,\n      documentId,\n      total: total.toLocaleString(\"pt-BR\", { style: \"currency\", currency: \"BRL\" }),\n      gasto: gasto.toLocaleString(\"pt-BR\", { style: \"currency\", currency: \"BRL\" }),\n      restante: restante.toLocaleString(\"pt-BR\", { style: \"currency\", currency: \"BRL\" })\n    };\n  })\n}}\n",
   "originalBottomRow": 59,
   "originalTopRow": 11,
   "parentColumnSpace": 14.388281249999999,
   "parentId": "f6garpcig4",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "EditActions1": {
-      "alias": "EditActions1",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "buttonStyle": "rgb(3, 179, 101)",
-      "columnType": "editActions",
-      "computedValue": "",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "discardActionLabel": "Discard",
-      "discardBorderRadius": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "discardButtonColor": "#F22B2B",
-      "discardButtonVariant": "TERTIARY",
-      "discardIconAlign": "left",
-      "enableFilter": true,
-      "enableSort": true,
-      "id": "EditActions1",
-      "index": 7,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": true,
-      "isDisabled": false,
-      "isDiscardDisabled": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( !capitalcusteioterceiros.updatedRowIndices.includes(currentIndex)))}}",
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveDisabled": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( !capitalcusteioterceiros.updatedRowIndices.includes(currentIndex)))}}",
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Save / Discard",
-      "notation": "standard",
-      "onSave": "{{ updateFluxoCaixa.run() }}",
-      "originalId": "EditActions1",
-      "saveActionLabel": "Save",
-      "saveBorderRadius": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "saveButtonColor": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
-      "saveIconAlign": "left",
-      "sticky": "right",
-      "thousandSeparator": true,
-      "validation": {},
-      "width": 150
-    },
-    "documentId": {
-      "alias": "documentId",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"documentId\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "documentId",
-      "index": 7,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "documentId",
-      "notation": "standard",
-      "originalId": "documentId",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "gasto": {
       "alias": "gasto",
       "allowCellWrapping": false,
@@ -258,12 +147,12 @@
       "horizontalAlignment": "LEFT",
       "id": "gasto",
       "index": 5,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Gasto",
@@ -311,40 +200,6 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "projetos": {
-      "alias": "projetos",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"projetos\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "projetos",
-      "index": 6,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "projetos",
-      "notation": "standard",
-      "originalId": "projetos",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "restante": {
       "alias": "restante",
       "allowCellWrapping": false,
@@ -360,12 +215,12 @@
       "horizontalAlignment": "LEFT",
       "id": "restante",
       "index": 6,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Restante",
@@ -428,12 +283,12 @@
       "horizontalAlignment": "LEFT",
       "id": "total",
       "index": 6,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "total",
@@ -453,9 +308,9 @@
   "rightColumn": 62,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{\n  getCapitalCusteioItens.data?.data\n    ?.filter(item =>\n      appsmith.store.projetoSelecionadoDocumentId === \"TODOS\" ||\n      item.projetos?.some(p => p.documentId === appsmith.store.projetoSelecionadoDocumentId)\n    )\n    ?.sort((a, b) => {\n      if (a.tipo === \"CAPITAL\" && b.tipo === \"CUSTEIO\") return -1;\n      if (a.tipo === \"CUSTEIO\" && b.tipo === \"CAPITAL\") return 1;\n      return 0;\n    })\n    ?.map(item => ({\n      documentId: item.documentId,\n      tipo: item.tipo || \"-\",\n      item: item.item || \"-\",\n      total: \"R$ \" + (item.total || 0).toLocaleString(\"pt-BR\"),\n      gasto: \"R$ \" + (item.gasto || 0).toLocaleString(\"pt-BR\"),\n      restante: \"R$ \" + (item.restante || 0).toLocaleString(\"pt-BR\"),\n      projetos: item.projetos?.map(p => p.nome).join(\", \") || \"-\"\n    }))\n}}\n",
+  "tableData": "{{\n(() => {\n  const itens = getCapitalCusteioItens.data?.data || [];\n  const lancamentos = getItensFluxoCaixa.data?.data || [];\n\n  return itens.map(item => {\n    const id = item.id;\n    const nomeItem = item.descricao || \"-\";\n    const tipo = item.tipo || \"-\";\n\n    // Todos os lançamentos que referenciam este item\n    const relacionados = lancamentos.filter(l => l.capital_custeio_item?.id === id);\n\n    const totalGasto = relacionados.reduce((acc, l) => acc + (Number(l.despesa) || 0), 0);\n    const totalRecebido = relacionados.reduce((acc, l) => acc + (Number(l.receita) || 0), 0);\n    const saldo = totalRecebido - totalGasto;\n\n    return {\n      tipo,\n      item: nomeItem,\n      total: \"R$ \" + totalRecebido.toLocaleString(\"pt-BR\", { minimumFractionDigits: 2 }),\n      gasto: \"R$ \" + totalGasto.toLocaleString(\"pt-BR\", { minimumFractionDigits: 2 }),\n      restante: \"R$ \" + saldo.toLocaleString(\"pt-BR\", { minimumFractionDigits: 2 }),\n    };\n  });\n})()\n}}\n",
   "textSize": "0.875rem",
-  "topRow": 8,
+  "topRow": 15,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

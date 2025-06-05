@@ -7,21 +7,8 @@
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "7nud6wet66": {
-      "data": [
-        {
-          "x": "Product1",
-          "y": 20000
-        },
-        {
-          "x": "Product2",
-          "y": 22000
-        },
-        {
-          "x": "Product3",
-          "y": 32000
-        }
-      ],
-      "seriesName": "2023"
+      "data": "[\n  {\n    x: \"Gasto Total\",\n    y: getCapitalCusteioItens.data?.data\n      ?.filter(item =>\n        item.projetos?.some(p => p.documentId === appsmith.store.projetoSelecionadoDocumentId)\n      )\n      ?.reduce((acc, item) => acc + Number(item.GastoTotal || 0), 0)\n  },\n  {\n    x: \"Restante\",\n    y: getCapitalCusteioItens.data?.data\n      ?.filter(item =>\n        item.projetos?.some(p => p.documentId === appsmith.store.projetoSelecionadoDocumentId)\n      )\n      ?.reduce((acc, item) => acc + Number(item.restante || 0), 0)\n  },\n  {\n    x: \"Total Previsto\",\n    y: getCapitalCusteioItens.data?.data\n      ?.filter(item =>\n        item.projetos?.some(p => p.documentId === appsmith.store.projetoSelecionadoDocumentId)\n      )\n      ?.reduce((acc, item) => acc + Number(item.valorTotal || 0), 0)\n  }\n]\n",
+      "seriesName": ""
     }
   },
   "chartName": "Total/Restante",

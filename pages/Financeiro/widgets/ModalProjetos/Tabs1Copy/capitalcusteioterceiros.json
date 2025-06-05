@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 68,
+  "bottomRow": 69,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -34,13 +34,13 @@
   "columnOrder": [
     "tipo",
     "item",
-    "gasto",
     "total",
+    "gasto",
     "restante",
     "documentId",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1748881343319,
+  "columnUpdatedAt": 1749081896297,
   "columnWidthMap": {
     "EditActions1": 60,
     "gasto": 145,
@@ -415,7 +415,7 @@
   "rightColumn": 62,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{\n  getCapitalCusteioItens.data?.data\n    ?.filter(item => item.projetos?.some(p => p.documentId === appsmith.store.projetoSelecionadoDocumentId))\n    ?.sort((a, b) => {\n      // Ordena: CAPITAL primeiro, depois CUSTEIO\n      if (a.Tipo === \"CAPITAL\" && b.Tipo === \"CUSTEIO\") return -1;\n      if (a.Tipo === \"CUSTEIO\" && b.Tipo === \"CAPITAL\") return 1;\n      return 0;\n    })\n    ?.map(item => ({\n      documentId: item.documentId,\n      tipo: item.Tipo || \"-\",\n      item: item.item || \"-\",\n      total: \"R$ \" + (item.valorTotal || 0).toLocaleString(\"pt-BR\"),\n      gasto: \"R$ \" + (item.GastoTotal || 0).toLocaleString(\"pt-BR\"),\n      restante: \"R$ \" + (item.Restante || 0).toLocaleString(\"pt-BR\")\n    }))\n}}\n",
+  "tableData": "{{\n  getCapitalCusteioItens.data?.data\n    ?.filter(item =>\n      item.projetos?.some(p => p.documentId === appsmith.store.projetoSelecionadoDocumentId)\n    )\n    ?.sort((a, b) => {\n      if (a.tipo === \"CAPITAL\" && b.tipo === \"CUSTEIO\") return -1;\n      if (a.tipo === \"CUSTEIO\" && b.tipo === \"CAPITAL\") return 1;\n      return 0;\n    })\n    ?.map(item => ({\n      documentId: item.documentId,\n      tipo: item.tipo || \"-\",\n      item: item.item || \"-\",\n      total: \"R$ \" + (item.total || 0).toLocaleString(\"pt-BR\"),\n      gasto: \"R$ \" + (item.gasto || 0).toLocaleString(\"pt-BR\"),\n      restante: \"R$ \" + (item.restante || 0).toLocaleString(\"pt-BR\")\n    }))\n}}\n",
   "textSize": "0.875rem",
   "topRow": 8,
   "totalRecordsCount": 0,

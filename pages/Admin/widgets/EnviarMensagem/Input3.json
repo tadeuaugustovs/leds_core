@@ -3,18 +3,15 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 8,
+  "bottomRow": 14,
   "boxShadow": "none",
-  "defaultText": "{{\n  \"R$ \" + (\n    getCapitalCusteioItens.data?.data\n      ?.filter(item =>\n        item.projetos?.some(p => p.documentId === appsmith.store.projetoSelecionadoDocumentId)\n      )\n      ?.reduce((acc, item) => acc + (item.total || 0), 0)\n  ).toLocaleString(\"pt-BR\")\n}}\n",
+  "defaultText": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -25,34 +22,33 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "z0rly7dbym",
-  "label": "Valor Total",
+  "key": "q5n9jpfq82",
+  "label": "Título",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
-  "labelTextColor": "#1e3a8a",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 8,
-  "mobileLeftColumn": 7,
-  "mobileRightColumn": 27,
-  "mobileTopRow": 1,
+  "mobileBottomRow": 14,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "parentColumnSpace": 12.142578125,
-  "parentId": "f6garpcig4",
+  "parentColumnSpace": 10.96875,
+  "parentId": "p2f8xg28dz",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 19,
+  "rightColumn": 28,
   "showStepArrows": false,
-  "topRow": 1,
+  "topRow": 7,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "mp8udxp1y1",
-  "widgetName": "valortotal"
+  "widgetId": "28agnq0hcn",
+  "widgetName": "Input3"
 }

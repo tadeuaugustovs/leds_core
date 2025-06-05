@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 41,
+  "bottomRow": 16,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -22,26 +22,26 @@
   "leftColumn": 14,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
-  "originalBottomRow": 41,
-  "originalTopRow": 37,
+  "originalBottomRow": 16,
+  "originalTopRow": 12,
   "overflow": "NONE",
   "parentColumnSpace": 12.01953125,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 32,
+  "rightColumn": 38,
   "searchTags": [
     "typography",
     "paragraph"
   ],
   "shouldTruncate": false,
-  "text": "Usuários do LEDSCORE",
+  "text": "Enviar Mensagem para os Membros",
   "textAlign": "LEFT",
   "textColor": "#1e3a8a",
-  "topRow": 37,
+  "topRow": 12,
   "truncateButtonColor": "#FFC13D",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "6eeanjjswm",
-  "widgetName": "TitleCopy"
+  "widgetId": "uypyz5kjhx",
+  "widgetName": "TitleCopyCopy"
 }

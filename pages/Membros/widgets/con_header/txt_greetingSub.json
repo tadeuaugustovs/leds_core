@@ -1,59 +1,57 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 10,
+  "bottomRow": 5,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
     },
     {
+      "key": "fontFamily"
+    },
+    {
       "key": "borderRadius"
+    },
+    {
+      "key": "textColor"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
-  "fontFamily": "Montserrat",
-  "fontSize": "1.875rem",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "hideCard": false,
-  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
+  "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
   "isDeprecated": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "73053k0w83",
-  "leftColumn": 11,
+  "key": "a391ouhaqa",
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
-  "minWidth": 450,
-  "mobileBottomRow": 25,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 16,
-  "mobileTopRow": 21,
+  "originalBottomRow": 5,
+  "originalTopRow": 1,
   "overflow": "NONE",
-  "parentColumnSpace": 12.8603515625,
-  "parentId": "0",
+  "parentColumnSpace": 19.5,
+  "parentId": "ndu8pwt7nz",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "responsiveBehavior": "fill",
-  "rightColumn": 34,
+  "rightColumn": 17,
   "searchTags": [
     "typography",
     "paragraph",
     "label"
   ],
   "shouldTruncate": false,
-  "tags": [
-    "Suggested",
-    "Content"
-  ],
-  "text": "Administrativo",
+  "text": "Membros",
   "textAlign": "LEFT",
-  "textColor": "#1e3a8a",
-  "topRow": 6,
+  "textColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "4owe4ukkex",
-  "widgetName": "txt_scheduledMeetingsCopy"
+  "widgetId": "9jktxpx3fu",
+  "widgetName": "txt_greetingSub"
 }

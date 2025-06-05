@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 7,
   "boxShadow": "none",
-  "defaultText": "{{\"R$ \" + (\n  getCapitalCusteioItens.data?.data\n    ?.filter(item => item.projetos?.some(p => p.documentId === appsmith.store.projetoSelecionadoDocumentId))\n    ?.reduce((acc, item) => acc + (item.GastoTotal || 0), 0)\n).toLocaleString(\"pt-BR\")\n}}",
+  "defaultText": "{{\n  \"R$ \" + (\n    getCapitalCusteioItens.data?.data\n      ?.filter(item =>\n        item.projetos?.some(p => p.documentId === appsmith.store.projetoSelecionadoDocumentId)\n      )\n      ?.reduce((acc, item) => acc + (item.gasto || 0), 0)\n  ).toLocaleString(\"pt-BR\")\n}}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

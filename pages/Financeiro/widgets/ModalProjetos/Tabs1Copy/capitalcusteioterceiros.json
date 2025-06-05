@@ -38,9 +38,10 @@
     "gasto",
     "restante",
     "documentId",
+    "projetos",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1749081896297,
+  "columnUpdatedAt": 1749102951946,
   "columnWidthMap": {
     "EditActions1": 60,
     "gasto": 145,
@@ -106,6 +107,9 @@
     },
     {
       "key": "primaryColumns.tipo.cellBackground"
+    },
+    {
+      "key": "primaryColumns.projetos.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -307,6 +311,40 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "projetos": {
+      "alias": "projetos",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"projetos\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "projetos",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "projetos",
+      "notation": "standard",
+      "originalId": "projetos",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "restante": {
       "alias": "restante",
       "allowCellWrapping": false,
@@ -415,7 +453,7 @@
   "rightColumn": 62,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{\n  getCapitalCusteioItens.data?.data\n    ?.filter(item =>\n      item.projetos?.some(p => p.documentId === appsmith.store.projetoSelecionadoDocumentId)\n    )\n    ?.sort((a, b) => {\n      if (a.tipo === \"CAPITAL\" && b.tipo === \"CUSTEIO\") return -1;\n      if (a.tipo === \"CUSTEIO\" && b.tipo === \"CAPITAL\") return 1;\n      return 0;\n    })\n    ?.map(item => ({\n      documentId: item.documentId,\n      tipo: item.tipo || \"-\",\n      item: item.item || \"-\",\n      total: \"R$ \" + (item.total || 0).toLocaleString(\"pt-BR\"),\n      gasto: \"R$ \" + (item.gasto || 0).toLocaleString(\"pt-BR\"),\n      restante: \"R$ \" + (item.restante || 0).toLocaleString(\"pt-BR\")\n    }))\n}}\n",
+  "tableData": "{{\n  getCapitalCusteioItens.data?.data\n    ?.filter(item =>\n      appsmith.store.projetoSelecionadoDocumentId === \"TODOS\" ||\n      item.projetos?.some(p => p.documentId === appsmith.store.projetoSelecionadoDocumentId)\n    )\n    ?.sort((a, b) => {\n      if (a.tipo === \"CAPITAL\" && b.tipo === \"CUSTEIO\") return -1;\n      if (a.tipo === \"CUSTEIO\" && b.tipo === \"CAPITAL\") return 1;\n      return 0;\n    })\n    ?.map(item => ({\n      documentId: item.documentId,\n      tipo: item.tipo || \"-\",\n      item: item.item || \"-\",\n      total: \"R$ \" + (item.total || 0).toLocaleString(\"pt-BR\"),\n      gasto: \"R$ \" + (item.gasto || 0).toLocaleString(\"pt-BR\"),\n      restante: \"R$ \" + (item.restante || 0).toLocaleString(\"pt-BR\"),\n      projetos: item.projetos?.map(p => p.nome).join(\", \") || \"-\"\n    }))\n}}\n",
   "textSize": "0.875rem",
   "topRow": 8,
   "totalRecordsCount": 0,

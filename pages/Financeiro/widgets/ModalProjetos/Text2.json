@@ -39,7 +39,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 22,
   "shouldTruncate": false,
-  "text": "{{ Table5.selectedRow.nome }} ",
+  "text": "{{ \n  appsmith.store.projetoSelecionadoDocumentId === \"TODOS\" \n    ? \"Todos os Projetos\" \n    : Table5.selectedRow?.nome || \"—\" \n}}\n",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 0,

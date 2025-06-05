@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 31,
+  "bottomRow": 41,
   "boxShadow": "none",
   "chartData": {
     "a8rizw4eoi": {
@@ -84,7 +84,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "hkqv4ynkfl",
-  "labelOrientation": "auto",
+  "labelOrientation": "slant",
   "leftColumn": 0,
   "minWidth": 450,
   "mobileBottomRow": 33,

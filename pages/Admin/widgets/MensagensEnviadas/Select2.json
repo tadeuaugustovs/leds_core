@@ -47,7 +47,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 26,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"Blue\",\n    \"code\": \"BLUE\"\n  },\n  {\n    \"name\": \"Green\",\n    \"code\": \"GREEN\"\n  },\n  {\n    \"name\": \"Red\",\n    \"code\": \"RED\"\n  }\n]",
+  "sourceData": "[\n  {\n    \"name\": \"Alta\",\n    \"code\": \"ALTA\"\n  },\n  {\n    \"name\": \"Média\",\n    \"code\": \"MÉDIA\"\n  },\n  {\n    \"name\": \"Baixa\",\n    \"code\": \"BAIXA\"\n  }\n]",
   "topRow": 7,
   "type": "SELECT_WIDGET",
   "version": 1,

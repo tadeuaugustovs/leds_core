@@ -235,6 +235,51 @@
       "version": 1,
       "widgetId": "rwc9n5jc7s",
       "widgetName": "Canvas10Copy"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 450,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "b7uv39olgx",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 490,
+      "minWidth": 450,
+      "mobileBottomRow": 491,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 710.8203125,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "rjewgw46wh",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 710.8203125,
+      "tabId": "tabd0e479u6i4",
+      "tabName": "Add/Remover",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "dodwby5hh5",
+      "widgetName": "Canvas19"
     }
   ],
   "defaultTab": "{{ appsmith.store.abaSelecionada || \"Geral\" }}\n",
@@ -290,6 +335,13 @@
       "label": "Alocação",
       "positioning": "vertical",
       "widgetId": "zo72vx8b5r"
+    },
+    "tabd0e479u6i4": {
+      "id": "tabd0e479u6i4",
+      "index": 5,
+      "isVisible": true,
+      "label": "Add/Remover",
+      "widgetId": "dodwby5hh5"
     },
     "tabecoru5ux88": {
       "id": "tabecoru5ux88",

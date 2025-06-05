@@ -1,0 +1,53 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 30,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "499xgrvqqp",
+  "leftColumn": 2,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 20,
+  "mobileLeftColumn": 8,
+  "mobileRightColumn": 24,
+  "mobileTopRow": 16,
+  "needsErrorInfo": false,
+  "overflow": "NONE",
+  "parentColumnSpace": 3.913330078125,
+  "parentId": "4z4cna7a2o",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 61,
+  "shouldTruncate": false,
+  "text": "{{\n  getMembros.data?.data\n    ?.slice(-4)\n    ?.map((m) => {\n      const nome = m.nome || \"Sem nome\";\n      const criado = new Date(m.createdAt).toLocaleDateString(\"pt-BR\");\n      return `🟢 Novo membro: ${nome}\\n📅 Criado em: ${criado}`;\n    })\n    .reverse()\n    .join(\"\\n\\n\")\n    .trim()\n}}\n",
+  "textAlign": "LEFT",
+  "textColor": "#1e3a8a",
+  "topRow": 5,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "a4ym3ml2vg",
+  "widgetName": "Text2"
+}

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68375c2c56cad916c8fc38e2_d1826e95-cada-46d1-a200-a4b4bb889012",
+  "id": "Financeiro_getResumoFinanceiro",
+  "unpublishedCollection": {
+    "name": "getResumoFinanceiro",
+    "pageId": "Financeiro",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

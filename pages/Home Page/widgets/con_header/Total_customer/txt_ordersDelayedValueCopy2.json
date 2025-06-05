@@ -6,6 +6,9 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -32,7 +35,7 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "R$185.556",
+  "text": "{{ \n  \"R$ \" + (\n    getCapitalCusteioItens.data?.data\n      ?.reduce((acc, item) => acc + (item.restante || 0), 0)\n  ).toLocaleString(\"pt-BR\")\n}}\n",
   "textAlign": "LEFT",
   "textColor": "#fff",
   "topRow": 7,

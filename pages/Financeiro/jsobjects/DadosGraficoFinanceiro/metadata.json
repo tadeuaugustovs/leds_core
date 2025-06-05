@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68375c2c56cad916c8fc38e2_71adbc31-6fce-416e-bc4c-19c20b4096a9",
+  "id": "Financeiro_DadosGraficoFinanceiro",
+  "unpublishedCollection": {
+    "name": "DadosGraficoFinanceiro",
+    "pageId": "Financeiro",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

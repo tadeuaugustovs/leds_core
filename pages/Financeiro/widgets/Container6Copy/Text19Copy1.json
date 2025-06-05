@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 7,
+  "bottomRow": 5,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,7 +30,7 @@
   "mobileRightColumn": 21,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 7,
+  "originalBottomRow": 5,
   "originalTopRow": 0,
   "overflow": "NONE",
   "parentColumnSpace": 2.578857421875,
@@ -40,7 +40,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 56,
   "shouldTruncate": false,
-  "text": "Gasto Total em Assinaturas",
+  "text": "Gasto com Assinaturas",
   "textAlign": "CENTER",
   "textColor": "#ffffff",
   "topRow": 0,

@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 32,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "499xgrvqqp",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 20,
+  "mobileLeftColumn": 8,
+  "mobileRightColumn": 24,
+  "mobileTopRow": 16,
+  "needsErrorInfo": false,
+  "originalBottomRow": 31,
+  "originalTopRow": 6,
+  "overflow": "NONE",
+  "parentColumnSpace": 3.913330078125,
+  "parentId": "s86lxjfh6g",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 60,
+  "shouldTruncate": false,
+  "text": "{{\n  getCapitalCusteioItens.data?.data\n    ?.filter(i => typeof i.gasto === 'number')\n    ?.sort((a, b) => b.gasto - a.gasto)\n    ?.slice(0, 3)\n    ?.map(item => {\n      const nome = item.item || \"Item sem nome\";\n      const valor = item.gasto?.toLocaleString(\"pt-BR\", {\n        style: \"currency\",\n        currency: \"BRL\"\n      }) || \"R$ 0,00\";\n\n      const projeto = item.projetos?.length\n        ? item.projetos[0].nome\n        : \"Sem projeto\";\n\n      return `🧾 *${nome}*\\n💰 ${valor}\\n📁 Projeto: ${projeto}`;\n    })\n    .join(\"\\n\\n\")\n}}\n",
+  "textAlign": "LEFT",
+  "textColor": "#1e3a8a",
+  "topRow": 7,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "68gfhzwyty",
+  "widgetName": "Text2Copy"
+}

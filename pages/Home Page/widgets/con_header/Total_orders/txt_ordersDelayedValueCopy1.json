@@ -6,6 +6,9 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -32,7 +35,7 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "R$500.000",
+  "text": "{{ \n  \"R$ \" + (\n    getMembros.data?.data?.flatMap(m => m.planos_de_trabalho || [])\n      .reduce((acc, plano) => acc + (plano?.bolsa?.valor || 0), 0)\n  ).toLocaleString(\"pt-BR\")\n}}\n",
   "textAlign": "LEFT",
   "textColor": "#fff",
   "topRow": 7,

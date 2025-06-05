@@ -9,15 +9,15 @@
       "key": "truncateButtonColor"
     },
     {
-      "key": "fontFamily"
+      "key": "borderRadius"
     },
     {
-      "key": "borderRadius"
+      "key": "text"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
-  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontFamily": "Inter",
   "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
@@ -40,7 +40,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 58,
   "shouldTruncate": false,
-  "text": "R$500,00",
+  "text": "{{ \"R$ \" + getResumoFinanceiro.getResumoFinanceiro().bolsas.toLocaleString(\"pt-BR\") }}",
   "textAlign": "CENTER",
   "textColor": "#1e3a8a",
   "topRow": 0,

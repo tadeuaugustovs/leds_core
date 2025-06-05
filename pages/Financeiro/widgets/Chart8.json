@@ -7,8 +7,8 @@
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "7nud6wet66": {
-      "data": "[\n  {\n    x: \"Gasto Total\",\n    y: getCapitalCusteioItens.data?.data\n      ?.filter(item =>\n        item.projetos?.some(p => p.documentId === appsmith.store.projetoSelecionadoDocumentId)\n      )\n      ?.reduce((acc, item) => acc + Number(item.GastoTotal || 0), 0)\n  },\n  {\n    x: \"Restante\",\n    y: getCapitalCusteioItens.data?.data\n      ?.filter(item =>\n        item.projetos?.some(p => p.documentId === appsmith.store.projetoSelecionadoDocumentId)\n      )\n      ?.reduce((acc, item) => acc + Number(item.restante || 0), 0)\n  },\n  {\n    x: \"Total Previsto\",\n    y: getCapitalCusteioItens.data?.data\n      ?.filter(item =>\n        item.projetos?.some(p => p.documentId === appsmith.store.projetoSelecionadoDocumentId)\n      )\n      ?.reduce((acc, item) => acc + Number(item.valorTotal || 0), 0)\n  }\n]\n",
-      "seriesName": ""
+      "data": "{{ DadosGraficoFinanceiro.getDadosGraficoFinanceiro() }}",
+      "seriesName": "Valores Financeiros"
     }
   },
   "chartName": "Total/Restante",
@@ -76,6 +76,9 @@
     },
     {
       "key": "fontFamily"
+    },
+    {
+      "key": "chartData.7nud6wet66.data"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -99,7 +102,8 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 47,
+  "rightColumn": 48,
+  "setAdaptiveYMin": true,
   "showDataPointLabel": false,
   "topRow": 11,
   "type": "CHART_WIDGET",
@@ -107,5 +111,5 @@
   "widgetId": "hux2kwrg5w",
   "widgetName": "Chart8",
   "xAxisName": "\n",
-  "yAxisName": "Revenue($)"
+  "yAxisName": ""
 }

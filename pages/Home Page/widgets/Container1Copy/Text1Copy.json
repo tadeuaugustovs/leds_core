@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 84,
+  "bottomRow": 7,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,45 +11,42 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
+  "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
   "key": "o6dpdokie9",
-  "leftColumn": 20,
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 84,
-  "mobileLeftColumn": 20,
-  "mobileRightColumn": 36,
-  "mobileTopRow": 80,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 18,
+  "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 84,
-  "originalTopRow": 80,
+  "originalBottomRow": 5,
+  "originalTopRow": 1,
   "overflow": "NONE",
-  "parentColumnSpace": 14.234375,
-  "parentId": "0",
+  "parentColumnSpace": 3.913330078125,
+  "parentId": "s86lxjfh6g",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 36,
+  "rightColumn": 62,
   "shouldTruncate": false,
-  "text": "{{ typeof getCapitalCusteioItens.data?.data[0]?.valorTotal }}\n",
+  "text": "Maiores despesas hoje",
   "textAlign": "LEFT",
-  "textColor": "#231F20",
-  "topRow": 80,
+  "textColor": "#1e3a8a",
+  "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "sznr9gxk24",
-  "widgetName": "Text21"
+  "widgetId": "raiewlrppq",
+  "widgetName": "Text1Copy"
 }

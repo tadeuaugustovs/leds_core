@@ -11,7 +11,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "iconAlign": "left",
   "iconName": "archive",
   "isDefaultClickDisabled": true,
@@ -26,6 +30,7 @@
   "mobileRightColumn": 48,
   "mobileTopRow": 13,
   "needsErrorInfo": false,
+  "onClick": "{{showModal(MensagensEnviadas.name);}}",
   "originalBottomRow": 27,
   "originalTopRow": 18,
   "parentColumnSpace": 14.234375,

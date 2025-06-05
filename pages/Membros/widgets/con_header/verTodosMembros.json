@@ -1,0 +1,47 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "boxShadow": "none",
+  "buttonColor": "#ffffff",
+  "buttonVariant": "TERTIARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "double-chevron-down",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "b8kj4tv0mp",
+  "leftColumn": 61,
+  "minWidth": 50,
+  "mobileBottomRow": 10,
+  "mobileLeftColumn": 14,
+  "mobileRightColumn": 18,
+  "mobileTopRow": 6,
+  "needsErrorInfo": false,
+  "onClick": "{{ storeValue('filtroTabelaMembros', 'TODOS') }}",
+  "parentColumnSpace": 2.134033203125,
+  "parentId": "ndu8pwt7nz",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "topRow": 2,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "o3zh7lmaar",
+  "widgetName": "verTodosMembros"
+}

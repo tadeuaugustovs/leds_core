@@ -8,7 +8,7 @@
   "chartData": {
     "9kj93g25do": {
       "color": "#192550",
-      "data": "[\n  {\n    \"x\": \"ConectaFapes\",\n    \"y\": 15000\n  },\n  {\n    \"x\": \"AgentES\",\n    \"y\": 22000\n  }\n]",
+      "data": "{{ DadosGraficoGastosProjetos.getGastoPorProjeto() }}",
       "seriesName": "Projetos"
     }
   },
@@ -71,6 +71,9 @@
     },
     {
       "key": "fontFamily"
+    },
+    {
+      "key": "chartData.9kj93g25do.data"
     }
   ],
   "dynamicTriggerPathList": [],

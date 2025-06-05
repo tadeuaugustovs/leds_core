@@ -8,7 +8,7 @@
   "chartData": {
     "7nud6wet66": {
       "color": "#1e3a8a",
-      "data": "{{ DadosGraficoGastosProjetos.getGastoPorProjeto() }}\n",
+      "data": "{{ DadosGraficoGastosProjetos1.getGastoPorProjeto() }}\n",
       "seriesName": "Projetos"
     }
   },

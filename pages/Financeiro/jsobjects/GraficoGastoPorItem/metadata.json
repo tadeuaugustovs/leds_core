@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68375c2c56cad916c8fc38e2_77778137-1883-4514-9e9f-2ecc215bdeae",
+  "id": "Financeiro_GraficoGastoPorItem",
+  "unpublishedCollection": {
+    "name": "GraficoGastoPorItem",
+    "pageId": "Financeiro",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

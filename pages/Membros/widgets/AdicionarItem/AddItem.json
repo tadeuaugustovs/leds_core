@@ -1,9 +1,7 @@
 {
   "animateLoading": true,
-  "backgroundColor": "",
-  "borderColor": "",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 6,
+  "bottomRow": 5,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -13,9 +11,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -25,33 +20,29 @@
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "qbev3hpq6c",
-  "leftColumn": 42,
+  "key": "iokjweugwg",
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 4,
-  "mobileLeftColumn": 5,
-  "mobileRightColumn": 21,
-  "mobileTopRow": 0,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 6,
-  "originalTopRow": 0,
   "overflow": "NONE",
-  "parentColumnSpace": 1.8828964233398438,
-  "parentId": "u98q57nhie",
-  "parentRowSpace": 10,
+  "parentId": "p5ao0fzw9j",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 41,
   "shouldTruncate": false,
-  "text": "\n{{ \ngetMembros.data?.data?.flatMap(m => m.planos_de_trabalho || [])\n  .filter(p => p.statusBolsa === \"ATIVA\").length \n}}\n",
-  "textAlign": "CENTER",
-  "textColor": "green",
-  "topRow": 0,
+  "text": "Adicionar Informação",
+  "textAlign": "LEFT",
+  "textColor": "#1e3a8a",
+  "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "hcz91njzb6",
-  "widgetName": "Text6"
+  "widgetId": "fa3l5x19i1",
+  "widgetName": "AddItem"
 }

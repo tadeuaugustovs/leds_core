@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 5,
   "boxShadow": "none",
-  "defaultText": "{{\n(() => {\n  const totalOrcadoBolsas = getValorOrcamento.data?.data?.[0]?.valor || 0;\n\n  const totalUsadoBolsas = Array.isArray(getMembros.data?.data)\n    ? getMembros.data.data.flatMap(membro =>\n        (membro.planos_de_trabalho || [])\n          .filter(plano => plano?.bolsa?.valor)\n          .map(plano => plano.bolsa.valor || 0)\n      ).reduce((acc, val) => acc + val, 0)\n    : 0;\n\n  const restante = totalOrcadoBolsas - totalUsadoBolsas;\n\n  return \"R$ \" + restante.toLocaleString(\"pt-BR\");\n})()\n}}\n",
+  "defaultText": "{{\n  getMembros.data?.data\n    ?.flatMap(m => m.planos_de_trabalho || [])\n    ?.filter(p =>\n      p.bolsa?.valor &&\n      ['ATIVA', 'PAUSADA'].includes(p.statusBolsa) &&\n      (\n        appsmith.store.projetoSelecionadoDocumentId === \"TODOS\" ||\n        p.projetos?.some(proj => proj?.documentId === appsmith.store.projetoSelecionadoDocumentId)\n      )\n    )\n    ?.map(p => Number(p.bolsa.valor) || 0)\n    ?.reduce((a, b) => a + b, 0)\n    ?.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })\n}}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -33,7 +33,7 @@
   "labelTextColor": "#231f20",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 43,
+  "leftColumn": 48,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -48,7 +48,7 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 58,
+  "rightColumn": 63,
   "showStepArrows": false,
   "topRow": 1,
   "type": "INPUT_WIDGET_V2",

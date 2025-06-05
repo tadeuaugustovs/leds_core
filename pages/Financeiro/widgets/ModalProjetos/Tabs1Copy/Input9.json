@@ -3,18 +3,15 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 6,
+  "bottomRow": 8,
   "boxShadow": "none",
-  "defaultText": "{{\n  getMembros.data?.data\n    ?.flatMap(m => m.planos_de_trabalho || [])\n    ?.filter(p =>\n      p?.bolsa?.valor &&\n      p.statusBolsa === 'ATIVA' &&\n      (\n        appsmith.store.projetoSelecionadoDocumentId === \"TODOS\" ||\n        p.projetos?.some(proj => proj.documentId === appsmith.store.projetoSelecionadoDocumentId)\n      )\n    )\n    ?.reduce((total, p) => total + Number(p.bolsa.valor || 0), 0)\n    ?.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) || \"R$ 0,00\"\n}}\n",
+  "defaultText": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -25,33 +22,33 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "z0rly7dbym",
-  "label": "Total em Bolsas:",
+  "key": "6tbkwloxwi",
+  "label": "Valor Planejado",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 0,
+  "leftColumn": 34,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 9,
-  "mobileLeftColumn": 11,
-  "mobileRightColumn": 31,
-  "mobileTopRow": 2,
+  "mobileBottomRow": 87,
+  "mobileLeftColumn": 17,
+  "mobileRightColumn": 37,
+  "mobileTopRow": 80,
   "needsErrorInfo": false,
-  "parentColumnSpace": 12.142578125,
+  "parentColumnSpace": 13.200781249999999,
   "parentId": "aooibuimzs",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 16,
+  "rightColumn": 48,
   "showStepArrows": false,
   "topRow": 1,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "dyr7mtstqv",
-  "widgetName": "Input1"
+  "widgetId": "jnga1led1b",
+  "widgetName": "Input9"
 }

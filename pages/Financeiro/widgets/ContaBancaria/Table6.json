@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 58,
+  "bottomRow": 67,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -34,17 +34,14 @@
   },
   "columnOrder": [
     "documentId",
-    "tipoLinha",
     "descricao",
     "data",
     "situacao",
     "receita",
     "despesa",
-    "contacorrente",
-    "ano",
-    "mes"
+    "contacorrente"
   ],
-  "columnUpdatedAt": 1749155176838,
+  "columnUpdatedAt": 1749173960259,
   "columnWidthMap": {
     "descricao": 177
   },
@@ -76,9 +73,6 @@
       "key": "primaryColumns.documentId.cellBackground"
     },
     {
-      "key": "primaryColumns.tipoLinha.computedValue"
-    },
-    {
       "key": "primaryColumns.descricao.computedValue"
     },
     {
@@ -95,12 +89,6 @@
     },
     {
       "key": "primaryColumns.contacorrente.computedValue"
-    },
-    {
-      "key": "primaryColumns.ano.computedValue"
-    },
-    {
-      "key": "primaryColumns.mes.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -133,44 +121,12 @@
   "mobileRightColumn": 36,
   "mobileTopRow": 17,
   "needsErrorInfo": false,
+  "originalBottomRow": 59,
+  "originalTopRow": 21,
   "parentColumnSpace": 12.34375,
   "parentId": "2u9n92bl3l",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "ano": {
-      "alias": "ano",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "\n",
-      "columnType": "number",
-      "computedValue": "{{Table6.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"ano\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "ano",
-      "index": 8,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "ano",
-      "notation": "standard",
-      "originalId": "ano",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "contacorrente": {
       "alias": "contacorrente",
       "allowCellWrapping": false,
@@ -339,40 +295,6 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "mes": {
-      "alias": "mes",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "\n",
-      "columnType": "number",
-      "computedValue": "{{Table6.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"mes\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "mes",
-      "index": 9,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "mes",
-      "notation": "standard",
-      "originalId": "mes",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "receita": {
       "alias": "receita",
       "allowCellWrapping": false,
@@ -440,49 +362,15 @@
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
-    },
-    "tipoLinha": {
-      "alias": "tipoLinha",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "\n",
-      "columnType": "text",
-      "computedValue": "{{Table6.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"tipoLinha\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "tipoLinha",
-      "index": 0,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "tipoLinha",
-      "notation": "standard",
-      "originalId": "tipoLinha",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
     }
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "searchKey": "",
-  "tableData": "{{\n(() => {\n  const dados = getItensFluxoCaixa.data?.data || [];\n\n  const formatado = dados\n    .sort((a, b) => new Date(b.data) - new Date(a.data))\n    .map(item => {\n      const dataObj = new Date(item.data);\n      return {\n        documentId: item.documentId,\n        tipoLinha: \"registro\",\n        ano: dataObj.getFullYear(),\n        mes: dataObj.getMonth(),\n        data: dataObj.toLocaleDateString(\"pt-BR\"),\n        descricao: item.descricao || \"-\",\n        situacao: item.situacao || \"-\",\n        receita: item.receita != null \n          ? \"R$ \" + Number(item.receita).toLocaleString(\"pt-BR\", { minimumFractionDigits: 2 }) \n          : \"-\",\n        despesa: item.despesa != null \n          ? \"R$ \" + Number(item.despesa).toLocaleString(\"pt-BR\", { minimumFractionDigits: 2 }) \n          : \"-\",\n        contacorrente: item.contacorrente != null \n          ? \"R$ \" + Number(item.contacorrente).toLocaleString(\"pt-BR\", { minimumFractionDigits: 2 }) \n          : \"-\"\n      };\n    });\n\n  const resultadoFinal = [];\n  let ultimoAno = null;\n  let ultimoMes = null;\n\n  for (const item of formatado) {\n    const { ano, mes } = item;\n\n    if (ano !== ultimoAno) {\n      resultadoFinal.push({\n        tipoLinha: \"fechamento_ano\",\n        descricao: `Fechamento ${ano}`,\n        data: \"\",\n        situacao: \"\",\n        receita: \"\",\n        despesa: \"\",\n        contacorrente: \"\"\n      });\n      ultimoAno = ano;\n      ultimoMes = null; // força fechamento de mês também\n    }\n\n    if (mes !== ultimoMes) {\n      resultadoFinal.push({\n        tipoLinha: \"fechamento_mes\",\n        descricao: `Fechamento ${(\"0\" + (mes + 1)).slice(-2)}/${ano}`,\n        data: \"\",\n        situacao: \"\",\n        receita: \"\",\n        despesa: \"\",\n        contacorrente: \"\"\n      });\n      ultimoMes = mes;\n    }\n\n    resultadoFinal.push(item);\n  }\n\n  return resultadoFinal;\n})()\n}}\n",
+  "tableData": "{{\n(() => {\n  const dadosApi = getItensFluxoCaixa.data?.data || [];\n  const dadosNovos = appsmith.store.itensBancarios || [];\n\n  const dadosCombinados = [...dadosApi, ...dadosNovos];\n\n  return dadosCombinados\n    .sort((a, b) => new Date(b.data) - new Date(a.data))\n    .map(item => {\n      const dataObj = new Date(item.data);\n      return {\n        documentId: item.documentId || null,\n        data: item.data \n          ? dataObj.toLocaleDateString(\"pt-BR\") \n          : \"-\",\n        descricao: item.descricao || \"-\",\n        situacao: item.situacao || \"-\",\n        receita: item.receita != null \n          ? \"R$ \" + Number(item.receita).toLocaleString(\"pt-BR\", { minimumFractionDigits: 2 }) \n          : \"-\",\n        despesa: item.despesa != null \n          ? \"R$ \" + Number(item.despesa).toLocaleString(\"pt-BR\", { minimumFractionDigits: 2 }) \n          : \"-\",\n        contacorrente: item.contacorrente != null \n          ? \"R$ \" + Number(item.contacorrente).toLocaleString(\"pt-BR\", { minimumFractionDigits: 2 }) \n          : \"-\"\n      };\n    });\n})()\n}}\n",
   "textSize": "0.875rem",
-  "topRow": 16,
+  "topRow": 23,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

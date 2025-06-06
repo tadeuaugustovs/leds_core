@@ -1,15 +1,15 @@
 {
   "data": {
-    "nome_item": "{{ InputItem.text || '' }}",
-    "total": {{ InputTotal.text || 0 }},
-    "restante": {{ InputRestante.text || 0 }},
-    "gasto": {{ InputGasto.text || 0 }},
-    "Capital": "{{ SelectCapital.selectedOptionValue || null }}",
-    "Custeio": "{{ Select2.selectedOptionValue || null }}",
-    "projeto": {
+    "descricao": "{{InputDescricao.text}}",
+    "receita": {{Number(InputReceita.text.replace(',', '.')) || 0}},
+    "despesa": {{Number(InputDespesa.text.replace(',', '.')) || 0}},
+    "contacorrente": {{Number(ContaCorrente.text.replace(',', '.')) || 0}},
+    "data": "{{SelecionarData.selectedDate}}",
+    "situacao": "{{InputSituacao.text || 'Executado'}}",
+    "capital_custeio_item": {
       "connect": [
         {
-          "documentId": "{{ appsmith.store.projetoSelecionadoDocumentId }}"
+          "documentId": "{{appsmith.store.documentoDoItemSelecionado}}"
         }
       ]
     }

@@ -8,9 +8,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -21,7 +18,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "98vhjz1mbl",
-  "leftColumn": 2,
+  "leftColumn": 3,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -34,9 +31,9 @@
   "parentId": "sdoeqowvy1",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 33,
+  "rightColumn": 50,
   "shouldTruncate": false,
-  "text": "Adicionar item no projeto {{ Table5.selectedRow.nome }} ",
+  "text": "Adicionar item na Conta Bancaria",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 2,

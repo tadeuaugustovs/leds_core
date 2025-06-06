@@ -1,0 +1,57 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 38,
+  "boxShadow": "none",
+  "defaultText": "{{(() => {\n  const dados = getItensFluxoCaixa.data?.data || [];\n  const ordenado = dados.sort((a, b) => new Date(b.data) - new Date(a.data));\n  const primeiro = ordenado[0];\n  return Number(primeiro?.contacorrente || 0).toLocaleString(\"pt-BR\", { style: \"currency\", currency: \"BRL\" });\n})()\n\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "lz8i9y7v1s",
+  "label": "Valor Atual da Conta Corrente",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 31,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 38,
+  "mobileLeftColumn": 24,
+  "mobileRightColumn": 44,
+  "mobileTopRow": 31,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 7.600781250000001,
+  "parentId": "sdoeqowvy1",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 58,
+  "showStepArrows": false,
+  "topRow": 31,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "1uf0z9phf2",
+  "widgetName": "InputContaCorrenteAtual"
+}

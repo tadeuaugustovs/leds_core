@@ -30,7 +30,7 @@
   "mobileRightColumn": 60,
   "mobileTopRow": 20,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(Modal2.name);}}",
+  "onClick": "{{showModal(modalUsuario.name);}}",
   "originalBottomRow": 41,
   "originalTopRow": 37,
   "parentColumnSpace": 11.2529296875,

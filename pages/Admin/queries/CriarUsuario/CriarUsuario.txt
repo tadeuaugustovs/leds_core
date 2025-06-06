@@ -1,0 +1,7 @@
+{
+  "data": {
+    "nome": "{{ InputNome.text }}",
+    "email": "{{ InputEmail.text }}",
+    "senha": "{{ InputSenha.text }}"
+  }
+}

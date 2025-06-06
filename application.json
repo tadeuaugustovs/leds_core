@@ -54,18 +54,6 @@
     {
       "id": "ConectaFapes",
       "isDefault": false
-    },
-    {
-      "id": "AgentES",
-      "isDefault": false
-    },
-    {
-      "id": "ProjetoTemplate",
-      "isDefault": false
-    },
-    {
-      "id": "Membros Copy",
-      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

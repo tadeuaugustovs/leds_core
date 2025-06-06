@@ -144,6 +144,51 @@
       "version": 1,
       "widgetId": "ryqs2r4eer",
       "widgetName": "Canvas16"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 360,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "3gubul9cvd",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 400,
+      "minWidth": 450,
+      "mobileBottomRow": 401,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 793,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "8z01ojoswj",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 793,
+      "tabId": "tab0cbi2zdpkk",
+      "tabName": "Todas",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "yluq32pjtx",
+      "widgetName": "Canvas17"
     }
   ],
   "defaultTab": "Alta",
@@ -180,9 +225,18 @@
   "shouldScrollContents": true,
   "shouldShowTabs": true,
   "tabsObj": {
+    "tab0cbi2zdpkk": {
+      "id": "tab0cbi2zdpkk",
+      "index": 0,
+      "isDuplicateLabel": false,
+      "isVisible": true,
+      "label": "Todas",
+      "widgetId": "yluq32pjtx"
+    },
     "tab1": {
       "id": "tab1",
-      "index": 0,
+      "index": 1,
+      "isDuplicateLabel": false,
       "isVisible": true,
       "label": "Alta",
       "positioning": "vertical",
@@ -190,7 +244,8 @@
     },
     "tab2": {
       "id": "tab2",
-      "index": 1,
+      "index": 2,
+      "isDuplicateLabel": false,
       "isVisible": true,
       "label": "Média",
       "positioning": "vertical",
@@ -198,7 +253,8 @@
     },
     "tab6pfzecpgag": {
       "id": "tab6pfzecpgag",
-      "index": 2,
+      "index": 3,
+      "isDuplicateLabel": false,
       "isVisible": true,
       "label": "Baixa",
       "widgetId": "ryqs2r4eer"

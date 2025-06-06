@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "bottomRow": 6,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,42 +11,43 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "textColor"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1.25rem",
-  "fontStyle": "BOLD",
+  "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
-  "key": "o6dpdokie9",
-  "leftColumn": 1,
+  "key": "gvfnptrugq",
+  "leftColumn": 3,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
   "mobileBottomRow": 5,
-  "mobileLeftColumn": 2,
-  "mobileRightColumn": 18,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 41,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 7,
+  "originalBottomRow": 5,
   "originalTopRow": 1,
   "overflow": "NONE",
-  "parentColumnSpace": 3.913330078125,
-  "parentId": "s86lxjfh6g",
-  "parentRowSpace": 10,
+  "parentId": "wg2p639ewa",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
+  "rightColumn": 53,
   "shouldTruncate": false,
-  "text": "Últimos Acessos",
+  "text": "Adicionar Usuário ao LEDSCORE",
   "textAlign": "LEFT",
-  "textColor": "#1e3a8a",
-  "topRow": 1,
+  "textColor": "{{appsmith.theme.colors.primaryColor}}",
+  "topRow": 2,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "raiewlrppq",
-  "widgetName": "Text1Copy"
+  "widgetId": "ky7ri8n25a",
+  "widgetName": "AdicionarUsuario"
 }

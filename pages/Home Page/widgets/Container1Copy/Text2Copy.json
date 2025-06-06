@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 32,
+  "bottomRow": 30,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -46,7 +46,7 @@
   "text": "{{\n  getCapitalCusteioItens.data?.data\n    ?.filter(i => typeof i.gasto === 'number')\n    ?.sort((a, b) => b.gasto - a.gasto)\n    ?.slice(0, 3)\n    ?.map(item => {\n      const nome = item.item || \"Item sem nome\";\n      const valor = item.gasto?.toLocaleString(\"pt-BR\", {\n        style: \"currency\",\n        currency: \"BRL\"\n      }) || \"R$ 0,00\";\n\n      const projeto = item.projetos?.length\n        ? item.projetos[0].nome\n        : \"Sem projeto\";\n\n      return `🧾 *${nome}*\\n💰 ${valor}\\n📁 Projeto: ${projeto}`;\n    })\n    .join(\"\\n\\n\")\n}}\n",
   "textAlign": "LEFT",
   "textColor": "#1e3a8a",
-  "topRow": 7,
+  "topRow": 5,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

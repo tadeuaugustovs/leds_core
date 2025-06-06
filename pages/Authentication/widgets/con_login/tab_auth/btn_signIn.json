@@ -31,7 +31,7 @@
   "isVisible": true,
   "key": "d80868s2dr",
   "leftColumn": 8,
-  "onClick": "{{\n  const email = InputEmail.text?.trim();\n  const senha = InputSenha.text?.trim();\n\n  if (!email || !senha) {\n    showAlert(\"Preencha o email e a senha para continuar.\", \"warning\");\n    return;\n  }\n\n  verificarAcesso.verificarAcesso()\n    .then((usuario) => {\n      showAlert(\"Login realizado com sucesso\", \"success\");\n\n      setTimeout(() => {\n        navigateTo(\"Home Page\", \"SAME_WINDOW\");\n      }, 300);\n    })\n    .catch((err) => {\n      showAlert(\"Erro ao verificar acesso: \" + err.message, \"error\");\n    });\n}}\n",
+  "onClick": "{{\n  (async () => {\n    const email = InputEmail.text?.trim();\n    const senha = InputSenha.text?.trim();\n\n    if (!email || !senha) {\n      showAlert(\"Preencha o email e a senha para continuar.\", \"warning\");\n      return;\n    }\n\n    verificarAcesso.verificarAcesso()\n      .then((usuario) => {\n        showAlert(\"Login realizado com sucesso\", \"success\");\n\n        setTimeout(() => {\n          navigateTo(\"Home Page\", \"SAME_WINDOW\");\n        }, 300);\n      })\n      .catch((err) => {\n        showAlert(\"Erro ao verificar acesso: \" + err.message, \"error\");\n      });\n  })();\n}}\n",
   "originalBottomRow": 46,
   "originalTopRow": 41,
   "parentColumnSpace": 18.1875,

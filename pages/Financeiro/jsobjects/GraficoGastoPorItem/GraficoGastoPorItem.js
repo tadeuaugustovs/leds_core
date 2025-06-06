@@ -1,16 +1,15 @@
 export default {
   porItem: () => {
-    const projetoId = Table5.selectedRow?.documentId;
     const itens = getCapitalCusteioItens.data?.data || [];
+    const movimentos = getItensDoFluxoCompleto.data?.data || [];
 
-    const filtrados = itens.filter(item =>
-      item.projetos?.some(p => p.documentId === projetoId)
-    );
+    const dados = itens.map(item => {
+      const gasto = movimentos
+        .filter(mov => mov.capital_custeio_item?.documentId === item.documentId)
+        .reduce((soma, mov) => soma + Math.abs(Number(mov.despesa || 0)), 0);
 
-    const dados = filtrados.map(item => {
-      const gasto = item.gasto || 0;
       return {
-        x: item.item || 'Sem nome',
+        x: item.descricao || item.item || 'Sem nome',
         y: gasto,
         label: gasto.toLocaleString("pt-BR", {
           style: "currency",
@@ -19,9 +18,7 @@ export default {
       };
     });
 
-    // Ordena decrescente pelo gasto
     dados.sort((a, b) => b.y - a.y);
-
     return dados;
   }
 }

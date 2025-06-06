@@ -32,15 +32,15 @@
     }
   },
   "columnOrder": [
+    "tipo",
     "item",
     "total",
-    "documentId",
-    "tipo",
     "gasto",
     "restante",
+    "documentId",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1749168181969,
+  "columnUpdatedAt": 1749223458209,
   "columnWidthMap": {
     "EditActions1": 60,
     "gasto": 145,
@@ -103,6 +103,18 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "primaryColumns.tipo.cellBackground"
+    },
+    {
+      "key": "primaryColumns.tipo.textColor"
+    },
+    {
+      "key": "primaryColumns.total.cellBackground"
+    },
+    {
+      "key": "primaryColumns.total.textColor"
     }
   ],
   "dynamicPropertyPathList": [
@@ -117,6 +129,18 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "primaryColumns.tipo.cellBackground"
+    },
+    {
+      "key": "primaryColumns.tipo.textColor"
+    },
+    {
+      "key": "primaryColumns.total.cellBackground"
+    },
+    {
+      "key": "primaryColumns.total.textColor"
     }
   ],
   "dynamicTriggerPathList": [
@@ -138,7 +162,7 @@
   "isVisibleSearch": true,
   "key": "chaelok04u",
   "label": "Data",
-  "leftColumn": 1,
+  "leftColumn": 0,
   "minWidth": 450,
   "mobileBottomRow": 52,
   "mobileLeftColumn": 2,
@@ -332,7 +356,7 @@
       "alias": "tipo",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
+      "cellBackground": "{{(() => { const tableData = capitalcusteioterceiros.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \n  currentRow.tipo === \"CAPITAL\" \n    ? \"#DBEAFE\" \n    : currentRow.tipo === \"CUSTEIO\" \n      ? \"#DCFCE7\" \n      : \"transparent\" \n)) :  \n  currentRow.tipo === \"CAPITAL\" \n    ? \"#DBEAFE\" \n    : currentRow.tipo === \"CUSTEIO\" \n      ? \"#DCFCE7\" \n      : \"transparent\" \n })()}}",
       "columnType": "text",
       "computedValue": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"tipo\"]))}}",
       "currencyCode": "USD",
@@ -355,7 +379,7 @@
       "notation": "standard",
       "originalId": "tipo",
       "sticky": "",
-      "textColor": "",
+      "textColor": "{{(() => { const tableData = capitalcusteioterceiros.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \n  currentRow.tipo === \"CAPITAL\" \n    ? \"#1E40AF\" // azul escuro\n    : currentRow.tipo === \"CUSTEIO\" \n      ? \"#065F46\" // verde escuro\n      : \"inherit\"\n)) :  \n  currentRow.tipo === \"CAPITAL\" \n    ? \"#1E40AF\" // azul escuro\n    : currentRow.tipo === \"CUSTEIO\" \n      ? \"#065F46\" // verde escuro\n      : \"inherit\"\n })()}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -366,7 +390,7 @@
       "alias": "total",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
+      "cellBackground": "{{(() => { const tableData = capitalcusteioterceiros.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \"#FEF9C3\" )) :  \"#FEF9C3\"  })()}}",
       "columnType": "number",
       "computedValue": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"total\"]))}}",
       "currencyCode": "USD",
@@ -389,7 +413,7 @@
       "notation": "standard",
       "originalId": "total",
       "sticky": "",
-      "textColor": "",
+      "textColor": "{{(() => { const tableData = capitalcusteioterceiros.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \"#78350F\" )) :  \"#78350F\"  })()}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -399,10 +423,10 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
+  "rightColumn": 63,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{\n(() => {\n  const itens = getCapitalCusteioItens.data?.data || [];\n  const movimentos = getItensDoFluxoCompleto.data?.data || [];\n\n  return itens.map(item => {\n    const total = Number(item.despesa || 0);\n\n    const gasto = movimentos\n      .filter(mov => mov.capital_custeio_item?.documentId === item.documentId)\n      .reduce((soma, mov) => soma + Math.abs(Number(mov.despesa || 0)), 0);\n\n    const restante = total - gasto;\n\n    return {\n      tipo: item.tipo,\n      item: item.descricao,\n      documentId: item.documentId,\n      total: total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n      gasto: gasto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n      restante: restante.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n    };\n  });\n})()\n}}\n",
+  "tableData": "{{\n(() => {\n  const itens = getCapitalCusteioItens.data?.data || [];\n  const movimentos = getItensDoFluxoCompleto.data?.data || [];\n\n  // Ordenar CAPITAL antes de CUSTEIO\n  const itensOrdenados = [...itens].sort((a, b) => {\n    if (a.tipo === \"CAPITAL\" && b.tipo !== \"CAPITAL\") return -1;\n    if (a.tipo !== \"CAPITAL\" && b.tipo === \"CAPITAL\") return 1;\n    return 0;\n  });\n\n  return itensOrdenados.map(item => {\n    const total = Number(item.despesa || 0);\n\n    const gasto = movimentos\n      .filter(mov => mov.capital_custeio_item?.documentId === item.documentId)\n      .reduce((soma, mov) => soma + Math.abs(Number(mov.despesa || 0)), 0);\n\n    const restante = total - gasto;\n\n    return {\n      tipo: item.tipo,\n      item: item.descricao,\n      documentId: item.documentId,\n      total: total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n      gasto: gasto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n      restante: restante.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n    };\n  });\n})()\n}}\n",
   "textSize": "0.875rem",
   "topRow": 10,
   "totalRecordsCount": 0,

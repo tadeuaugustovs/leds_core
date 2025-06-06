@@ -8,7 +8,7 @@ export default {
       return false;
     }
 
-    const url = `http://10.128.128.20:1337/api/usuarios?filters[email][$eq]=${encodeURIComponent(usuarioSalvo.email)}&pagination[pageSize]=1`;
+    const url = `https://strapi.conectafapes.leds.dev.br/api/usuarios?filters[email][$eq]=${encodeURIComponent(usuarioSalvo.email)}&pagination[pageSize]=1`;
 
     try {
       const response = await fetch(url, {
@@ -35,10 +35,5 @@ export default {
       navigateTo("Authentication", "SAME_WINDOW");
       return false;
     }
-  },
-
-  // ⚡ Executa automaticamente ao abrir a página
-  __forcarExecucao__: (async () => {
-    await this.verificarAcesso();
-  })()
+  }
 }

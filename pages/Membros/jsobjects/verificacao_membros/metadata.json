@@ -6,11 +6,6 @@
     "pageId": "Membros",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "variables": [
-      {
-        "name": "__forcarExecucao__",
-        "value": "(async () => {\n  await verificacao_membros.verificarAcesso();\n})()"
-      }
-    ]
+    "variables": []
   }
 }

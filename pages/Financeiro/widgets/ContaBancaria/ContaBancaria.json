@@ -8,7 +8,7 @@
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 710,
+      "bottomRow": 740,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -29,7 +29,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 710,
+      "minHeight": 742,
       "minWidth": 450,
       "mobileBottomRow": 240,
       "mobileLeftColumn": 0,
@@ -58,7 +58,7 @@
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
-  "height": 710,
+  "height": 742,
   "isCanvas": true,
   "isLoading": false,
   "key": "65tn881nk8",
@@ -81,5 +81,5 @@
   "version": 2,
   "widgetId": "1014dcywg2",
   "widgetName": "ContaBancaria",
-  "width": 1076
+  "width": 1330
 }

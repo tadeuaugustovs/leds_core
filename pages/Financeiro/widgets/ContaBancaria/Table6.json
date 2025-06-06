@@ -33,15 +33,17 @@
     }
   },
   "columnOrder": [
-    "documentId",
     "descricao",
+    "itemCapital",
     "data",
     "situacao",
     "receita",
     "despesa",
-    "contacorrente"
+    "contacorrente",
+    "documentId",
+    "EditActions1"
   ],
-  "columnUpdatedAt": 1749173960259,
+  "columnUpdatedAt": 1749180419987,
   "columnWidthMap": {
     "descricao": 177
   },
@@ -62,9 +64,6 @@
     },
     {
       "key": "boxShadow"
-    },
-    {
-      "key": "tableData"
     },
     {
       "key": "primaryColumns.documentId.computedValue"
@@ -89,6 +88,27 @@
     },
     {
       "key": "primaryColumns.contacorrente.computedValue"
+    },
+    {
+      "key": "primaryColumns.itemCapital.computedValue"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveButtonColor"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveBorderRadius"
+    },
+    {
+      "key": "primaryColumns.EditActions1.discardBorderRadius"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isSaveDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isDiscardDisabled"
     }
   ],
   "dynamicPropertyPathList": [
@@ -97,6 +117,12 @@
     },
     {
       "key": "primaryColumns.documentId.cellBackground"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isSaveDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isDiscardDisabled"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -127,6 +153,46 @@
   "parentId": "2u9n92bl3l",
   "parentRowSpace": 10,
   "primaryColumns": {
+    "EditActions1": {
+      "alias": "EditActions1",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "editActions",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "discardActionLabel": "Discard",
+      "discardBorderRadius": "{{Table6.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "discardButtonColor": "#F22B2B",
+      "discardButtonVariant": "TERTIARY",
+      "discardIconAlign": "left",
+      "enableFilter": true,
+      "enableSort": true,
+      "id": "EditActions1",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardDisabled": "{{Table6.processedTableData.map((currentRow, currentIndex) => ( !Table6.updatedRowIndices.includes(currentIndex)))}}",
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveDisabled": "{{Table6.processedTableData.map((currentRow, currentIndex) => ( !Table6.updatedRowIndices.includes(currentIndex)))}}",
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Save / Discard",
+      "notation": "standard",
+      "originalId": "EditActions1",
+      "saveActionLabel": "Save",
+      "saveBorderRadius": "{{Table6.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "saveButtonColor": "{{Table6.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "saveIconAlign": "left",
+      "sticky": "right",
+      "thousandSeparator": true,
+      "validation": {},
+      "width": 150
+    },
     "contacorrente": {
       "alias": "contacorrente",
       "allowCellWrapping": false,
@@ -142,12 +208,12 @@
       "horizontalAlignment": "LEFT",
       "id": "contacorrente",
       "index": 6,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "contacorrente",
@@ -176,12 +242,12 @@
       "horizontalAlignment": "LEFT",
       "id": "data",
       "index": 2,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "data",
@@ -210,12 +276,12 @@
       "horizontalAlignment": "LEFT",
       "id": "descricao",
       "index": 1,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "descricao",
@@ -244,12 +310,12 @@
       "horizontalAlignment": "LEFT",
       "id": "despesa",
       "index": 5,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "despesa",
@@ -295,6 +361,40 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "itemCapital": {
+      "alias": "itemCapital",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "\n",
+      "columnType": "select",
+      "computedValue": "{{Table6.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"itemCapital\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "itemCapital",
+      "index": 7,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "itemCapital",
+      "notation": "standard",
+      "originalId": "itemCapital",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "receita": {
       "alias": "receita",
       "allowCellWrapping": false,
@@ -310,12 +410,12 @@
       "horizontalAlignment": "LEFT",
       "id": "receita",
       "index": 4,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "receita",
@@ -344,12 +444,12 @@
       "horizontalAlignment": "LEFT",
       "id": "situacao",
       "index": 3,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "situacao",
@@ -368,7 +468,8 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "searchKey": "",
-  "tableData": "{{\n(() => {\n  const dadosApi = getItensFluxoCaixa.data?.data || [];\n  const dadosNovos = appsmith.store.itensBancarios || [];\n\n  const dadosCombinados = [...dadosApi, ...dadosNovos];\n\n  return dadosCombinados\n    .sort((a, b) => new Date(b.data) - new Date(a.data))\n    .map(item => {\n      const dataObj = new Date(item.data);\n      return {\n        documentId: item.documentId || null,\n        data: item.data \n          ? dataObj.toLocaleDateString(\"pt-BR\") \n          : \"-\",\n        descricao: item.descricao || \"-\",\n        situacao: item.situacao || \"-\",\n        receita: item.receita != null \n          ? \"R$ \" + Number(item.receita).toLocaleString(\"pt-BR\", { minimumFractionDigits: 2 }) \n          : \"-\",\n        despesa: item.despesa != null \n          ? \"R$ \" + Number(item.despesa).toLocaleString(\"pt-BR\", { minimumFractionDigits: 2 }) \n          : \"-\",\n        contacorrente: item.contacorrente != null \n          ? \"R$ \" + Number(item.contacorrente).toLocaleString(\"pt-BR\", { minimumFractionDigits: 2 }) \n          : \"-\"\n      };\n    });\n})()\n}}\n",
+  "showInlineEditingOptionDropdown": true,
+  "tableData": "{{\n(() => {\n  const dados = getItensFluxoCaixa.data?.data || [];\n\n  return dados\n    .sort((a, b) => new Date(b.data) - new Date(a.data))\n    .map(item => {\n      const dataObj = new Date(item.data);\n      return {\n        documentId: item.documentId,\n        data: item.data \n          ? dataObj.toLocaleDateString(\"pt-BR\") \n          : \"-\",\n        descricao: item.descricao || \"-\",\n        situacao: item.situacao || \"-\",\n        receita: item.receita != null \n          ? \"R$ \" + Number(item.receita).toLocaleString(\"pt-BR\", { minimumFractionDigits: 2 }) \n          : \"-\",\n        despesa: item.despesa != null \n          ? \"R$ \" + Number(item.despesa).toLocaleString(\"pt-BR\", { minimumFractionDigits: 2 }) \n          : \"-\",\n        contacorrente: item.contacorrente != null \n          ? \"R$ \" + Number(item.contacorrente).toLocaleString(\"pt-BR\", { minimumFractionDigits: 2 }) \n          : \"-\",\n        itemCapital: item.capital_custeio_item?.descricao || \"-\"\n      };\n    });\n})()\n\n}}\n",
   "textSize": "0.875rem",
   "topRow": 23,
   "totalRecordsCount": 0,

@@ -1,6 +1,6 @@
 {
   "gitSyncId": "68375c2c56cad916c8fc38e2_7664847d-2322-4963-82b5-1ba78d044bff",
-  "id": "Financeiro_addItemFluxoCaixa",
+  "id": "Financeiro_postItemFluxoCaixa",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -44,7 +44,7 @@
         "key": "body"
       }
     ],
-    "name": "addItemFluxoCaixa",
+    "name": "postItemFluxoCaixa",
     "pageId": "Financeiro",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

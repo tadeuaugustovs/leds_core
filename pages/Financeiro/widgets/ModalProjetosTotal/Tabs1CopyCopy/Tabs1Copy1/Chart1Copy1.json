@@ -7,7 +7,7 @@
   "boxShadow": "none",
   "chartData": {
     "a8rizw4eoi": {
-      "data": "{{ GraficoProjetoTipo.porTipo() }}\n",
+      "data": "{{ GraficoGastoPorTipo.gerar() }}\n",
       "seriesName": "Gasto total"
     }
   },

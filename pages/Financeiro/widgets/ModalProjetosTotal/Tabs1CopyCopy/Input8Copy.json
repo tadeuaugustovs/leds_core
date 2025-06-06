@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 8,
   "boxShadow": "none",
-  "defaultText": "{{\n  getMembros.data?.data\n    ?.flatMap(m => m.planos_de_trabalho || [])\n    ?.filter(p =>\n      p.bolsa?.valor &&\n      (\n        appsmith.store.projetoSelecionadoDocumentId === \"TODOS\" ||\n        p.projetos?.some(proj => proj?.documentId === appsmith.store.projetoSelecionadoDocumentId)\n      )\n    )\n    ?.map(p => Number(p.bolsa.valor) || 0)\n    ?.reduce((a, b) => a + b, 0)\n    ?.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })\n}}\n",
+  "defaultText": "{{\ngetMembros.data?.data\n  ?.flatMap(membro => membro.planos_de_trabalho || [])\n  ?.filter(p =>\n    p?.bolsa?.valor &&\n    (\n      appsmith.store.projetoSelecionadoDocumentId === \"TODOS\" ||\n      p.projetos?.some(proj => proj?.documentId === appsmith.store.projetoSelecionadoDocumentId)\n    )\n  )\n  ?.reduce((total, plano) => total + Number(plano.bolsa.valor || 0), 0)\n  ?.toLocaleString(\"pt-BR\", { style: \"currency\", currency: \"BRL\" }) || \"R$ 0,00\"\n}}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -26,7 +26,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "ny71s1lt0q",
-  "label": "Valor Alocado",
+  "label": "Total Alocado",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",

@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 60,
   "shouldTruncate": false,
-  "text": "{{\n  getCapitalCusteioItens.data?.data\n    ?.filter(i => typeof i.gasto === 'number')\n    ?.sort((a, b) => b.gasto - a.gasto)\n    ?.slice(0, 3)\n    ?.map(item => {\n      const nome = item.item || \"Item sem nome\";\n      const valor = item.gasto?.toLocaleString(\"pt-BR\", {\n        style: \"currency\",\n        currency: \"BRL\"\n      }) || \"R$ 0,00\";\n\n      const projeto = item.projetos?.length\n        ? item.projetos[0].nome\n        : \"Sem projeto\";\n\n      return `🧾 *${nome}*\\n💰 ${valor}\\n📁 Projeto: ${projeto}`;\n    })\n    .join(\"\\n\\n\")\n}}\n",
+  "text": "{{ \n  getUsuarios.data?.data\n    ?.filter(u => u.updatedAt) // garante que existe a data\n    ?.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt)) // mais recentes primeiro\n    ?.slice(0, 5) // mostra só os 5 últimos\n    ?.map(u => {\n      const nome = u.nome || \"Sem nome\";\n      const data = new Date(u.updatedAt).toLocaleString(\"pt-BR\", {\n        day: \"2-digit\", month: \"2-digit\", year: \"numeric\",\n        hour: \"2-digit\", minute: \"2-digit\"\n      });\n\n      return `👤 ${nome} – ${data}`;\n    })\n    ?.join('\\n') || \"Sem acessos recentes\"\n}}\n",
   "textAlign": "LEFT",
   "textColor": "#1e3a8a",
   "topRow": 5,

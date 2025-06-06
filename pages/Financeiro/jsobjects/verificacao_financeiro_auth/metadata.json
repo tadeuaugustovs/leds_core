@@ -6,11 +6,6 @@
     "pageId": "Financeiro",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "variables": [
-      {
-        "name": "__forcarExecucao__",
-        "value": "(async () => {\n  await verificacao_financeiro_auth.verificarAcesso();\n})()"
-      }
-    ]
+    "variables": []
   }
 }

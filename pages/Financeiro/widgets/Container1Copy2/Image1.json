@@ -3,7 +3,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 15,
   "boxShadow": "none",
-  "defaultImage": "https://strapi.core.leds.dev.br/uploads/2_d2409ae5ee.png",
+  "defaultImage": "https://strapi.conectafapes.leds.dev.br/uploads/2_92ac83e036.png",
   "displayName": "Image",
   "dynamicBindingPathList": [
     {

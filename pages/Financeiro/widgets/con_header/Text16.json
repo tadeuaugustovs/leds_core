@@ -41,7 +41,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
+  "rightColumn": 63,
   "shouldTruncate": false,
   "text": "{{\n(() => {\n  const dados = getItensFluxoCaixa.data?.data || [];\n\n  const contaCorrente = dados.reduce((soma, item) => {\n    const valor = Number(\n      String(item.contacorrente || \"0\")\n        .replace(\"R$\", \"\")\n        .replace(\".\", \"\")\n        .replace(\",\", \".\")\n        .trim()\n    );\n    return soma + (isNaN(valor) ? 0 : valor);\n  }, 0);\n\n  return contaCorrente.toLocaleString(\"pt-BR\", {\n    style: \"currency\",\n    currency: \"BRL\"\n  });\n})()\n}}\n",
   "textAlign": "CENTER",

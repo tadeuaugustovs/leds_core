@@ -41,11 +41,19 @@
     "despesa",
     "contacorrente",
     "documentId",
+    "customColumn1",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1749180419987,
+  "columnUpdatedAt": 1749181892888,
   "columnWidthMap": {
-    "descricao": 177
+    "EditActions1": 60,
+    "contacorrente": 133,
+    "customColumn1": 90,
+    "data": 137,
+    "descricao": 177,
+    "despesa": 128,
+    "receita": 118,
+    "situacao": 122
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -93,9 +101,6 @@
       "key": "primaryColumns.itemCapital.computedValue"
     },
     {
-      "key": "tableData"
-    },
-    {
       "key": "primaryColumns.EditActions1.saveButtonColor"
     },
     {
@@ -109,6 +114,12 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.itemCapital.selectOptions"
     }
   ],
   "dynamicPropertyPathList": [
@@ -123,9 +134,16 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onSave"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.EditActions1.onSave"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -183,6 +201,7 @@
       "isVisible": true,
       "label": "Save / Discard",
       "notation": "standard",
+      "onSave": "{{ updateItemFluxoCaixa.run(() => {\n  showAlert(\"Atualizado com sucesso!\", \"success\");\n  getItensFluxoCaixa.run();\n}, (err) => {\n  showAlert(\"Erro ao atualizar: \" + err.message, \"error\");\n});\n\n}}\n",
       "originalId": "EditActions1",
       "saveActionLabel": "Save",
       "saveBorderRadius": "{{Table6.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -221,6 +240,46 @@
       "originalId": "contacorrente",
       "sticky": "",
       "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn1": {
+      "alias": "Excluir",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "0.375rem",
+      "boxShadow": "none",
+      "buttonColor": "#7f1d1d",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "PRIMARY",
+      "cellBackground": "\n",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "iconName": "small-cross",
+      "id": "customColumn1",
+      "index": 9,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Excluir",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "originalId": "customColumn1",
+      "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -367,8 +426,9 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "\n",
       "columnType": "select",
-      "computedValue": "{{Table6.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"itemCapital\"]))}}",
+      "computedValue": "{{(() => { const tableData = Table6.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.itemCapital )) :  currentRow.itemCapital  })()}}",
       "currencyCode": "USD",
+      "customAlias": "",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
@@ -387,6 +447,9 @@
       "label": "itemCapital",
       "notation": "standard",
       "originalId": "itemCapital",
+      "placeholderText": "",
+      "selectOptions": "{{(() => { const tableData = Table6.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \n  getCapitalCusteioItens.data?.data?.map(item => ({\n    label: item.descricao,\n    value: item.descricao\n  }))\n)) :  \n  getCapitalCusteioItens.data?.data?.map(item => ({\n    label: item.descricao,\n    value: item.descricao\n  }))\n })()}}",
+      "sortBy": "value",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

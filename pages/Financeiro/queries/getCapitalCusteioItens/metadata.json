@@ -24,8 +24,12 @@
       ],
       "queryParameters": [
         {
-          "key": "populate",
-          "value": "*"
+          "key": "pagination[pageSize]",
+          "value": "1000"
+        },
+        {
+          "key": "sort[0]",
+          "value": "descricao\n"
         }
       ],
       "timeoutInMillisecond": 10000

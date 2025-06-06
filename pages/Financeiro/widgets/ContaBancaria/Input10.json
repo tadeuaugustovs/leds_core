@@ -50,6 +50,7 @@
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
   "rightColumn": 18,
+  "shouldAllowAutofill": false,
   "showStepArrows": false,
   "topRow": 16,
   "type": "INPUT_WIDGET_V2",

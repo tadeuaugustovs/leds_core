@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 39,
+  "bottomRow": 42,
   "boxShadow": "none",
   "buttonColor": "#1d4ed8",
   "buttonVariant": "PRIMARY",
@@ -46,7 +46,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 49,
   "text": "Ver Todos os Projetos",
-  "topRow": 34,
+  "topRow": 36,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "qdm6rk4jk3",

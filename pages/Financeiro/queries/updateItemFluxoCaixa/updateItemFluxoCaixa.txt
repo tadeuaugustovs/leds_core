@@ -1,0 +1,17 @@
+{
+  "data": {
+    "descricao": "{{ Table6.triggeredRow.descricao }}",
+    "receita": {{ Table6.triggeredRow.receita === "-" ? null : Number(Table6.triggeredRow.receita.replace('R$ ', '').replace(/\./g, '').replace(',', '.')) }},
+    "despesa": {{ Table6.triggeredRow.despesa === "-" ? null : Number(Table6.triggeredRow.despesa.replace('R$ ', '').replace(/\./g, '').replace(',', '.')) }},
+    "data": "{{ moment(Table6.triggeredRow.data, 'DD/MM/YYYY').format('YYYY-MM-DD') }}",
+    "contacorrente": {{ Table6.triggeredRow.contacorrente === "-" ? null : Number(Table6.triggeredRow.contacorrente.replace('R$ ', '').replace(/\./g, '').replace(',', '.')) }},
+    "situacao": {{ Table6.triggeredRow.situacao ? `"${Table6.triggeredRow.situacao}"` : null }},
+    "capital_custeio_item": {
+      "connect": {{ 
+        (getCapitalCusteioItens.data?.data || [])
+        .filter(i => i.descricao === Table6.triggeredRow.itemCapital)
+        .map(i => ({ id: i.id })) 
+      }}
+    }
+  }
+}

@@ -85,9 +85,16 @@
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "onRowSelected"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onRowSelected"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -109,6 +116,7 @@
   "mobileRightColumn": 35,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
+  "onRowSelected": "{{\n  storeValue(\"documentIdSelecionado\", BolsaMembros.selectedRow.documentId);\n  showModal(\"EditarBolsas\");\n  getPlanoDeTrabalho.run();\n  getMembrosByDocumentId.run();\n}}\n\n",
   "originalBottomRow": 48,
   "originalTopRow": 9,
   "parentColumnSpace": 14.388281249999999,
@@ -121,7 +129,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"bolsas\"]))}}",
+      "computedValue": "{{BolsaMembros.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"bolsas\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -155,7 +163,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "date",
-      "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"fim\"]))}}",
+      "computedValue": "{{BolsaMembros.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"fim\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -191,7 +199,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "date",
-      "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"inicio\"]))}}",
+      "computedValue": "{{BolsaMembros.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"inicio\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -227,7 +235,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nome\"]))}}",
+      "computedValue": "{{BolsaMembros.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nome\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -261,7 +269,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"valor\"]))}}",
+      "computedValue": "{{BolsaMembros.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"valor\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -303,5 +311,5 @@
   "version": 2,
   "verticalAlignment": "CENTER",
   "widgetId": "3q479ah076",
-  "widgetName": "Table2Copy"
+  "widgetName": "BolsaMembros"
 }

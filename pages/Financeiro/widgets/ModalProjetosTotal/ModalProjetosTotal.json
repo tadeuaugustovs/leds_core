@@ -2,7 +2,7 @@
   "animateLoading": true,
   "backgroundColor": "",
   "borderRadius": "1.5rem",
-  "bottomRow": 251,
+  "bottomRow": 326,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
@@ -38,7 +38,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "7mdoyvce9i",
+      "parentId": "oylr1z5omb",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -47,8 +47,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "mqd8aa7enx",
-      "widgetName": "Canvas1"
+      "widgetId": "43o4ozapza",
+      "widgetName": "Canvas1Copy4"
     }
   ],
   "detachFromLayout": true,
@@ -74,10 +74,10 @@
   "renderMode": "CANVAS",
   "rightColumn": 48,
   "shouldScrollContents": true,
-  "topRow": 11,
+  "topRow": 86,
   "type": "MODAL_WIDGET",
   "version": 2,
-  "widgetId": "7mdoyvce9i",
-  "widgetName": "ModalProjetos",
+  "widgetId": "oylr1z5omb",
+  "widgetName": "ModalProjetosTotal",
   "width": 876.8499999999999
 }

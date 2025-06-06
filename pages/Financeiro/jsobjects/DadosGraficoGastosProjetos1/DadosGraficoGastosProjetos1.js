@@ -3,16 +3,22 @@ export default {
     const projetos = getProjetos.data?.data || [];
     const itens = getCapitalCusteioItens.data?.data || [];
     const membros = getMembros.data?.data || [];
+    const movimentos = getItensDoFluxoCompleto.data?.data || [];
 
     return projetos.map(projeto => {
-      // Somar itens de custeio/capital vinculados
+      // Gasto com itens (CAPITAL / CUSTEIO)
       const gastoItens = itens
         .filter(item =>
           item.projetos?.some(p => p.documentId === projeto.documentId)
         )
-        .reduce((acc, item) => acc + Number(item.gasto || 0), 0);
+        .reduce((acc, item) => {
+          const gastoDoItem = movimentos
+            .filter(mov => mov.capital_custeio_item?.documentId === item.documentId)
+            .reduce((soma, mov) => soma + Math.abs(Number(mov.despesa || 0)), 0);
+          return acc + gastoDoItem;
+        }, 0);
 
-      // Somar valores de bolsas vinculadas a este projeto
+      // Gasto com bolsas vinculadas
       const gastoBolsas = membros
         .flatMap(m => m.planos_de_trabalho || [])
         .filter(p =>

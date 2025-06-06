@@ -1,0 +1,7 @@
+{
+  "data": {
+    "nome": "{{ Table1.processedTableData[Table1.updatedRowIndices[0]]?.nome || '' }}",
+    "email": "{{ Table1.processedTableData[Table1.updatedRowIndices[0]]?.email || '' }}",
+    "senha": "{{ Table1.processedTableData[Table1.updatedRowIndices[0]]?.senha_real || '' }}"
+  }
+}

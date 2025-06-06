@@ -25,7 +25,7 @@
     "fullyQualifiedName": "DadosGraficoGastosProjetos1.getGastoPorProjeto",
     "name": "getGastoPorProjeto",
     "pageId": "Financeiro",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }

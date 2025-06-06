@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 7,
   "boxShadow": "none",
-  "defaultText": "{{\n(() => {\n  const itens = getCapitalCusteioItens.data?.data || [];\n  const movimentos = getItensDoFluxoCompleto.data?.data || [];\n\n  const totalGasto = itens.reduce((soma, item) => {\n    const gasto = movimentos\n      .filter(mov => mov.capital_custeio_item?.documentId === item.documentId)\n      .reduce((g, mov) => g + Math.abs(Number(mov.despesa || 0)), 0);\n    return soma + gasto;\n  }, 0);\n\n  return totalGasto.toLocaleString(\"pt-BR\", {\n    style: \"currency\",\n    currency: \"BRL\",\n  });\n})()\n}}\n",
+  "defaultText": "{{\n(() => {\n  const itens = getCapitalCusteioItens.data?.data || [];\n  const movimentos = getItensDoFluxoCompleto.data?.data || [];\n  const projetoSelecionadoId = appsmith.store.projetoSelecionadoDocumentId;\n\n  const totalGasto = itens\n    .filter(item =>\n      projetoSelecionadoId === \"TODOS\" ||\n      (item.projetos || []).some(p => p.documentId === projetoSelecionadoId)\n    )\n    .reduce((soma, item) => {\n      const gasto = movimentos\n        .filter(mov => mov.capital_custeio_item?.documentId === item.documentId)\n        .reduce((g, mov) => g + Math.abs(Number(mov.despesa || 0)), 0);\n      return soma + gasto;\n    }, 0);\n\n  return totalGasto.toLocaleString(\"pt-BR\", { style: \"currency\", currency: \"BRL\" });\n})()\n}}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

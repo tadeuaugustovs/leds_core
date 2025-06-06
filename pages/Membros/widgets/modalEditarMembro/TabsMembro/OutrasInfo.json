@@ -40,7 +40,7 @@
     "documentId",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1748357077996,
+  "columnUpdatedAt": 1749248279799,
   "columnWidthMap": {
     "campo": 184,
     "label": 218
@@ -89,9 +89,6 @@
     },
     {
       "key": "primaryColumns.documentId.computedValue"
-    },
-    {
-      "key": "primaryColumns.customColumn1.buttonColor"
     },
     {
       "key": "primaryColumns.customColumn1.borderRadius"
@@ -238,9 +235,9 @@
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{OutrasInfo.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{OutrasInfo.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{OutrasInfo.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonColor": "#831843",
       "buttonStyle": "rgb(3, 179, 101)",
-      "buttonVariant": "SECONDARY",
+      "buttonVariant": "PRIMARY",
       "columnType": "iconButton",
       "computedValue": "",
       "currencyCode": "USD",
@@ -294,7 +291,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "documentId",
       "notation": "standard",
       "originalId": "documentId",
@@ -328,7 +325,7 @@
       "isDiscardVisible": true,
       "isEditable": true,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "label",
       "notation": "standard",
       "originalId": "label",

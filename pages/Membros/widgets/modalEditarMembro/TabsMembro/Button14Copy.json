@@ -1,52 +1,46 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 17,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-  "buttonVariant": "TERTIARY",
+  "buttonColor": "#b91c1c",
+  "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [
-    {
-      "key": "onClick"
-    }
-  ],
+  "dynamicTriggerPathList": [],
   "iconAlign": "left",
-  "iconName": "chevron-left",
+  "iconName": "cross",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "iisbry2c3t",
+  "key": "rr86sve967",
   "leftColumn": 1,
   "minWidth": 120,
-  "mobileBottomRow": 4,
-  "mobileLeftColumn": 42,
-  "mobileRightColumn": 58,
-  "mobileTopRow": 0,
+  "mobileBottomRow": 13,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 18,
+  "mobileTopRow": 9,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(Adde.name);}}",
-  "parentColumnSpace": 13.513281249999999,
-  "parentId": "padvycng5h",
+  "originalBottomRow": 19,
+  "originalTopRow": 12,
+  "parentColumnSpace": 12.7784912109375,
+  "parentId": "dodwby5hh5",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 8,
-  "text": "Voltar",
-  "topRow": 0,
+  "rightColumn": 21,
+  "text": "Excluir usuário do LEDSHUB",
+  "topRow": 13,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "zek6aycked",
-  "widgetName": "Button11"
+  "widgetId": "8yuybh3ogm",
+  "widgetName": "Button14Copy"
 }

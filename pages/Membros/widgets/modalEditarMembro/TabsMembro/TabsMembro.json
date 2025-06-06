@@ -274,7 +274,7 @@
       "responsiveBehavior": "fill",
       "rightColumn": 710.8203125,
       "tabId": "tabd0e479u6i4",
-      "tabName": "Add/Remover",
+      "tabName": "Remover",
       "topRow": 1,
       "type": "CANVAS_WIDGET",
       "version": 1,
@@ -316,7 +316,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
+  "rightColumn": 63,
   "shouldScrollContents": true,
   "shouldShowTabs": true,
   "tabsObj": {
@@ -340,7 +340,7 @@
       "id": "tabd0e479u6i4",
       "index": 5,
       "isVisible": true,
-      "label": "Add/Remover",
+      "label": "Remover",
       "widgetId": "dodwby5hh5"
     },
     "tabecoru5ux88": {

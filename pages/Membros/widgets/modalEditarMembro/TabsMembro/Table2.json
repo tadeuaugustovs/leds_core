@@ -83,9 +83,6 @@
       "key": "tableData"
     },
     {
-      "key": "primaryColumns.customColumn1.buttonColor"
-    },
-    {
       "key": "primaryColumns.customColumn1.boxShadow"
     },
     {
@@ -239,9 +236,9 @@
       "allowSameOptionsInNewRow": true,
       "borderRadius": "0.375rem",
       "boxShadow": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonColor": "#7f1d1d",
       "buttonStyle": "rgb(3, 179, 101)",
-      "buttonVariant": "SECONDARY",
+      "buttonVariant": "PRIMARY",
       "columnType": "iconButton",
       "computedValue": "",
       "currencyCode": "USD",

@@ -96,9 +96,6 @@
       "key": "primaryColumns.documentId.computedValue"
     },
     {
-      "key": "primaryColumns.customColumn1.buttonColor"
-    },
-    {
       "key": "primaryColumns.customColumn1.borderRadius"
     },
     {
@@ -246,14 +243,14 @@
       "width": 150
     },
     "customColumn1": {
-      "alias": "Deletar",
+      "alias": "Excluir",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{TableFormacao.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{TableFormacao.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{TableFormacao.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonColor": "#831843",
       "buttonStyle": "rgb(3, 179, 101)",
-      "buttonVariant": "SECONDARY",
+      "buttonVariant": "PRIMARY",
       "columnType": "iconButton",
       "computedValue": "",
       "currencyCode": "USD",
@@ -273,7 +270,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Deletar",
+      "label": "Excluir",
       "labelColor": "#FFFFFF",
       "notation": "standard",
       "onClick": "{{ \n  TableFormacao.selectedRow?.documentId \n    ? deleteFormacaoMembro.run(() => {\n        getMembros.run();\n        showAlert(\"Formação removida com sucesso!\", \"success\");\n      }, (err) => {\n        showAlert(\"Erro ao remover formação: \" + err.message, \"error\");\n      }) \n    : showAlert(\"DocumentId inválido. Não foi possível deletar.\", \"error\") \n}}\n",

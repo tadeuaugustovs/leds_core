@@ -1,40 +1,37 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 5,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#7f1d1d",
   "buttonVariant": "TERTIARY",
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     }
   ],
   "dynamicTriggerPathList": [],
-  "iconName": "floppy-disk",
+  "iconName": "warning-sign",
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "z847lvni8a",
-  "leftColumn": 61,
+  "key": "xmjri9vwax",
+  "leftColumn": 24,
   "minWidth": 50,
-  "mobileBottomRow": 4,
-  "mobileLeftColumn": 58,
-  "mobileRightColumn": 62,
-  "mobileTopRow": 0,
+  "mobileBottomRow": 11,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 4,
+  "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "parentColumnSpace": 14.388281249999999,
-  "parentId": "osggc8mvts",
+  "parentColumnSpace": 12.989636230468749,
+  "parentId": "dodwby5hh5",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
-  "rightColumn": 63,
-  "topRow": 0,
+  "rightColumn": 26,
+  "topRow": 1,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "6l7pvjh3kk",
-  "widgetName": "IconButton2Copy"
+  "widgetId": "pf80apufmb",
+  "widgetName": "IconButton7"
 }

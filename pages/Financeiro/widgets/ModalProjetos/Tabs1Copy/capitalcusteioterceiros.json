@@ -46,7 +46,7 @@
     "gasto": 145,
     "item": 603,
     "orcamento": 136,
-    "restante": 211,
+    "restante": 132,
     "tipo": 102,
     "total": 164
   },
@@ -423,7 +423,7 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 64,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{\n(() => {\n  const itens = getCapitalCusteioItens.data?.data || [];\n  const movimentos = getItensDoFluxoCompleto.data?.data || [];\n  const projetoSelecionadoId = Table5.selectedRow?.documentId;\n\n  // Ordenar CAPITAL antes de CUSTEIO\n  const itensOrdenados = [...itens].sort((a, b) => {\n    if (a.tipo === \"CAPITAL\" && b.tipo !== \"CAPITAL\") return -1;\n    if (a.tipo !== \"CAPITAL\" && b.tipo === \"CAPITAL\") return 1;\n    return 0;\n  });\n\n  // Filtrar por projeto selecionado\n  const itensFiltrados = projetoSelecionadoId\n    ? itensOrdenados.filter(item =>\n        Array.isArray(item.projetos) &&\n        item.projetos.some(p => p.documentId === projetoSelecionadoId)\n      )\n    : itensOrdenados;\n\n  return itensFiltrados.map(item => {\n    const total = Number(item.despesa || 0);\n\n    const gasto = movimentos\n      .filter(mov => mov.capital_custeio_item?.documentId === item.documentId)\n      .reduce((soma, mov) => soma + Math.abs(Number(mov.despesa || 0)), 0);\n\n    const restante = total - gasto;\n\n    return {\n      tipo: item.tipo,\n      item: item.descricao,\n      documentId: item.documentId,\n      total: total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n      gasto: gasto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n      restante: restante.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n    };\n  });\n})()\n}}\n",

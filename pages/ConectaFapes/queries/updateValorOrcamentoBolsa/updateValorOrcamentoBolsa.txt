@@ -1,5 +1,0 @@
-{
-  "data": {
-    "valor": {{ Number(orcamentobolsas.text.replace(/\./g, '').replace(',', '.')) }}
-  }
-}

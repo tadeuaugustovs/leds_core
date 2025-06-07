@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 28,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \ngetEquipes.data?.data\n  ?.filter(eq =>\n    Array.isArray(eq.membros) &&\n    eq.membros.some(mem => mem.documentId === Table1.selectedRow.documentId)\n  )\n  .map(eq => ({\n    label: eq.nome,\n    value: eq.documentId\n  }))\n))(MultiSelectEquipesEditCopy.options, MultiSelectEquipesEditCopy.serverSideFiltering) }}",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -14,9 +14,6 @@
     },
     {
       "key": "sourceData"
-    },
-    {
-      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",

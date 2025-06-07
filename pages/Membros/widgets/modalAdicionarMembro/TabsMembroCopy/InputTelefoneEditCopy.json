@@ -8,16 +8,13 @@
   "bottomRow": 19,
   "boxShadow": "none",
   "defaultDialCode": "+55",
-  "defaultText": "{{ Table1.selectedRow.telefone }}",
+  "defaultText": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",

@@ -4,16 +4,13 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 36,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n Array.isArray(getSquads.data?.data) && Table1.selectedRow?.squads\n  ? getSquads.data.data\n      .filter(s => Table1.selectedRow.squads\n        .split(',')\n        .map(item => item.trim())\n        .includes(s.nome)\n      )\n      .map(s => ({\n        label: s.nome,\n        value: s.documentId\n      }))\n  : []\n\n))(SquadCopy.options, SquadCopy.serverSideFiltering) }}",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "defaultOptionValue"
     },
     {
       "key": "sourceData"

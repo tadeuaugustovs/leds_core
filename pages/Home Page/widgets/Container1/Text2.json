@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 30,
+  "bottomRow": 29,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -20,11 +20,11 @@
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "0.875rem",
-  "fontStyle": "BOLD",
+  "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
   "key": "499xgrvqqp",
-  "leftColumn": 2,
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -41,12 +41,12 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 61,
+  "rightColumn": 60,
   "shouldTruncate": false,
-  "text": "{{\n  getMembros.data?.data\n    ?.slice(-4)\n    ?.map((m) => {\n      const nome = m.nome || \"Sem nome\";\n      const criado = new Date(m.createdAt).toLocaleDateString(\"pt-BR\");\n      return `🟢 Novo membro: ${nome}\\n📅 Criado em: ${criado}`;\n    })\n    .reverse()\n    .join(\"\\n\\n\")\n    .trim()\n}}\n",
+  "text": "{{\n(() => {\n  const projetos = getProjetos.data?.data || [];\n  const membros = getMembros.data?.data || [];\n\n  const totalProjetos = projetos.length;\n\n  const totalProjetosComBolsas = new Set(\n    membros.flatMap(m => m.planos_de_trabalho || [])\n      .filter(p => p.bolsa?.valor && p.statusBolsa === \"ATIVA\")\n      .flatMap(p => p.projetos || [])\n      .map(p => p.documentId)\n  ).size;\n\n  const membrosTotal = membros.length;\n\n  const membrosComAlocacao = membros.filter(m => \n    (m.planos_de_trabalho || []).some(p => (p.projetos || []).length > 0)\n  ).length;\n\n  const membrosSemAlocacao = membrosTotal - membrosComAlocacao;\n\n  const totalAlocacoes = membros.flatMap(m => m.planos_de_trabalho || [])\n    .filter(p => p.projetos?.length).length;\n\n  const bolsasAtivas = membros.flatMap(m => m.planos_de_trabalho || [])\n    .filter(p => p.statusBolsa === \"ATIVA\" && p.bolsa?.valor).length;\n\n  const valorTotalBolsas = membros.flatMap(m => m.planos_de_trabalho || [])\n    .filter(p => p.statusBolsa === \"ATIVA\" && p.bolsa?.valor)\n    .reduce((acc, p) => acc + Number(p.bolsa.valor || 0), 0)\n    .toLocaleString(\"pt-BR\", { style: \"currency\", currency: \"BRL\" });\n\n  const equipes = new Set(\n    membros.flatMap(m => m.equipes || []).map(e => e.nome)\n  );\n\n  return `\nProjetos cadastrados: ${totalProjetos}\nProjetos com bolsas: ${totalProjetosComBolsas}\n\nMembros cadastrados: ${membrosTotal}\nMembros com alocação: ${membrosComAlocacao}\nMembros sem alocação: ${membrosSemAlocacao}\n\nAlocações em projetos: ${totalAlocacoes}\nBolsas ativas: ${bolsasAtivas}\nValor total de bolsas: ${valorTotalBolsas}\n\nEquipes (${equipes.size}): ${[...equipes].join(\", \") || \"-\"}`.trim();\n})()\n}}\n",
   "textAlign": "LEFT",
   "textColor": "#1e3a8a",
-  "topRow": 5,
+  "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

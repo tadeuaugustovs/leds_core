@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 28,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  getPlanoDeTrabalho.data?.data\n    ?.filter(plano => plano?.membro?.documentId === Table1.selectedRow?.documentId)\n    ?.flatMap(plano => plano.projetos || [])\n    ?.map(proj => ({\n      label: proj.nome,\n      value: proj.documentId\n    })) \n))(MultiSelectProjetosCopyCopy.options, MultiSelectProjetosCopyCopy.serverSideFiltering) }}",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -14,9 +14,6 @@
     },
     {
       "key": "sourceData"
-    },
-    {
-      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",

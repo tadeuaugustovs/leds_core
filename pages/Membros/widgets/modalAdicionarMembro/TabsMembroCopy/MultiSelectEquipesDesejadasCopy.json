@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 28,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \nTable1.selectedRow?.equipeDesejada\n  ?.split(', ')\n  .map(nome => {\n    const equipe = getEquipesDesejadas.data?.data?.find(eq => eq.nome === nome);\n    return {\n      label: nome,\n      value: equipe?.documentId ?? nome // fallback se não achar\n    };\n  }) \n))(MultiSelectEquipesDesejadasCopy.options, MultiSelectEquipesDesejadasCopy.serverSideFiltering) }}",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -14,9 +14,6 @@
     },
     {
       "key": "sourceData"
-    },
-    {
-      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",

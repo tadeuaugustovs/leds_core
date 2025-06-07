@@ -5,16 +5,13 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 11,
   "boxShadow": "none",
-  "defaultText": "{{ Table1.selectedRow.nome }}",
+  "defaultText": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -50,7 +47,7 @@
   "mobileRightColumn": 23,
   "mobileTopRow": 10,
   "needsErrorInfo": false,
-  "onTextChanged": "{{2}}",
+  "onTextChanged": "{{ storeValue(\"novoMembro\", { ...appsmith.store.novoMembro, nome: InputNome.text }) }}",
   "originalBottomRow": 18,
   "originalTopRow": 11,
   "parentColumnSpace": 11.3125,
@@ -66,5 +63,5 @@
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "d0rehqe5eo",
-  "widgetName": "InputNomeEditCopy"
+  "widgetName": "InputNome"
 }

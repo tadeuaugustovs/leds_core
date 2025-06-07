@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 45,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "l6fj6l4xlf",
+  "leftColumn": 5,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 12,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 8,
+  "needsErrorInfo": false,
+  "originalBottomRow": 45,
+  "originalTopRow": 7,
+  "overflow": "NONE",
+  "parentColumnSpace": 10.5625,
+  "parentId": "yz0vmg8plj",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 45,
+  "shouldTruncate": false,
+  "text": "{{\n(() => {\n  const membros = getMembros.data?.data || [];\n\n  const equipesResumo = {};\n\n  membros.forEach(membro => {\n    const valorBolsas = (membro.planos_de_trabalho || [])\n      .reduce((soma, plano) => soma + Number(plano?.bolsa?.valor || 0), 0);\n\n    const equipes = membro.equipes || [];\n\n    equipes.forEach(eq => {\n      const nomeEquipe = eq.nome || \"Sem equipe\";\n\n      if (!equipesResumo[nomeEquipe]) {\n        equipesResumo[nomeEquipe] = { membros: 0, gasto: 0 };\n      }\n\n      equipesResumo[nomeEquipe].membros += 1;\n      equipesResumo[nomeEquipe].gasto += valorBolsas;\n    });\n  });\n\n  return Object.entries(equipesResumo)\n    .sort((a, b) => a[0].localeCompare(b[0]))\n    .map(([nome, info]) =>\n      `Equipe: ${nome}\\n- Membros: ${info.membros}\\n- Gasto total: ${info.gasto.toLocaleString('pt-BR', {\n        style: 'currency',\n        currency: 'BRL'\n      })}\\n`\n    )\n    .join('\\n') || \"Nenhuma equipe registrada.\";\n})()\n}}\n",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
+  "topRow": 7,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "ydjaqj5fk7",
+  "widgetName": "Text4"
+}

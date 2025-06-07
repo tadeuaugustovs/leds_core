@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
+  "bottomRow": 39,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -14,41 +14,54 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
   "iconAlign": "left",
-  "inputType": "TEXT",
+  "inputType": "NUMBER",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
   "key": "803ubygy2z",
-  "label": "Número da Agência",
+  "label": "CPF",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 36,
+  "leftColumn": 6,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 18,
-  "mobileLeftColumn": 42,
-  "mobileRightColumn": 62,
-  "mobileTopRow": 11,
+  "mobileBottomRow": 30,
+  "mobileLeftColumn": 31,
+  "mobileRightColumn": 51,
+  "mobileTopRow": 23,
   "needsErrorInfo": false,
+  "onTextChanged": "{{ storeValue(\"novoMembro\", { \n  ...appsmith.store.novoMembro, \n  CPF: String(InputCPFEditCopy.text) \n}) }}\n",
+  "originalBottomRow": 39,
+  "originalTopRow": 32,
   "parentColumnSpace": 27.57421875,
-  "parentId": "ixuot0k8rg",
+  "parentId": "padvycng5h",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 47,
+  "rightColumn": 59,
+  "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 4,
+  "topRow": 32,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "58gtlicbu2",
-  "widgetName": "InputNumeroAgenciaEditCopy"
+  "widgetId": "ccquuxdk52",
+  "widgetName": "InputCPFEditCopy"
 }

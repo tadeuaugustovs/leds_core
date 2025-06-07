@@ -9,7 +9,7 @@
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 560,
+      "bottomRow": 520,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -30,7 +30,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 566,
+      "minHeight": 520,
       "minWidth": 450,
       "mobileBottomRow": 240,
       "mobileLeftColumn": 0,
@@ -59,7 +59,7 @@
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
-  "height": 566,
+  "height": 520,
   "isCanvas": true,
   "isLoading": false,
   "key": "ybv70kj5js",
@@ -83,5 +83,5 @@
   "version": 2,
   "widgetId": "z5mc14trn3",
   "widgetName": "modalAdicionarMembro",
-  "width": 876.8499999999999
+  "width": 362.8499999999999
 }

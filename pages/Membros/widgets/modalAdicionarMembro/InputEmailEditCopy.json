@@ -3,9 +3,9 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 36,
+  "bottomRow": 25,
   "boxShadow": "none",
-  "defaultText": "\n",
+  "defaultText": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -15,42 +15,53 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
   "iconAlign": "left",
-  "inputType": "TEXT",
+  "inputType": "EMAIL",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "xxgt8zph7l",
-  "label": "Termo de Confidencialidade",
+  "key": "2y94jw6jgf",
+  "label": "Email",
   "labelAlignment": "left",
-  "labelPosition": "Top",
+  "labelPosition": "Auto",
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 21,
+  "leftColumn": 6,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 39,
-  "mobileLeftColumn": 21,
-  "mobileRightColumn": 41,
-  "mobileTopRow": 32,
+  "mobileBottomRow": 27,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 23,
+  "mobileTopRow": 20,
   "needsErrorInfo": false,
-  "originalBottomRow": 36,
-  "originalTopRow": 29,
-  "parentColumnSpace": 12.989636230468749,
-  "parentId": "ixuot0k8rg",
+  "onTextChanged": "{{ storeValue(\"novoMembro\", { ...appsmith.store.novoMembro, email: InputEmailEditCopy.text }) }}",
+  "originalBottomRow": 21,
+  "originalTopRow": 16,
+  "parentColumnSpace": 11.3125,
+  "parentId": "padvycng5h",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 41,
+  "rightColumn": 59,
+  "shouldAllowAutofill": true,
   "showStepArrows": false,
-  "topRow": 29,
+  "topRow": 18,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "wryfljozei",
-  "widgetName": "InputTermoConfidencialidadeCopy"
+  "widgetId": "56nu4l3obd",
+  "widgetName": "InputEmailEditCopy"
 }

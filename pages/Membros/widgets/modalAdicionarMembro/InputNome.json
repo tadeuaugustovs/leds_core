@@ -1,13 +1,10 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "allowDialCodeChange": false,
-  "allowFormatting": true,
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 19,
+  "bottomRow": 18,
   "boxShadow": "none",
-  "defaultDialCode": "+55",
   "defaultText": "",
   "dynamicBindingPathList": [
     {
@@ -18,40 +15,53 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
   "iconAlign": "left",
+  "inputType": "TEXT",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "etb5kf8dba",
-  "label": "Telefone",
+  "key": "2y94jw6jgf",
+  "label": "Nome",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 17,
+  "leftColumn": 6,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 29,
-  "mobileLeftColumn": 44,
-  "mobileRightColumn": 64,
-  "mobileTopRow": 22,
+  "mobileBottomRow": 17,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 23,
+  "mobileTopRow": 10,
   "needsErrorInfo": false,
-  "originalBottomRow": 29,
-  "originalTopRow": 22,
-  "parentColumnSpace": 12.809814453125,
-  "parentId": "ixuot0k8rg",
+  "onTextChanged": "{{ storeValue(\"novoMembro\", { ...appsmith.store.novoMembro, nome: InputNome.text }) }}",
+  "originalBottomRow": 14,
+  "originalTopRow": 10,
+  "parentColumnSpace": 11.3125,
+  "parentId": "padvycng5h",
   "parentRowSpace": 10,
+  "placeholderText": "",
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 34,
-  "topRow": 12,
-  "type": "PHONE_INPUT_WIDGET",
-  "version": 1,
-  "widgetId": "pg55bcvwsn",
-  "widgetName": "InputTelefoneEditCopy"
+  "rightColumn": 59,
+  "showStepArrows": false,
+  "topRow": 11,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "d0rehqe5eo",
+  "widgetName": "InputNome"
 }

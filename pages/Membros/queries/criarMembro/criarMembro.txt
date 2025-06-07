@@ -1,5 +1,8 @@
 {
   "data": {
-    "nome": "{{ appsmith.store.novoMembro.nome }}"
+    "nome": "{{ appsmith.store.novoMembro.nome }}",
+    "email": "{{ appsmith.store.novoMembro.email }}",
+    "telefone": "{{ appsmith.store.novoMembro.telefone }}",
+    "CPF": "{{ appsmith.store.novoMembro.CPF }}"
   }
 }

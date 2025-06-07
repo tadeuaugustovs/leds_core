@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"data\": {\n    \"nome\": \"{{ appsmith.store.novoMembro.nome }}\"\n  }\n}\n",
+      "body": "{\n  \"data\": {\n    \"nome\": \"{{ appsmith.store.novoMembro.nome }}\",\n    \"email\": \"{{ appsmith.store.novoMembro.email }}\",\n    \"telefone\": \"{{ appsmith.store.novoMembro.telefone }}\",\n    \"CPF\": \"{{ appsmith.store.novoMembro.CPF }}\"\n  }\n}\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

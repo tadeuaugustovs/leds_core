@@ -2,11 +2,14 @@ export default {
   atualizarMembro: async () => {
     try {
       showAlert("Iniciando update...", "info");
+
       await updateMembro.run();
       showAlert("Update executado", "info");
+
       await getMembros.run();
       await getMembrosByDocumentId.run();
-      closeModal("modalEditarMembro");
+
+      closeModal("modalEditarMembro"); // <- Fecha o modal novamente
       showAlert("Membro atualizado com sucesso!", "success");
     } catch (e) {
       showAlert("Erro ao atualizar membro: " + e.message, "error");
@@ -25,7 +28,6 @@ export default {
       return;
     }
 
-    // Se for campo fixo (já mapeado no Strapi), salva direto na API
     const camposFixos = ["github", "gitlab", "linkedin", "lattes", "discord"];
     const isCampoPadrao = camposFixos.includes(campo);
 
@@ -48,12 +50,11 @@ export default {
           throw new Error(erro?.error?.message || "Erro ao atualizar");
         }
 
-        storeValue("social_cache_" + campo, valor); // cache local
+        storeValue("social_cache_" + campo, valor);
         await getMembrosByDocumentId.run();
 
         showAlert(`Campo "${campo}" atualizado para "${valor}" com sucesso!`, "success");
       } else {
-        // Se for campo extra, salva no store para reexibir depois
         const custom = appsmith.store.social_custom || [];
         const atualizado = [
           ...custom.filter(r => r.campo !== campo),

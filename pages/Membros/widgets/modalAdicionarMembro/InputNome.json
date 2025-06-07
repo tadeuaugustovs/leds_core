@@ -5,13 +5,16 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 18,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultText": "{{ appsmith.store.novoMembro.nome }}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -47,7 +50,7 @@
   "mobileRightColumn": 23,
   "mobileTopRow": 10,
   "needsErrorInfo": false,
-  "onTextChanged": "{{ storeValue(\"novoMembro\", { ...appsmith.store.novoMembro, nome: InputNome.text }) }}",
+  "onTextChanged": "{{ storeValue(\"novoMembro\", { \n  ...appsmith.store.novoMembro, \n  nome: InputNome.text \n}) }}",
   "originalBottomRow": 14,
   "originalTopRow": 10,
   "parentColumnSpace": 11.3125,

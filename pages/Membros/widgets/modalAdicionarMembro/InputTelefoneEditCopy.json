@@ -8,13 +8,16 @@
   "bottomRow": 32,
   "boxShadow": "none",
   "defaultDialCode": "+55",
-  "defaultText": "",
+  "defaultText": "{{ appsmith.store.novoMembro.telefone }}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",

@@ -5,7 +5,7 @@
   "bottomRow": 11,
   "boxShadow": "none",
   "closeOnSelection": true,
-  "dateFormat": "{{ moment(Table1.selectedRow?.dataNascimento).format('DD/MM/YYYY') }}\n",
+  "dateFormat": "DD/MM/YYYY",
   "datePickerType": "DATE_PICKER",
   "defaultDate": "{{ Table1.selectedRow?.dataNascimento ? new Date(`${Table1.selectedRow.dataNascimento}T00:00:00Z`) : undefined }}\n",
   "dynamicBindingPathList": [
@@ -16,17 +16,11 @@
       "key": "borderRadius"
     },
     {
-      "key": "dateFormat"
-    },
-    {
       "key": "defaultDate"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
-    {
-      "key": "dateFormat"
-    },
     {
       "key": "defaultDate"
     },

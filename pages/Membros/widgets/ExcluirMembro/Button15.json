@@ -1,45 +1,51 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 52,
+  "bottomRow": 19,
   "boxShadow": "none",
-  "buttonColor": "#1d4ed8",
-  "buttonStyle": "PRIMARY_BUTTON",
-  "buttonVariant": "PRIMARY",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonStyle": "PRIMARY",
+  "buttonVariant": "SECONDARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
     {
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
-  "iconAlign": "left",
-  "iconName": "floppy-disk",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "iisbry2c3t",
-  "leftColumn": 51,
+  "key": "75qp1ggc0v",
+  "leftColumn": 15,
   "minWidth": 120,
   "mobileBottomRow": 22,
-  "mobileLeftColumn": 47,
-  "mobileRightColumn": 63,
+  "mobileLeftColumn": 31,
+  "mobileRightColumn": 47,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "originalBottomRow": 54,
-  "originalTopRow": 50,
-  "parentId": "p5ao0fzw9j",
+  "onClick": "{{showModal(modalEditarMembro.name);}}",
+  "originalBottomRow": 19,
+  "originalTopRow": 15,
+  "parentId": "0ssrc48hnp",
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 62,
-  "text": "Salvar",
-  "topRow": 48,
+  "rightColumn": 31,
+  "text": "Cancelar",
+  "topRow": 15,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "szg8e83s5n",
-  "widgetName": "Button13"
+  "widgetId": "5pitmt5clo",
+  "widgetName": "Button15"
 }

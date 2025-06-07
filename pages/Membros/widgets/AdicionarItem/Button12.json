@@ -35,6 +35,8 @@
   "mobileTopRow": 18,
   "needsErrorInfo": false,
   "onClick": "{{showModal(Adde.name);}}",
+  "originalBottomRow": 54,
+  "originalTopRow": 50,
   "parentId": "p5ao0fzw9j",
   "placement": "CENTER",
   "recaptchaType": "V3",

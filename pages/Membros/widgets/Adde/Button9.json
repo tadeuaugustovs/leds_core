@@ -36,7 +36,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{\n  storeValue(\"novoMembro\", {\n    nome: \"\",\n    email: \"\",\n    telefone: \"\",\n    CPF: \"\"\n  });\n\n  showModal(\"modalAdicionarMembro\");\n}}\n",
+  "onClick": "{{ \n  // Limpar os campos antes de abrir o modal\n  storeValue(\"novoMembro\", {\n    nome: \"\",\n    email: \"\",\n    telefone: \"\",\n    CPF: \"\",\n    dataNascimento: null,\n    numeroAgencia: \"\",\n    bairroMunicipio: \"\",\n    termoConfidencialidade: \"\",\n    DISC: \"\",\n    discAdapt: \"\",\n    formacao: \"\",\n    finalizaTecnico: \"\",\n    finalizaSuperior: \"\",\n    experienciaAntes: \"\",\n    experienciaApos: \"\",\n    tamanhoCamisa: \"\",\n    kitLEDS: \"\",\n    projetos: [],\n    equipes: [],\n    equipeDesejada: [],\n    squads: [],\n  });\n\n  showModal(\"modalAdicionarMembro\");\n}}\n",
   "originalBottomRow": 13,
   "originalTopRow": 9,
   "parentId": "m5cho3nt09",

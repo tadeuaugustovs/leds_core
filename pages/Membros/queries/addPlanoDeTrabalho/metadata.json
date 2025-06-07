@@ -21,7 +21,7 @@
       "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/api/rede-socials",
+      "path": "/api/plano-de-trabalhos",
       "pluginSpecifiedTemplates": [
         {
           "value": true

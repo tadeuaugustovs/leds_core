@@ -1,29 +1,26 @@
 {
   "data": {
-    "statusBolsa": "{{ SelectStatusBolsaCopy.selectedOptionValue || '' }}",
-    "motivoInatividade": "{{ MotivoCopy.selectedOptionValue || '' }}",
-    "inicioBolsa": "{{ DatePicker1_1.selectedDate || '' }}",
-    "fimBolsa": "{{ DatePicker2_1.selectedDate || '' }}",
+    "statusBolsa": "{{ TableBolsas.selectedRow.status }}",
+    "motivoInatividade": "{{ TableBolsas.selectedRow.motivo !== '-' ? TableBolsas.selectedRow.motivo : null }}",
+    "inicioBolsa": "{{ TableBolsas.selectedRow.inicio }}",
+    "fimBolsa": "{{ TableBolsas.selectedRow.fim }}",
     "bolsa": {
       "connect": [
-        {
-          "documentId": "{{ SelectBolsaCopy.selectedOptionValue || '' }}"
-        }
+        { "documentId": "{{ getBolsaSelecionada.data?.data[0]?.documentId }}" }
       ]
     },
     "projetos": {
-      "set": [
-        {
-          "documentId": "{{ SelectProjectCopy.selectedOptionValue || '' }}"
-        }
+      "connect": [
+        { "documentId": "{{ getProjetoSelecionado.data?.data[0]?.documentId }}" }
       ]
     },
     "membro": {
       "connect": [
-        {
-          "documentId": "{{ Table1.selectedRow?.documentId }}"
-        }
+        { "documentId": "{{ Table1.selectedRow.documentId }}" }
       ]
+    },
+    "financiador": {
+      "connect": { "documentId": "{{ SelectFinanciador.selectedOptionValue }}" }
     }
   }
 }

@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"data\": {\n    \"label\": \"{{ TableFormacao.processedTableData[TableFormacao.updatedRowIndices[0]]?.label || '' }}\",\n    \"valor\": \"{{ TableFormacao.processedTableData[TableFormacao.updatedRowIndices[0]]?.valor || '' }}\",\n    \"membro\": {\n      \"connect\": [\n        {\n          \"documentId\": \"{{ Table1.selectedRow?.documentId || appsmith.store.membroSelecionadoDocumentId }}\"\n        }\n      ]\n    }\n  }\n}\n",
+      "body": "{\n  \"data\": {\n    \"label\": \"{{ TableFormacao.processedTableData[TableFormacao.updatedRowIndices[0]]?.label || '' }}\",\n    \"valor\": \"{{ TableFormacao.processedTableData[TableFormacao.updatedRowIndices[0]]?.valor || '' }}\",\n    \"membro\": {\n      \"connect\": [\n        {\n          \"documentId\": \"{{ Table1.selectedRow?.documentId || appsmith.store.membroSelecionadoDocumentId }}\"\n        }\n      ]\n    }\n  }\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

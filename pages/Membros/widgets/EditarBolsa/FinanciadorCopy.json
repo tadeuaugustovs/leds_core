@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 22,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \n(() => {\n  const documentId = Table1.selectedRow?.documentId;\n  const plano = getPlanoDeTrabalho.data?.data?.find(p =>\n    p.membro?.documentId === documentId\n  );\n  const financiador = plano?.bolsa?.financiador;\n  return financiador ? { label: financiador.nome, value: financiador.id } : undefined;\n})()\n))(FinanciadorCopy.options, FinanciadorCopy.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n(() => {\n  const documentId = Table1.selectedRow?.documentId;\n  const plano = getPlanoDeTrabalho.data?.data?.find(\n    p => p.membro?.documentId === documentId &&\n         p.bolsa?.nome === TableBolsas.selectedRow?.bolsa\n  );\n\n  const financiador = plano?.financiador;\n  return financiador\n    ? { label: financiador.nome, value: financiador.documentId }\n    : undefined;\n})()\n))(FinanciadorCopy.options, FinanciadorCopy.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -58,7 +58,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 23,
   "serverSideFiltering": false,
-  "sourceData": "{{ \n  getFinanciadores.data?.data?.map(f => ({\n    label: f.nome,\n    value: f.id\n  })) || []\n}}\n",
+  "sourceData": "{{ \n  getFinanciadores.data?.data?.map(f => ({\n    label: f.nome,\n    value: f.documentId\n  })) || []\n}}\n",
   "topRow": 15,
   "type": "SELECT_WIDGET",
   "version": 1,

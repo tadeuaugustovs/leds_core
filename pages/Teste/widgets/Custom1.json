@@ -1,0 +1,65 @@
+{
+  "backgroundColor": "#FFFFFF",
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 61,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "defaultModel": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "theme"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onResetClick"
+    }
+  ],
+  "events": [
+    "onResetClick"
+  ],
+  "isCanvas": false,
+  "isLoading": false,
+  "isSearchWildcard": true,
+  "isVisible": true,
+  "key": "f2z3n3iusy",
+  "leftColumn": 3,
+  "maxDynamicHeight": 48,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 45,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 26,
+  "mobileTopRow": 15,
+  "needsErrorInfo": false,
+  "onResetClick": "{{showAlert('Successfully reset!!', '');}}",
+  "parentColumnSpace": 14.234375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 55,
+  "shouldScrollContents": true,
+  "srcDoc": {
+    "css": "#chatbot-root {\n  font-family: 'Roboto', sans-serif;\n  width: 400px;\n  margin: 0 auto;\n  background: #f4f4f9;\n  border-radius: 8px;\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n  overflow: hidden;\n}\n\n.chat-header {\n  background: var(--appsmith-theme-primaryColor);\n  color: #fff;\n  padding: 16px;\n  font-size: 18px;\n  text-align: center;\n}\n\n.chat-window {\n  height: 300px;\n  overflow-y: auto;\n  padding: 16px;\n}\n\n.message {\n  margin-bottom: 16px;\n}\n\n.user-message {\n  text-align: right;\n}\n\n.user-message .content,\n.bot-message .content {\n  display: inline-block;\n  padding: 10px 15px;\n  border-radius: 15px;\n}\n\n.user-message .content {\n  background: var(--appsmith-theme-primaryColor);\n  color: #fff;\n}\n\n.bot-message .content {\n  background: #e0e0e0;\n  color: #000;\n}\n\n.chat-input {\n  display: flex;\n  padding: 12px;\n  background: #fff;\n}\n\n.chat-input input {\n  flex: 1;\n  padding: 10px;\n  border-radius: 20px;\n  border: 1px solid #ccc;\n}\n\n.chat-input button {\n  background: var(--appsmith-theme-primaryColor);\n  color: #fff;\n  border: none;\n  padding: 0 15px;\n  margin-left: 10px;\n  border-radius: 20px;\n  cursor: pointer;\n  transition: background 0.3s;\n}\n\n.chat-input button:hover {\n  background: darken(var(--appsmith-theme-primaryColor), 5%);\n}",
+    "html": "<div id=\"chatbot-root\"></div>",
+    "js": "import React, { useState, useCallback, useEffect } from 'https://cdn.jsdelivr.net/npm/react@18.2.0/+esm';\nimport ReactDOM from 'https://cdn.jsdelivr.net/npm/react-dom@18.2.0/+esm';\nfunction Chatbot() {\n  const [messages, setMessages] = useState([]);\n  const [currentMessage, setCurrentMessage] = useState('');\n  const [loading, setLoading] = useState(false);\n  const handleSendMessage = useCallback(() => {\n    if (currentMessage.trim() === '') return;\n    const userMessage = {\n      type: 'user',\n      content: currentMessage\n    };\n    const botMessage = {\n      type: 'bot',\n      content: 'Pensando...'\n    };\n    setMessages(prevMessages => [...prevMessages, userMessage, botMessage]);\n    setLoading(true);\n\n    // Execute the action and handle response/error\n    ledscore_ai.run({\n      query: currentMessage\n    }).then(response => {\n      const data = response.data; // Assuming the response has a data property\n      setMessages(prevMessages => prevMessages.map((msg, idx) => idx === prevMessages.length - 1 ? {\n        ...msg,\n        content: data\n      } : msg));\n    }).catch(error => {\n      console.error('Erro ao buscar resposta da AI:', error);\n      setMessages(prevMessages => prevMessages.map((msg, idx) => idx === prevMessages.length - 1 ? {\n        ...msg,\n        content: 'Desculpa, algo deu errado.'\n      } : msg));\n    }).finally(() => {\n      setLoading(false);\n    });\n    setCurrentMessage('');\n  }, [currentMessage]);\n\n  // Monitor ledscore_ai isLoading state if needed\n  useEffect(() => {\n    if (ledscore_ai && ledscore_ai.isLoading !== undefined) {\n      setLoading(ledscore_ai.isLoading);\n    }\n  }, [ledscore_ai]);\n  return /*#__PURE__*/React.createElement(\"div\", {\n    id: \"chatbot-root\"\n  }, /*#__PURE__*/React.createElement(\"div\", {\n    className: \"chat-header\"\n  }, \"Chatbot \", loading && '(Carregando...)'), /*#__PURE__*/React.createElement(\"div\", {\n    className: \"chat-window\"\n  }, messages.map((message, index) => /*#__PURE__*/React.createElement(\"div\", {\n    key: index,\n    className: `message ${message.type}-message`\n  }, /*#__PURE__*/React.createElement(\"div\", {\n    className: \"content\"\n  }, message.content)))), /*#__PURE__*/React.createElement(\"div\", {\n    className: \"chat-input\"\n  }, /*#__PURE__*/React.createElement(\"input\", {\n    type: \"text\",\n    value: currentMessage,\n    onChange: e => setCurrentMessage(e.target.value),\n    placeholder: \"Digite sua mensagem...\",\n    disabled: loading\n  }), /*#__PURE__*/React.createElement(\"button\", {\n    onClick: handleSendMessage,\n    disabled: loading\n  }, \"Enviar\")));\n}\nappsmith.onReady(() => {\n  ReactDOM.render(/*#__PURE__*/React.createElement(Chatbot, null), document.getElementById(\"chatbot-root\"));\n});"
+  },
+  "theme": "{{appsmith.theme}}",
+  "topRow": 5,
+  "type": "CUSTOM_WIDGET",
+  "uncompiledSrcDoc": {
+    "css": "#chatbot-root {\n  font-family: 'Roboto', sans-serif;\n  width: 400px;\n  margin: 0 auto;\n  background: #f4f4f9;\n  border-radius: 8px;\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n  overflow: hidden;\n}\n\n.chat-header {\n  background: var(--appsmith-theme-primaryColor);\n  color: #fff;\n  padding: 16px;\n  font-size: 18px;\n  text-align: center;\n}\n\n.chat-window {\n  height: 300px;\n  overflow-y: auto;\n  padding: 16px;\n}\n\n.message {\n  margin-bottom: 16px;\n}\n\n.user-message {\n  text-align: right;\n}\n\n.user-message .content,\n.bot-message .content {\n  display: inline-block;\n  padding: 10px 15px;\n  border-radius: 15px;\n}\n\n.user-message .content {\n  background: var(--appsmith-theme-primaryColor);\n  color: #fff;\n}\n\n.bot-message .content {\n  background: #e0e0e0;\n  color: #000;\n}\n\n.chat-input {\n  display: flex;\n  padding: 12px;\n  background: #fff;\n}\n\n.chat-input input {\n  flex: 1;\n  padding: 10px;\n  border-radius: 20px;\n  border: 1px solid #ccc;\n}\n\n.chat-input button {\n  background: var(--appsmith-theme-primaryColor);\n  color: #fff;\n  border: none;\n  padding: 0 15px;\n  margin-left: 10px;\n  border-radius: 20px;\n  cursor: pointer;\n  transition: background 0.3s;\n}\n\n.chat-input button:hover {\n  background: darken(var(--appsmith-theme-primaryColor), 5%);\n}",
+    "html": "<div id=\"chatbot-root\"></div>",
+    "js": "import React, { useState, useCallback, useEffect } from 'https://cdn.jsdelivr.net/npm/react@18.2.0/+esm';\nimport ReactDOM from 'https://cdn.jsdelivr.net/npm/react-dom@18.2.0/+esm';\n\nfunction Chatbot() {\n  const [messages, setMessages] = useState([]);\n  const [currentMessage, setCurrentMessage] = useState('');\n  const [loading, setLoading] = useState(false);\n\n  const handleSendMessage = useCallback(() => {\n    if (currentMessage.trim() === '') return;\n\n    const userMessage = { type: 'user', content: currentMessage };\n    const botMessage = { type: 'bot', content: 'Pensando...' };\n\n    setMessages((prevMessages) => [...prevMessages, userMessage, botMessage]);\n    setLoading(true);\n\n    // Execute the action and handle response/error\n    ledscore_ai.run({ query: currentMessage })\n      .then(response => {\n        const data = response.data; // Assuming the response has a data property\n        setMessages(prevMessages =>\n          prevMessages.map((msg, idx) =>\n            idx === prevMessages.length - 1 ? { ...msg, content: data } : msg\n          )\n        );\n      })\n      .catch(error => {\n        console.error('Erro ao buscar resposta da AI:', error);\n        setMessages(prevMessages =>\n          prevMessages.map((msg, idx) =>\n            idx === prevMessages.length - 1 ? { ...msg, content: 'Desculpa, algo deu errado.' } : msg\n          )\n        );\n      })\n      .finally(() => {\n        setLoading(false);\n      });\n\n    setCurrentMessage('');\n  }, [currentMessage]);\n\n  // Monitor ledscore_ai isLoading state if needed\n  useEffect(() => {\n    if (ledscore_ai && ledscore_ai.isLoading !== undefined) {\n      setLoading(ledscore_ai.isLoading);\n    }\n  }, [ledscore_ai]);\n\n  return (\n    <div id=\"chatbot-root\">\n      <div className=\"chat-header\">Chatbot {loading && '(Carregando...)'}</div>\n      <div className=\"chat-window\">\n        {messages.map((message, index) => (\n          <div key={index} className={`message ${message.type}-message`}>\n            <div className=\"content\">{message.content}</div>\n          </div>\n        ))}\n      </div>\n      <div className=\"chat-input\">\n        <input\n          type=\"text\"\n          value={currentMessage}\n          onChange={(e) => setCurrentMessage(e.target.value)}\n          placeholder=\"Digite sua mensagem...\"\n          disabled={loading}\n        />\n        <button onClick={handleSendMessage} disabled={loading}>Enviar</button>\n      </div>\n    </div>\n  );\n}\n\nappsmith.onReady(() => {\n  ReactDOM.render(<Chatbot />, document.getElementById(\"chatbot-root\"));\n});"
+  },
+  "version": 1,
+  "widgetId": "6xux8k4a37",
+  "widgetName": "Custom1"
+}

@@ -1,36 +1,32 @@
 {
-  "gitSyncId": "681f65b8d8ba125f5109f15a_4746cf84-645f-447e-b127-9bdfec8df9f5",
+  "gitSyncId": "68375c2c56cad916c8fc38e2_d6e6294a-314b-4cf4-9b20-57243fe5183d",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 930,
+          "bottomRow": 610,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "minHeight": 930,
-          "mobileBottomRow": 1738,
-          "mobileTopRow": 0,
+          "minHeight": 580,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "positioning": "fixed",
-          "rightColumn": 1160,
+          "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 66,
+          "snapRows": 56,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
-          "useAutoLayout": false,
           "version": 93,
           "widgetId": "0",
           "widgetName": "MainContainer"
         }
       }
     ],
-    "name": "Home Page",
-    "slug": "home-page"
+    "name": "Teste",
+    "slug": "teste"
   }
 }

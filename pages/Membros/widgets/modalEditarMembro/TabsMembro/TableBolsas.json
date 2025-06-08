@@ -36,9 +36,10 @@
     "status",
     "inicio",
     "fim",
-    "motivo"
+    "motivo",
+    "documentId"
   ],
-  "columnUpdatedAt": 1749337478612,
+  "columnUpdatedAt": 1749394966821,
   "columnWidthMap": {
     "bolsa": 151,
     "fim": 204,
@@ -90,6 +91,9 @@
     },
     {
       "key": "primaryColumns.status.textColor"
+    },
+    {
+      "key": "primaryColumns.documentId.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -132,7 +136,7 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 20,
   "needsErrorInfo": false,
-  "onRowSelected": "{{\n  storeValue(\"bolsaSelecionada\", {\n    ...TableBolsas.selectedRow,\n    documentId: TableBolsas.selectedRow?.documentId || ''\n  });\n  showModal(\"EditarBolsa\");\n}}\n",
+  "onRowSelected": "{{\n  storeValue(\"bolsaSelecionada\", TableBolsas.selectedRow);\n  showModal(\"EditarBolsa\");\n}}\n",
   "originalBottomRow": 39,
   "originalTopRow": 6,
   "parentColumnSpace": 10.7940673828125,
@@ -165,6 +169,40 @@
       "label": "bolsa",
       "notation": "standard",
       "originalId": "bolsa",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "documentId": {
+      "alias": "documentId",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{TableBolsas.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"documentId\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "documentId",
+      "index": 5,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "documentId",
+      "notation": "standard",
+      "originalId": "documentId",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -319,7 +357,7 @@
   "searchKey": "",
   "serverSidePaginationEnabled": false,
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{\n(() => {\n  const membroSelecionado = Table1?.selectedRow;\n  const todosMembros = getMembros.data?.data || [];\n\n  if (!membroSelecionado || !membroSelecionado.documentId) return [];\n\n  const membro = todosMembros.find(m => m.documentId === membroSelecionado.documentId);\n  const planos = membro?.planos_de_trabalho || [];\n\n  const formatarData = data => {\n    if (!data) return '-';\n    const dateObj = new Date(data);\n    if (isNaN(dateObj)) return '-';\n    return dateObj.toISOString().split('T')[0];\n  };\n\n  const ordem = { \"ATIVA\": 0, \"PLANEJADA\": 1, \"INATIVA\": 2 };\n\n  return planos\n    .sort((a, b) => (ordem[a.statusBolsa] ?? 3) - (ordem[b.statusBolsa] ?? 3))\n    .map(plano => ({\n      bolsa: plano?.bolsa?.nome || '-',\n      status: plano?.statusBolsa || '-',\n      inicio: formatarData(plano?.inicioBolsa),\n      fim: formatarData(plano?.fimBolsa),\n      motivo: plano?.motivoInatividade || '-'\n    }));\n})()\n}}\n",
+  "tableData": "{{\n(() => {\n  const membroSelecionado = Table1?.selectedRow;\n  const todosMembros = getMembros.data?.data || [];\n\n  if (!membroSelecionado || !membroSelecionado.documentId) return [];\n\n  const membro = todosMembros.find(m => m.documentId === membroSelecionado.documentId);\n  const planos = membro?.planos_de_trabalho || [];\n\n  const formatarData = data => {\n    if (!data) return '-';\n    const dateObj = new Date(data);\n    if (isNaN(dateObj)) return '-';\n    return dateObj.toISOString().split('T')[0];\n  };\n\n  const ordem = { \"ATIVA\": 0, \"PLANEJADA\": 1, \"INATIVA\": 2 };\n\n  return planos\n    .sort((a, b) => (ordem[a.statusBolsa] ?? 3) - (ordem[b.statusBolsa] ?? 3))\n    .map(plano => ({\n      documentId: plano?.documentId, // necessário para a query PUT\n      bolsa: plano?.bolsa?.nome || '-',\n      status: plano?.statusBolsa || '-',\n      inicio: formatarData(plano?.inicioBolsa),\n      fim: formatarData(plano?.fimBolsa),\n      motivo: plano?.motivoInatividade || '-'\n    }));\n})()\n}}\n",
   "textSize": "0.875rem",
   "topRow": 6,
   "totalRecordsCount": 0,

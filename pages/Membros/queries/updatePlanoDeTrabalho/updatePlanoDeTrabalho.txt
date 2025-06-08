@@ -1,0 +1,29 @@
+{
+  "data": {
+    "statusBolsa": "{{ SelectStatusBolsaCopy.selectedOptionValue || '' }}",
+    "motivoInatividade": "{{ MotivoCopy.selectedOptionValue || '' }}",
+    "inicioBolsa": "{{ DatePicker1_1.selectedDate || '' }}",
+    "fimBolsa": "{{ DatePicker2_1.selectedDate || '' }}",
+    "bolsa": {
+      "connect": [
+        {
+          "documentId": "{{ SelectBolsaCopy.selectedOptionValue || '' }}"
+        }
+      ]
+    },
+    "projetos": {
+      "set": [
+        {
+          "documentId": "{{ SelectProjectCopy.selectedOptionValue || '' }}"
+        }
+      ]
+    },
+    "membro": {
+      "connect": [
+        {
+          "documentId": "{{ Table1.selectedRow?.documentId }}"
+        }
+      ]
+    }
+  }
+}

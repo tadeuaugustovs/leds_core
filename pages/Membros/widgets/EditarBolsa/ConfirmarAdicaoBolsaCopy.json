@@ -34,7 +34,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{\n  SelectBolsa.selectedOptionValue &&\n  SelectProject.selectedOptionValue &&\n  SelectStatusBolsa.selectedOptionValue &&\n  DatePicker1.selectedDate &&\n  DatePicker2.selectedDate &&\n  Table1.selectedRow?.documentId &&\n  Financiador.selectedOptionValue &&\n  (\n    SelectStatusBolsa.selectedOptionValue !== \"INATIVA\" ||\n    Motivo.selectedOptionValue\n  )\n  ? getMembrosByDocumentId.run(\n      () => {\n        const membroData = getMembrosByDocumentId.data?.data?.[0];\n\n        if (membroData && membroData.id) {\n          storeValue(\"idInternoMembro\", membroData.id);\n          addPlanoDeTrabalho.run(\n            () => {\n              showAlert(\"Plano de trabalho adicionado com sucesso\", \"success\");\n              closeModal(\"Adicionar_bolsaCopy\");\n            },\n            (err) => {\n              showAlert(\"Erro ao adicionar plano de trabalho: \" + err.message, \"error\");\n            }\n          );\n        } else {\n          showAlert(\"Membro não encontrado a partir do documentId\", \"error\");\n        }\n      },\n      (err) => {\n        showAlert(\"Erro ao buscar membro por documentId: \" + err.message, \"error\");\n      }\n    )\n  : showAlert(\"Preencha todos os campos obrigatórios antes de confirmar\", \"error\");\n}}\n",
+  "onClick": "{{ \nupdatePlanoDeTrabalho.run()\n  .then(() => {\n    getMembros.run();\n    showAlert(\"Bolsa atualizada com sucesso!\", \"success\");\n    closeModal(\"EditarBolsa\");\n  })\n  .catch(err => {\n    showAlert(\"Erro ao atualizar bolsa: \" + err.message, \"error\");\n  });\n\n}}\n",
   "originalBottomRow": 40,
   "originalTopRow": 36,
   "parentId": "fy1dmivih0",

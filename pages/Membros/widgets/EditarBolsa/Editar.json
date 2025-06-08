@@ -40,7 +40,7 @@
   "shouldTruncate": false,
   "text": "Editar bolsa",
   "textAlign": "LEFT",
-  "textColor": "#231F20",
+  "textColor": "#1e3a8a",
   "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",

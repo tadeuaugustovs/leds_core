@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 14,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  (() => {\n    const nome = TableBolsas.selectedRow?.projeto?.[0]; // se for múltiplo, pega o primeiro\n    const projeto = getProjetos.data?.data?.find(p => p.nome === nome);\n    return projeto ? { label: projeto.nome, value: projeto.id } : undefined;\n  })()\n))(SelectProjectCopy.options, SelectProjectCopy.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n(() => {\n  const documentId = Table1.selectedRow?.documentId;\n  const plano = getPlanoDeTrabalho.data?.data?.find(p => \n    p.membro?.documentId === documentId\n  );\n\n  const projeto = plano?.projetos?.[0];\n  return projeto ? { label: projeto.nome, value: projeto.documentId } : undefined;\n})()\n))(SelectProjectCopy.options, SelectProjectCopy.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -23,12 +23,6 @@
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
-    },
-    {
-      "key": "optionValue"
-    },
-    {
-      "key": "optionLabel"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -64,7 +58,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 48,
   "serverSideFiltering": false,
-  "sourceData": "{{ \n  getProjetos.data?.data?.map(p => ({\n    label: p.nome,\n    value: p.id\n  })) || [] \n}}\n",
+  "sourceData": "{{ \n  getProjetos.data?.data?.map(proj => ({\n    label: proj.nome,\n    value: proj.documentId\n  })) \n}}\n",
   "topRow": 7,
   "type": "SELECT_WIDGET",
   "version": 1,

@@ -132,7 +132,7 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 20,
   "needsErrorInfo": false,
-  "onRowSelected": "{{\nstoreValue(\"idBolsaSelecionada\", TableBolsas.selectedRow.documentId);\nshowModal(\"EditarBolsa\");\n\n}}",
+  "onRowSelected": "{{\nstoreValue(\"bolsaSelecionada\", TableBolsas.selectedRow);\nshowModal(\"EditarBolsa\");\n\n}}",
   "originalBottomRow": 39,
   "originalTopRow": 6,
   "parentColumnSpace": 10.7940673828125,

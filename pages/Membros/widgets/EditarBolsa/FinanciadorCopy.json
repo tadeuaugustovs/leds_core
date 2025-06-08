@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 22,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  (() => {\n    const nome = TableBolsas.selectedRow?.financiador;\n    const financiador = getFinanciadores.data?.data?.find(f => f.nome === nome);\n    return financiador ? { label: financiador.nome, value: financiador.id } : undefined;\n  })()\n))(FinanciadorCopy.options, FinanciadorCopy.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \n(() => {\n  const documentId = Table1.selectedRow?.documentId;\n  const plano = getPlanoDeTrabalho.data?.data?.find(p =>\n    p.membro?.documentId === documentId\n  );\n  const financiador = plano?.bolsa?.financiador;\n  return financiador ? { label: financiador.nome, value: financiador.id } : undefined;\n})()\n))(FinanciadorCopy.options, FinanciadorCopy.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

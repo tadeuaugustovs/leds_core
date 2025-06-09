@@ -1,0 +1,67 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  (() => {\n    const status = appsmith.store.bolsaSelecionada?.status;\n    if (!status) return undefined;\n    return { label: status, value: status };\n  })()\n))(SelectStatusBolsaCopy.options, SelectStatusBolsaCopy.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "optionValue"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "0023e8sb7e",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Status",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 24,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 32,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 25,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "code",
+  "originalBottomRow": 22,
+  "originalTopRow": 15,
+  "parentColumnSpace": 8.357031249999999,
+  "parentId": "cdsp8dwoh9",
+  "parentRowSpace": 10,
+  "placeholderText": "Selecionar",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 40,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"name\": \"Ativa\",\n    \"code\": \"ATIVA\"\n  },\n  {\n    \"name\": \"Inativa\",\n    \"code\": \"INATIVA\"\n  },\n  {\n    \"name\": \"Planejada\",\n    \"code\": \"PLANEJADA\"\n  }\n]",
+  "topRow": 15,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "2m2cnf5urk",
+  "widgetName": "SelectStatusBolsaCopy"
+}

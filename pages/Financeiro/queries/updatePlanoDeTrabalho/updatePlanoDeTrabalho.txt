@@ -1,0 +1,28 @@
+{
+  "data": {
+    "statusBolsa": "{{ TableBolsas.selectedRow.status }}",
+    "motivoInatividade": {{ TableBolsas.selectedRow.motivo !== '-' ? `"${TableBolsas.selectedRow.motivo}"` : null }},
+    "inicioBolsa": "{{ TableBolsas.selectedRow.inicio }}",
+    "fimBolsa": "{{ TableBolsas.selectedRow.fim }}",
+    "bolsa": {
+      "connect": [
+        { "documentId": "{{ SelectBolsaCopy.selectedOptionValue }}" }
+      ]
+    },
+    "projetos": {
+      "connect": {
+        "documentId": "{{ SelectProjectCopy.selectedOptionValue }}"
+      }
+    },
+    "membro": {
+      "connect": [
+        { "documentId": "{{ Table1.selectedRow.documentId }}" }
+      ]
+    },
+    "financiadors": {
+      "connect": [
+        { "documentId": "{{ SelectFinanciador.selectedOptionValue }}" }
+      ]
+    }
+  }
+}

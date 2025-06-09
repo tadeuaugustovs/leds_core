@@ -1,0 +1,47 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "displayName": "Text",
+  "dynamicBindingPathList": [
+    {
+      "key": "fontFamily"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.97c59b52.svg",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "xx7obgmjct",
+  "leftColumn": 3,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "originalBottomRow": 41,
+  "originalTopRow": 37,
+  "overflow": "NONE",
+  "parentColumnSpace": 12.01953125,
+  "parentId": "8t4xh26j60",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 21,
+  "searchTags": [
+    "typography",
+    "paragraph"
+  ],
+  "shouldTruncate": false,
+  "text": "Usuários do LEDSCORE",
+  "textAlign": "LEFT",
+  "textColor": "#1e3a8a",
+  "topRow": 3,
+  "truncateButtonColor": "#FFC13D",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "sxvpte4fcy",
+  "widgetName": "TitleCopyCopy"
+}

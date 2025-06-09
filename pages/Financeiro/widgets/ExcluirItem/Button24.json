@@ -1,51 +1,43 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 12,
+  "bottomRow": 18,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#7f1d1d",
   "buttonStyle": "PRIMARY_BUTTON",
-  "buttonVariant": "SECONDARY",
+  "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [
-    {
-      "key": "onClick"
-    }
-  ],
-  "iconAlign": "left",
-  "iconName": "add",
+  "dynamicTriggerPathList": [],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "erg03e2uo6",
-  "leftColumn": 52,
+  "key": "digbynz9jw",
+  "leftColumn": 33,
   "minWidth": 120,
   "mobileBottomRow": 22,
   "mobileLeftColumn": 47,
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(Modal1.name);}}",
-  "parentId": "altxndycxd",
+  "originalBottomRow": 24,
+  "originalTopRow": 20,
+  "parentId": "y6bk1aps4p",
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 62,
-  "text": "Adicionar",
-  "topRow": 8,
+  "rightColumn": 49,
+  "text": "Confirmar",
+  "topRow": 14,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "j0j8gjudia",
-  "widgetName": "Button16"
+  "widgetId": "qhduqh825k",
+  "widgetName": "Button24"
 }

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68375c2c56cad916c8fc38e2_83d65d94-d25b-45cf-afc5-dc8c4b09416a",
+  "id": "Admin_enviarPerguntaIA",
+  "unpublishedCollection": {
+    "name": "enviarPerguntaIA",
+    "pageId": "Admin",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

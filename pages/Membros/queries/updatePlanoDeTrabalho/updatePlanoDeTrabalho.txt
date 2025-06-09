@@ -10,9 +10,9 @@
       ]
     },
     "projetos": {
-      "connect": [
-        {{ SelectProjectCopy.selectedOptionValue ? `{ "documentId": "${SelectProjectCopy.selectedOptionValue}" }` : '' }}
-      ]
+      "connect": {
+        "documentId": "{{ SelectProjectCopy.selectedOptionValue }}"
+      }
     },
     "membro": {
       "connect": [

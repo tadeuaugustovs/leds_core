@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 30,
+  "bottomRow": 29,
   "boxShadow": "none",
   "buttonColor": "#1d4ed8",
   "buttonStyle": "PRIMARY_BUTTON",
@@ -47,7 +47,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 43,
   "text": "Salvar",
-  "topRow": 25,
+  "topRow": 24,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "ppvyo3lpmx",

@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 6,
   "boxShadow": "none",
-  "defaultText": "{{\n  (() => {\n    const registro = getControleBolsaDoProjeto.data?.data?.find(\n      item => item.projeto?.data?.id === appsmith.store.projetoSelecionadoDocumentId || \n              item.projeto?.documentId === appsmith.store.projetoSelecionadoDocumentId\n    );\n    return registro?.valor_total?.toLocaleString(\"pt-BR\", {\n      style: \"currency\",\n      currency: \"BRL\",\n    }) || \"\";\n  })()\n}}\n",
+  "defaultText": "{{\n  (() => {\n    const registro = getControleBolsaDoProjeto.data?.data?.[0];\n    return registro?.valor_total ?? \"\";\n  })()\n}}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

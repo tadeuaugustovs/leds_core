@@ -1,0 +1,9 @@
+{
+  "data": {
+    "valor_total": {{ Number(InputValorTotal.text) }},
+    "valor_planejado": {{ Number(InputPlanejado.text) }},
+    "projeto": {
+      "connect": [{ "documentId": "{{ appsmith.store.projetoSelecionadoDocumentId }}" }]
+    }
+  }
+}

@@ -116,7 +116,7 @@
   "mobileRightColumn": 36,
   "mobileTopRow": 23,
   "needsErrorInfo": false,
-  "onRowSelected": "{{\n  storeValue(\"projetoSelecionadoDocumentId\", Table5.selectedRow?.documentId);\n\n  setTimeout(() => {\n    Promise.all([\n getCapitalCusteioItens.run()\n    ])\n    .then(() => {\n      showModal(\"ModalProjetos\");\n    })\n    .catch((err) => {\n      showAlert(\"Erro ao carregar dados do projeto: \" + err.message, \"error\");\n    });\n  }, 5); // Delay de 5ms para garantir que o storeValue seja aplicado\n}}",
+  "onRowSelected": "{{\n  storeValue(\"projetoSelecionadoDocumentId\", Table5.selectedRow?.documentId);\n\n  setTimeout(() => {\n    Promise.all([\n      getCapitalCusteioItens.run(),\n      getControleBolsaDoProjeto.run(() => {\n        const dados = getControleBolsaDoProjeto.data?.data?.[0];\n\n        storeValue(\"controleDeBolsaId\", dados?.documentId);\n        storeValue(\"valorTotalProjeto\", dados?.valor_total || 0);\n        storeValue(\"valorPlanejadoProjeto\", dados?.valor_planejado || 0);\n      })\n    ])\n    .then(() => {\n      showModal(\"ModalProjetos\");\n    })\n    .catch((err) => {\n      showAlert(\"Erro ao carregar dados do projeto: \" + err.message, \"error\");\n    });\n  }, 5);\n}}\n",
   "originalBottomRow": 33,
   "originalTopRow": 7,
   "parentColumnSpace": 24.265625,

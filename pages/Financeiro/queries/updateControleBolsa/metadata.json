@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "68375c2c56cad916c8fc38e2_547bbe71-e4e9-47d2-8eba-0039c3fa0564",
-  "id": "Financeiro_createControleDeBolsa",
+  "gitSyncId": "68375c2c56cad916c8fc38e2_923e2b94-0b4a-43ec-aa9d-a18ca8f7d562",
+  "id": "Financeiro_updateControleBolsa",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,17 +11,17 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"data\": {\n    \"valor_total\": {{ InputValorTotalProjeto.text }},\n    \"valor_planejado\": {{ InputValorPlanejadoProjeto.text }},\n    \"projeto\": {\n      \"connect\": {\n        \"documentId\": \"{{ TableProjetos.selectedRow.documentId }}\"\n      }\n    }\n  }\n}\n",
+      "body": "{\n  \"data\": {\n    \"valor_total\": {{ Number(InputValorTotal.text) }},\n    \"valor_planejado\": {{ Number(InputPlanejado.text) }},\n    \"projeto\": {\n      \"connect\": [{ \"documentId\": \"{{ appsmith.store.projetoSelecionadoDocumentId }}\" }]\n    }\n  }\n}\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
         "apiContentType": "application/json"
       },
       "headers": [],
-      "httpMethod": "POST",
+      "httpMethod": "PUT",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/api/controle-de-bolsas",
+      "path": "/api/controle-de-bolsas/{{documentId}}",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -42,9 +42,12 @@
     "dynamicBindingPathList": [
       {
         "key": "body"
+      },
+      {
+        "key": "path"
       }
     ],
-    "name": "createControleDeBolsa",
+    "name": "updateControleBolsa",
     "pageId": "Financeiro",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

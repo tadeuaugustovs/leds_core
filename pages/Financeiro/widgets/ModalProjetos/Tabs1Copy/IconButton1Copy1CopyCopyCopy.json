@@ -32,7 +32,7 @@
   "mobileRightColumn": 31,
   "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "onClick": "{{updateValorOrcamentoGeral.run(() => {\n  showAlert(\"Valor geral atualizado com sucesso!\", \"success\");\n  getValorOrcamento.run(); // Recarrega os dados atualizados\n}, (err) => {\n  showAlert(\"Erro ao atualizar o valor geral: \" + err.message, \"error\");\n});\n}}",
+  "onClick": "{{ functionsFinanceiroBolsas.salvarControleDeBolsa() }}",
   "parentColumnSpace": 12.142578125,
   "parentId": "aooibuimzs",
   "parentRowSpace": 10,

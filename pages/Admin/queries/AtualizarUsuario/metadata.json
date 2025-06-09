@@ -45,6 +45,9 @@
       },
       {
         "key": "queryParameters[0].value"
+      },
+      {
+        "key": "path"
       }
     ],
     "name": "AtualizarUsuario",

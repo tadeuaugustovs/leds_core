@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 22,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n(() => {\n  const documentId = Table1.selectedRow?.documentId;\n  const plano = getPlanoDeTrabalho.data?.data?.find(\n    p => p.membro?.documentId === documentId &&\n         p.bolsa?.nome === TableBolsas.selectedRow?.bolsa\n  );\n\n  const financiador = plano?.financiador;\n  return financiador\n    ? { label: financiador.nome, value: financiador.documentId }\n    : undefined;\n})()\n))(FinanciadorCopy.options, FinanciadorCopy.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n(() => {\n  const documentId = Table1.selectedRow?.documentId;\n  const plano = getPlanoDeTrabalho.data?.data?.find(\n    p => p.membro?.documentId === documentId &&\n         p.bolsa?.nome === TableBolsas.selectedRow?.bolsa\n  );\n\n  const financiador = plano?.financiador;\n  return financiador\n    ? { label: financiador.nome, value: financiador.documentId }\n    : undefined;\n})()\n))(SelectFinanciador.options, SelectFinanciador.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -63,5 +63,5 @@
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "1stictff8b",
-  "widgetName": "FinanciadorCopy"
+  "widgetName": "SelectFinanciador"
 }

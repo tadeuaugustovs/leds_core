@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "68375c2c56cad916c8fc38e2_7664847d-2322-4963-82b5-1ba78d044bff",
-  "id": "Financeiro_postItemFluxoCaixa",
+  "gitSyncId": "68375c2c56cad916c8fc38e2_f9478c34-1bdd-410a-8739-ad172938baa6",
+  "id": "Financeiro_updateValorGeral",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,17 +11,17 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"data\": {\n    \"descricao\": \"{{InputDescricao.text}}\",\n    \"receita\": {{Number(InputReceita.text.replace(',', '.')) || 0}},\n    \"despesa\": {{Number(InputDespesa.text.replace(',', '.')) || 0}},\n    \"contacorrente\": {{Number(ContaCorrente.text.replace(',', '.')) || 0}},\n    \"data\": \"{{SelecionarData.selectedDate}}\",\n    \"situacao\": \"{{InputSituacao.text || 'Executado'}}\",\n    \"capital_custeio_item\": {\n      \"connect\": [\n        {\n          \"documentId\": \"{{appsmith.store.documentoDoItemSelecionado}}\"\n        }\n      ]\n    }\n  }\n}\n",
+      "body": "{\n  \"data\": {\n    \"valor_total\": {{ InputValorTotalGeral.text }}\n  }\n}\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
         "apiContentType": "application/json"
       },
       "headers": [],
-      "httpMethod": "POST",
+      "httpMethod": "PUT",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/api/item-fluxo-caixas",
+      "path": "/api/valor-gerals/{{ getValorGeral.data.data[0].documentId }}",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -42,9 +42,12 @@
     "dynamicBindingPathList": [
       {
         "key": "body"
+      },
+      {
+        "key": "path"
       }
     ],
-    "name": "postItemFluxoCaixa",
+    "name": "updateValorGeral",
     "pageId": "Financeiro",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

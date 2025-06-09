@@ -1,0 +1,6 @@
+{
+  "data": {
+    "valor_total": {{ InputValorTotalProjeto.text }},
+    "valor_planejado": {{ InputValorPlanejadoProjeto.text }}
+  }
+}

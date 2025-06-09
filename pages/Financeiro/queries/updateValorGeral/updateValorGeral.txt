@@ -1,0 +1,5 @@
+{
+  "data": {
+    "valor_total": {{ InputValorTotalGeral.text }}
+  }
+}

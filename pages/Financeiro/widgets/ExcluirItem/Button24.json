@@ -12,7 +12,16 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
@@ -25,8 +34,9 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "originalBottomRow": 24,
-  "originalTopRow": 20,
+  "onClick": "{{ \n  deleteItemFluxoCaixa.run()\n    .then(() => {\n      showAlert(\"Item excluído com sucesso!\", \"success\");\n      closeModal(\"ExcluirItem\");\n      getItensFluxoCaixa.run();\n    })\n    .catch(err => {\n      showAlert(\"Erro ao excluir o item: \" + err.message, \"error\");\n    });\n}}\n",
+  "originalBottomRow": 18,
+  "originalTopRow": 14,
   "parentId": "y6bk1aps4p",
   "placement": "CENTER",
   "recaptchaType": "V3",

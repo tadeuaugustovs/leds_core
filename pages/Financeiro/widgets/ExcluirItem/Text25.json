@@ -11,6 +11,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -38,7 +41,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 56,
   "shouldTruncate": false,
-  "text": "Tem certeza que deseja excluir este item?",
+  "text": "Tem certeza que deseja excluir: {{ appsmith.store.itemParaExcluir.descricao }}?\n",
   "textAlign": "CENTER",
   "textColor": "#7f1d1d",
   "topRow": 4,

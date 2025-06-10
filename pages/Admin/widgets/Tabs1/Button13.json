@@ -17,7 +17,7 @@
     }
   ],
   "iconAlign": "left",
-  "iconName": "chat",
+  "iconName": "chevron-right",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,

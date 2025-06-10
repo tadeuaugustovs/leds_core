@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "System Default",
+  "fontSize": "1.25rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "p2g4r9ca1s",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 19,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "originalBottomRow": 6,
+  "originalTopRow": 2,
+  "overflow": "NONE",
+  "parentColumnSpace": 6.35986328125,
+  "parentId": "knnzt41qrp",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 31,
+  "shouldTruncate": false,
+  "text": "Editar Squads",
+  "textAlign": "LEFT",
+  "textColor": "{{appsmith.theme.colors.primaryColor}}",
+  "topRow": 2,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "f9xol0odyt",
+  "widgetName": "Text5Copy1CopyCopy"
+}

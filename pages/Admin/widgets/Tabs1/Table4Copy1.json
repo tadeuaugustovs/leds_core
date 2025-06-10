@@ -68,7 +68,7 @@
   "isVisibleSearch": true,
   "key": "3f5n36hxus",
   "label": "Data",
-  "leftColumn": 1,
+  "leftColumn": 2,
   "minWidth": 450,
   "mobileBottomRow": 38,
   "mobileLeftColumn": 2,
@@ -78,7 +78,7 @@
   "originalBottomRow": 41,
   "originalTopRow": 8,
   "parentColumnSpace": 6.35986328125,
-  "parentId": "q0jaiw8a9c",
+  "parentId": "ma6vge3s56",
   "parentRowSpace": 10,
   "primaryColumns": {},
   "renderMode": "CANVAS",
@@ -92,6 +92,6 @@
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "obmhwkfowu",
-  "widgetName": "Table4"
+  "widgetId": "5b2ozoiogj",
+  "widgetName": "Table4Copy1"
 }

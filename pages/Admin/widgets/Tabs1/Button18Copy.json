@@ -1,51 +1,47 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 21,
+  "bottomRow": 9,
   "boxShadow": "none",
-  "buttonColor": "#1e3a8a",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "SECONDARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
+      "key": "buttonColor"
+    },
+    {
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [
-    {
-      "key": "onClick"
-    }
-  ],
+  "dynamicTriggerPathList": [],
   "iconAlign": "left",
-  "iconName": "archive",
+  "iconName": "add",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "2lxi8rq4ss",
-  "leftColumn": 30,
+  "key": "8k6v5avpx5",
+  "leftColumn": 49,
   "minWidth": 120,
-  "mobileBottomRow": 17,
-  "mobileLeftColumn": 32,
-  "mobileRightColumn": 48,
-  "mobileTopRow": 13,
+  "mobileBottomRow": 8,
+  "mobileLeftColumn": 46,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(MensagensEnviadas.name);}}",
-  "originalBottomRow": 27,
-  "originalTopRow": 18,
-  "parentColumnSpace": 14.234375,
-  "parentId": "s8a7mz0w7m",
+  "parentColumnSpace": 6.35986328125,
+  "parentId": "nhvkeq3d3k",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 54,
-  "text": "Ver Mensagens Enviadas",
-  "topRow": 13,
+  "rightColumn": 62,
+  "text": "Adicionar",
+  "topRow": 5,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "pqih67u6pt",
-  "widgetName": "Button10Copy"
+  "widgetId": "kdb19n0swz",
+  "widgetName": "Button18Copy"
 }

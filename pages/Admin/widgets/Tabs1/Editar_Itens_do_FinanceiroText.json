@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "System Default",
+  "fontSize": "1.25rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "p2g4r9ca1s",
+  "leftColumn": 2,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 19,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "originalBottomRow": 7,
+  "originalTopRow": 2,
+  "overflow": "NONE",
+  "parentColumnSpace": 6.35986328125,
+  "parentId": "ma6vge3s56",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 32,
+  "shouldTruncate": false,
+  "text": "Editar Itens do Financeiro",
+  "textAlign": "LEFT",
+  "textColor": "{{appsmith.theme.colors.primaryColor}}",
+  "topRow": 2,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "3fdp31v3xb",
+  "widgetName": "Editar_Itens_do_FinanceiroText"
+}

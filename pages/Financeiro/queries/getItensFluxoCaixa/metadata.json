@@ -28,12 +28,12 @@
           "value": "capital_custeio_item"
         },
         {
-          "key": "pagination[pageSize]",
+          "key": "pagination[limit]",
           "value": "10000"
         },
         {
           "key": "sort[0]",
-          "value": "data\n"
+          "value": "data:desc\n"
         }
       ],
       "timeoutInMillisecond": 10000

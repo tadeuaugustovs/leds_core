@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"data\": {\n    \"descricao\": \"{{InputDescricao.text}}\",\n    \"receita\": {{Number(InputReceita.text.replace(',', '.')) || 0}},\n    \"despesa\": {{Number(InputDespesa.text.replace(',', '.')) || 0}},\n    \"contacorrente\": {{Number(ContaCorrente.text.replace(',', '.')) || 0}},\n    \"data\": \"{{SelecionarData.selectedDate}}\",\n    \"situacao\": \"{{InputSituacao.text || 'Executado'}}\",\n    \"capital_custeio_item\": {\n      \"connect\": [\n        {\n          \"documentId\": \"{{ Select4.selectedOptionValue }}\"\n        }\n      ]\n    }\n  }\n}\n",
+      "body": "{\n  \"data\": {\n    \"descricao\": \"{{ InputDescricao.text }}\",\n    \"receita\": {{ Number(InputReceita.text.replace(',', '.')) || 0 }},\n    \"despesa\": {{ Number(InputDespesa.text.replace(',', '.')) || 0 }},\n    \"contacorrente\": {{ \n      parseFloat(\n        ContaCorrente.text\n          .replace(/\\s/g, '')\n          .replace('R$', '')\n          .replace(/\\./g, '')\n          .replace(',', '.')\n      ) || 0 \n    }},\n    \"data\": \"{{ SelecionarData.selectedDate }}\",\n    \"situacao\": \"{{ InputSituacao.text || 'Executado' }}\",\n    \"capital_custeio_item\": {\n      \"connect\": [\n        {\n          \"documentId\": \"{{ Select4.selectedOptionValue }}\"\n        }\n      ]\n    }\n  }\n}\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

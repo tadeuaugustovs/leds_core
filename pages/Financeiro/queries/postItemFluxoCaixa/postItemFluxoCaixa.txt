@@ -9,7 +9,7 @@
     "capital_custeio_item": {
       "connect": [
         {
-          "documentId": "{{appsmith.store.documentoDoItemSelecionado}}"
+          "documentId": "{{ Select4.selectedOptionValue }}"
         }
       ]
     }

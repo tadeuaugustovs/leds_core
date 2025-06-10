@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 7,
   "boxShadow": "none",
-  "defaultText": "{{(() => {\n  const dados = getItensFluxoCaixa.data?.data || [];\n  const ordenado = dados.sort((a, b) => new Date(b.data) - new Date(a.data));\n  const primeiro = ordenado[0];\n  return Number(primeiro?.contacorrente || 0).toLocaleString(\"pt-BR\", { style: \"currency\", currency: \"BRL\" });\n})()\n\n}}",
+  "defaultText": "{{\n(() => {\n  const dados = getItensFluxoCaixa.data?.data || [];\n\n  const receitaTotal = dados.reduce((soma, item) => {\n    const valor = Number(item.receita);\n    return soma + (isNaN(valor) ? 0 : valor);\n  }, 0);\n\n  const despesaTotal = dados.reduce((soma, item) => {\n    const valor = Number(item.despesa);\n    return soma + (isNaN(valor) ? 0 : valor);\n  }, 0);\n\n  const contaCorrente = receitaTotal + despesaTotal;\n\n  return contaCorrente.toLocaleString(\"pt-BR\", {\n    style: \"currency\",\n    currency: \"BRL\"\n  });\n})()\n}}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

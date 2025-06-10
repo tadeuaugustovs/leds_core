@@ -33,16 +33,16 @@
     }
   },
   "columnOrder": [
-    "documentId",
-    "nome",
+    "id",
     "descricao",
+    "tipo",
+    "documentId",
     "customColumn1",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1749593219315,
+  "columnUpdatedAt": 1749591974439,
   "columnWidthMap": {
-    "descricao": 292,
-    "nome": 155
+    "descricao": 611
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -66,13 +66,22 @@
       "key": "tableData"
     },
     {
-      "key": "primaryColumns.documentId.computedValue"
-    },
-    {
-      "key": "primaryColumns.nome.computedValue"
+      "key": "primaryColumns.id.computedValue"
     },
     {
       "key": "primaryColumns.descricao.computedValue"
+    },
+    {
+      "key": "primaryColumns.tipo.computedValue"
+    },
+    {
+      "key": "primaryColumns.documentId.computedValue"
+    },
+    {
+      "key": "primaryColumns.tipo.cellBackground"
+    },
+    {
+      "key": "primaryColumns.tipo.textColor"
     },
     {
       "key": "primaryColumns.customColumn1.borderRadius"
@@ -99,6 +108,12 @@
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.tipo.cellBackground"
+    },
+    {
+      "key": "primaryColumns.tipo.textColor"
     },
     {
       "key": "primaryColumns.EditActions1.isSaveDisabled"
@@ -132,7 +147,7 @@
   "originalBottomRow": 41,
   "originalTopRow": 8,
   "parentColumnSpace": 6.35986328125,
-  "parentId": "nhvkeq3d3k",
+  "parentId": "ma6vge3s56",
   "parentRowSpace": 10,
   "primaryColumns": {
     "EditActions1": {
@@ -145,30 +160,30 @@
       "currencyCode": "USD",
       "decimals": 0,
       "discardActionLabel": "Discard",
-      "discardBorderRadius": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "discardBorderRadius": "{{TabelaItens.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "discardButtonColor": "#F22B2B",
       "discardButtonVariant": "TERTIARY",
       "discardIconAlign": "left",
       "enableFilter": true,
       "enableSort": true,
       "id": "EditActions1",
-      "index": 4,
+      "index": 5,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": true,
       "isDisabled": false,
-      "isDiscardDisabled": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( !Table4Copy.updatedRowIndices.includes(currentIndex)))}}",
+      "isDiscardDisabled": "{{TabelaItens.processedTableData.map((currentRow, currentIndex) => ( !TabelaItens.updatedRowIndices.includes(currentIndex)))}}",
       "isDiscardVisible": true,
       "isEditable": false,
-      "isSaveDisabled": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( !Table4Copy.updatedRowIndices.includes(currentIndex)))}}",
+      "isSaveDisabled": "{{TabelaItens.processedTableData.map((currentRow, currentIndex) => ( !TabelaItens.updatedRowIndices.includes(currentIndex)))}}",
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Save / Discard",
       "notation": "standard",
       "originalId": "EditActions1",
       "saveActionLabel": "Save",
-      "saveBorderRadius": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "saveButtonColor": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "saveBorderRadius": "{{TabelaItens.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "saveButtonColor": "{{TabelaItens.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
       "saveIconAlign": "left",
       "sticky": "right",
       "thousandSeparator": true,
@@ -179,8 +194,8 @@
       "alias": "Excluir",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "borderRadius": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "boxShadow": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "borderRadius": "{{TabelaItens.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{TabelaItens.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
       "buttonColor": "#7f1d1d",
       "buttonStyle": "rgb(3, 179, 101)",
       "columnType": "iconButton",
@@ -193,7 +208,7 @@
       "horizontalAlignment": "LEFT",
       "iconName": "small-cross",
       "id": "customColumn1",
-      "index": 3,
+      "index": 4,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": true,
@@ -219,7 +234,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"descricao\"]))}}",
+      "computedValue": "{{TabelaItens.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"descricao\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -227,7 +242,7 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "descricao",
-      "index": 2,
+      "index": 1,
       "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
@@ -253,7 +268,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"documentId\"]))}}",
+      "computedValue": "{{TabelaItens.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"documentId\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -261,7 +276,7 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "documentId",
-      "index": 0,
+      "index": 3,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -281,34 +296,68 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "nome": {
-      "alias": "nome",
+    "id": {
+      "alias": "id",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1e3a8a",
-      "columnType": "text",
-      "computedValue": "{{Table4Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nome\"]))}}",
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{TabelaItens.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "nome",
-      "index": 1,
-      "isCellEditable": true,
+      "id": "id",
+      "index": 0,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "id",
+      "notation": "standard",
+      "originalId": "id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "tipo": {
+      "alias": "tipo",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = TabelaItens.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \n  currentRow.tipo === \"CAPITAL\"\n    ? \"#BDEAFE\" \n    : currentRow.tipo === \"CUSTEIO\"\n    ? \"#DCFCE7\" \n    : \"transparent\" \n)) :  \n  currentRow.tipo === \"CAPITAL\"\n    ? \"#BDEAFE\" \n    : currentRow.tipo === \"CUSTEIO\"\n    ? \"#DCFCE7\" \n    : \"transparent\" \n })()}}",
+      "columnType": "text",
+      "computedValue": "{{TabelaItens.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"tipo\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "tipo",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "nome",
+      "label": "tipo",
       "notation": "standard",
-      "originalId": "nome",
+      "originalId": "tipo",
       "sticky": "",
-      "textColor": "#ffffff",
+      "textColor": "{{(() => { const tableData = TabelaItens.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \n  currentRow.tipo === \"CAPITAL\"\n    ? \"#1E40AF\"  // azul escuro\n    : currentRow.tipo === \"CUSTEIO\"\n    ? \"#065F46\"  // verde escuro\n    : \"inherit\" \n)) :  \n  currentRow.tipo === \"CAPITAL\"\n    ? \"#1E40AF\"  // azul escuro\n    : currentRow.tipo === \"CUSTEIO\"\n    ? \"#065F46\"  // verde escuro\n    : \"inherit\" \n })()}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -321,13 +370,13 @@
   "rightColumn": 63,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{(getEquipes.data?.data || []).map(equipe => ({\n  documentId: equipe.documentId || equipe.id,\n  nome: equipe.nome || \"-\",\n  descricao: equipe.descricao || \"-\"\n}))\n}}",
+  "tableData": "{{\n(() => {\n  const itens = getItensCusteioCapital.data?.data || [];\n\n  return itens\n    .sort((a, b) => {\n      if (a.tipo === b.tipo) return 0;\n      if (a.tipo === \"CAPITAL\") return -1;\n      return 1;\n    })\n    .map(item => ({\n      id: item.id,\n      descricao: item.descricao || \"-\",\n      tipo: item.tipo || \"-\",\n      documentId: item.documentId || \"-\"\n    }));\n})()\n}}\n",
   "textSize": "0.875rem",
   "topRow": 7,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "wase88wchd",
-  "widgetName": "Table4Copy"
+  "widgetId": "5b2ozoiogj",
+  "widgetName": "TabelaItens"
 }

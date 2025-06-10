@@ -1,52 +1,52 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "bottomRow": 6,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
     },
     {
-      "key": "fontFamily"
+      "key": "borderRadius"
     },
     {
-      "key": "borderRadius"
+      "key": "textColor"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
-  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
+  "fontFamily": "System Default",
+  "fontSize": "1.25rem",
   "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
-  "key": "ss4lrwjmj3",
-  "leftColumn": 9,
+  "key": "p2g4r9ca1s",
+  "leftColumn": 4,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 4,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 17,
-  "mobileTopRow": 0,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 19,
+  "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "originalBottomRow": 5,
-  "originalTopRow": 0,
+  "originalBottomRow": 6,
+  "originalTopRow": 2,
   "overflow": "NONE",
-  "parentColumnSpace": 11.45263671875,
-  "parentId": "itc6a1frrg",
+  "parentColumnSpace": 6.35986328125,
+  "parentId": "q0jaiw8a9c",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 32,
+  "rightColumn": 34,
   "shouldTruncate": false,
-  "text": "Titular: Paulo Sérgio dos Santos Júnior\nCPF: 055.125.707-57\t",
+  "text": "Editar Bolsas",
   "textAlign": "LEFT",
-  "textColor": "#dbeafe",
-  "topRow": 0,
+  "textColor": "{{appsmith.theme.colors.primaryColor}}",
+  "topRow": 2,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "vo1m7j375m",
-  "widgetName": "Text23Copy"
+  "widgetId": "x9wcbl0946",
+  "widgetName": "Text5Copy1"
 }

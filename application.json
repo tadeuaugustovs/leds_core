@@ -50,10 +50,6 @@
     {
       "id": "Admin",
       "isDefault": false
-    },
-    {
-      "id": "Teste",
-      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

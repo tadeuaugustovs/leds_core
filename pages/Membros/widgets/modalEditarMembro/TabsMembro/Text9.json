@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 40,
+  "bottomRow": 38,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -17,11 +17,11 @@
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "0.875rem",
-  "fontStyle": "",
+  "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
   "key": "7qckn44kjd",
-  "leftColumn": 19,
+  "leftColumn": 17,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -40,10 +40,10 @@
   "responsiveBehavior": "fill",
   "rightColumn": 47,
   "shouldTruncate": false,
-  "text": "OBS: ESSAS AÇÕES SÃO IRREVERSÍVEIS!",
+  "text": "OBS: CUIDADO, ESSAS AÇÕES SÃO IRREVERSÍVEIS!",
   "textAlign": "CENTER",
-  "textColor": "#231F20",
-  "topRow": 36,
+  "textColor": "#7f1d1d",
+  "topRow": 34,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

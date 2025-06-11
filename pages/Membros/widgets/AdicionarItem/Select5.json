@@ -11,6 +11,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -40,17 +43,17 @@
   "mobileRightColumn": 62,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "optionLabel": "name",
-  "optionValue": "code",
+  "optionLabel": "label",
+  "optionValue": "value",
   "parentColumnSpace": 13.513281249999999,
   "parentId": "p5ao0fzw9j",
   "parentRowSpace": 10,
-  "placeholderText": "Select option",
+  "placeholderText": "Selecionar",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 21,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"Blue\",\n    \"code\": \"BLUE\"\n  },\n  {\n    \"name\": \"Green\",\n    \"code\": \"GREEN\"\n  },\n  {\n    \"name\": \"Red\",\n    \"code\": \"RED\"\n  }\n]",
+  "sourceData": "{{\n  [\n    {\n      label: \"Formação Membro\",\n      value: \"formacao-membros\"\n    },\n    {\n      label: \"Rede Social Membro\",\n      value: \"rede-socials\"\n    },\n    {\n      label: \"Outras Informações Membro\",\n      value: \"outra-infomacoes-membros\"\n    }\n  ]\n}}\n",
   "topRow": 5,
   "type": "SELECT_WIDGET",
   "version": 1,

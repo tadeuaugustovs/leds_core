@@ -8,7 +8,7 @@
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 590,
+      "bottomRow": 550,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -29,7 +29,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 598,
+      "minHeight": 554,
       "minWidth": 450,
       "mobileBottomRow": 240,
       "mobileLeftColumn": 0,
@@ -58,7 +58,7 @@
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
-  "height": 598,
+  "height": 554,
   "isCanvas": true,
   "isLoading": false,
   "key": "qv0n5iui04",
@@ -81,5 +81,5 @@
   "version": 2,
   "widgetId": "twq3hlt0jc",
   "widgetName": "AdicionarItem",
-  "width": 876.8499999999999
+  "width": 776.8499999999999
 }

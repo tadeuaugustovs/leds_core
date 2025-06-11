@@ -35,7 +35,7 @@
   "mobileRightColumn": 37,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "onClick": "{{UploadArquivoBase64.enviar()\n\n}}",
+  "onClick": "{{uploadArquivo.run()\n  .then(() => {\n    const uploadedFile = uploadArquivo.data[0];\n    const fileId = uploadedFile?.id;\n\n    if (!fileId) {\n      showAlert(\"Erro ao obter ID do arquivo enviado\", \"error\");\n      return;\n    }\n\n    return adicionarArquivoItem.run({\n      body: JSON.stringify({\n        arquivos: { connect: [{ id: fileId }] }\n      })\n    });\n  })\n  .then(() => {\n    showAlert(\"Arquivo enviado com sucesso!\", \"success\");\n    getItemPorDocumentId.run();\n  })\n  .catch(err => {\n    showAlert(\"Erro no envio: \" + err.message, \"error\");\n  });\n}}",
   "originalBottomRow": 11,
   "originalTopRow": 7,
   "parentColumnSpace": 13.513281249999999,

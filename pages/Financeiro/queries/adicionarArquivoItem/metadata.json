@@ -1,6 +1,6 @@
 {
   "gitSyncId": "68375c2c56cad916c8fc38e2_998dd928-334a-43d6-81e9-d164af5f5435",
-  "id": "Financeiro_putItemArquivos",
+  "id": "Financeiro_adicionarArquivoItem",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -21,7 +21,7 @@
       "httpMethod": "PUT",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/api/item-fluxocaixas/{{ appsmith.store.itemSelecionado.documentId }}",
+      "path": "/api/item-fluxo-caixas/{{ appsmith.store.itemSelecionado.documentId }}",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -47,7 +47,7 @@
         "key": "body"
       }
     ],
-    "name": "putItemArquivos",
+    "name": "adicionarArquivoItem",
     "pageId": "Financeiro",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 25,
+  "bottomRow": 56,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -33,7 +33,7 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 16,
   "needsErrorInfo": false,
-  "originalBottomRow": 30,
+  "originalBottomRow": 25,
   "originalTopRow": 5,
   "overflow": "NONE",
   "parentColumnSpace": 3.913330078125,
@@ -46,7 +46,7 @@
   "text": "{{\n(() => {\n  const membros = getMembros.data?.data || [];\n\n  const equipesResumo = {};\n\n  membros.forEach(membro => {\n    const valorBolsas = (membro.planos_de_trabalho || [])\n      .reduce((soma, plano) => soma + Number(plano?.bolsa?.valor || 0), 0);\n\n    const equipes = membro.equipes || [];\n\n    equipes.forEach(eq => {\n      const nomeEquipe = eq.nome || \"Sem equipe\";\n\n      if (!equipesResumo[nomeEquipe]) {\n        equipesResumo[nomeEquipe] = { membros: 0, gasto: 0 };\n      }\n\n      equipesResumo[nomeEquipe].membros += 1;\n      equipesResumo[nomeEquipe].gasto += valorBolsas;\n    });\n  });\n\n  return Object.entries(equipesResumo)\n    .sort((a, b) => b[1].gasto - a[1].gasto)  // ordena por maior gasto\n    .slice(0, 3)  // mostra só as 3 primeiras\n    .map(([nome, info]) =>\n      `Equipe: ${nome}\\n- Membros: ${info.membros}\\n- Gasto total: ${info.gasto.toLocaleString('pt-BR', {\n        style: 'currency',\n        currency: 'BRL'\n      })}\\n`\n    )\n    .join('\\n');\n})()\n}}\n",
   "textAlign": "LEFT",
   "textColor": "#1e3a8a",
-  "topRow": 5,
+  "topRow": 36,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68375c2c56cad916c8fc38e2_184c7401-eb34-4ade-9b85-0a10bbdee5e5",
+  "id": "Financeiro_abrirArquivo",
+  "unpublishedCollection": {
+    "name": "abrirArquivo",
+    "pageId": "Financeiro",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

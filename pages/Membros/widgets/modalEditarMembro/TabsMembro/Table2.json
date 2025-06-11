@@ -33,16 +33,18 @@
     }
   },
   "columnOrder": [
-    "valor",
     "campo",
+    "valor",
     "label",
     "customColumn1",
     "documentId",
     "id",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1749148919297,
-  "columnWidthMap": {},
+  "columnUpdatedAt": 1749612207718,
+  "columnWidthMap": {
+    "valor": 237
+  },
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
@@ -360,7 +362,7 @@
       "isDiscardVisible": true,
       "isEditable": true,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "label",
       "notation": "standard",
       "originalId": "label",
@@ -392,7 +394,7 @@
       "isDiscardVisible": true,
       "isEditable": true,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "valor",
       "notation": "standard",
       "originalId": "valor",

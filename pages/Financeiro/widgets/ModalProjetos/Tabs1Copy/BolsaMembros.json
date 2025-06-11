@@ -40,10 +40,11 @@
   ],
   "columnUpdatedAt": 1748896183007,
   "columnWidthMap": {
+    "bolsas": 226,
     "fim": 110,
-    "inicio": 109,
-    "nome": 193,
-    "valor": 217
+    "inicio": 201,
+    "nome": 328,
+    "valor": 257
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",

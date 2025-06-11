@@ -19,9 +19,12 @@ export default {
 
     const restante = total - gasto;
 
+    // Arredonda para 2 casas decimais
+    const arredondar = valor => Math.round(valor * 100) / 100;
+
     return [
-      { x: "Total Previsto", y: total },
-      { x: "Restante", y: restante }
+      { x: "Total Previsto", y: arredondar(total) },
+      { x: "Restante", y: arredondar(restante) }
     ];
   }
 };

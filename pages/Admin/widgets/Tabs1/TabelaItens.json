@@ -120,9 +120,16 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -220,6 +227,7 @@
       "label": "Excluir",
       "labelColor": "#FFFFFF",
       "notation": "standard",
+      "onClick": "{{ \n  deleteItensCusteioCapital.run(\n    { path: { documentId: currentRow.documentId } },\n    () => {\n      showAlert(\"Item deletado com sucesso!\", \"success\");\n     getItensCusteioCapital.run(); // Atualiza a tabela após deletar\n    },\n    (err) => {\n      showAlert(\"Erro ao deletar item: \" + err.message, \"error\");\n    }\n  ) \n}}\n",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
@@ -345,12 +353,12 @@
       "horizontalAlignment": "LEFT",
       "id": "tipo",
       "index": 2,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "tipo",

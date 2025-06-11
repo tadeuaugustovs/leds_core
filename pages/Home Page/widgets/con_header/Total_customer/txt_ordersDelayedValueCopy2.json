@@ -35,7 +35,7 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "{{\n(() => {\n  const itens = getCapitalCusteioItens.data?.data || [];\n  const movimentos = getItensDoFluxoCompleto.data?.data || [];\n\n  const totalRestante = itens.reduce((soma, item) => {\n    const total = Number(item.despesa || 0);\n\n    const gasto = movimentos\n      .filter(mov => mov.capital_custeio_item?.documentId === item.documentId)\n      .reduce((acc, mov) => acc + Math.abs(Number(mov.despesa || 0)), 0);\n\n    const restante = total - gasto;\n\n    return soma + restante;\n  }, 0);\n\n  return totalRestante.toLocaleString(\"pt-BR\", {\n    style: \"currency\",\n    currency: \"BRL\"\n  });\n})()\n}}\n",
+  "text": "{{\n(() => {\n  const dados = getItensFluxoCaixa.data?.data || [];\n\n  const receitaTotal = dados.reduce((soma, item) => {\n    const valor = Number(item.receita);\n    return soma + (isNaN(valor) ? 0 : valor);\n  }, 0);\n\n  const despesaTotal = dados.reduce((soma, item) => {\n    const valor = Number(item.despesa);\n    return soma + (isNaN(valor) ? 0 : valor);\n  }, 0);\n\n  const contaCorrente = receitaTotal + despesaTotal;\n\n  return contaCorrente.toLocaleString(\"pt-BR\", {\n    style: \"currency\",\n    currency: \"BRL\"\n  });\n})()\n}}\n",
   "textAlign": "LEFT",
   "textColor": "#fff",
   "topRow": 7,

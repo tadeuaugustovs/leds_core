@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 66,
+  "bottomRow": 67,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -34,13 +34,14 @@
   "columnOrder": [
     "tipo",
     "item",
+    "customColumn1",
     "total",
     "gasto",
     "restante",
     "documentId",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1749247303077,
+  "columnUpdatedAt": 1750173812035,
   "columnWidthMap": {
     "EditActions1": 60,
     "gasto": 145,
@@ -115,6 +116,15 @@
     },
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.customColumn1.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonColor"
     }
   ],
   "dynamicPropertyPathList": [
@@ -141,11 +151,17 @@
     },
     {
       "key": "primaryColumns.total.textColor"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "onRowSelected"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -169,7 +185,7 @@
   "mobileRightColumn": 36,
   "mobileTopRow": 24,
   "needsErrorInfo": false,
-  "onRowSelected": "{{\n(() => {\n  const docId = capitalcusteioterceiros.selectedRow.documentId;\n\n  const itensRelacionados = getItensDoFluxoCompleto.data?.data?.filter(\n    item => item.capital_custeio_item?.documentId === docId\n  ) || [];\n\n  showModal(\"VerItens\");\n\n  storeValue(\"documentoDoItemSelecionado\", docId);\n  storeValue(\"itensSelecionados\", itensRelacionados);\n})();\n\n}}\n",
+  "onRowSelected": "/*\n\n(() => {\n  const docId = capitalcusteioterceiros.selectedRow.documentId;\n\n  const itensRelacionados = getItensDoFluxoCompleto.data?.data?.filter(\n    item => item.capital_custeio_item?.documentId === docId\n  ) || [];\n\n  showModal(\"VerItens\");\n\n  storeValue(\"documentoDoItemSelecionado\", docId);\n  storeValue(\"itensSelecionados\", itensRelacionados);\n})();\n\n*/",
   "originalBottomRow": 59,
   "originalTopRow": 11,
   "parentColumnSpace": 14.388281249999999,
@@ -214,6 +230,44 @@
       "sticky": "right",
       "thousandSeparator": true,
       "validation": {},
+      "width": 150
+    },
+    "customColumn1": {
+      "alias": "Visualizar",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{capitalcusteioterceirosCopy.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{capitalcusteioterceirosCopy.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{capitalcusteioterceirosCopy.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customColumn1",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Visualizar",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{ abrirItemFinanceiro.abrirModalDoItemSelecionado(currentRow) }}",
+      "originalId": "customColumn1",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
       "width": 150
     },
     "documentId": {

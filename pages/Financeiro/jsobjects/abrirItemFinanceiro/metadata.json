@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68375c2c56cad916c8fc38e2_8cc189b0-d05c-4d90-884c-d3dadc4719ed",
+  "id": "Financeiro_abrirItemFinanceiro",
+  "unpublishedCollection": {
+    "name": "abrirItemFinanceiro",
+    "pageId": "Financeiro",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

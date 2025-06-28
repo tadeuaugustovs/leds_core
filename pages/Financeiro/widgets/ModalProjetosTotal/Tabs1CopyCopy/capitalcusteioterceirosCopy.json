@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 67,
+  "bottomRow": 68,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -45,7 +45,7 @@
   "columnWidthMap": {
     "EditActions1": 60,
     "gasto": 145,
-    "item": 603,
+    "item": 539,
     "orcamento": 136,
     "restante": 127,
     "tipo": 102,
@@ -132,9 +132,6 @@
       "key": "tableData"
     },
     {
-      "key": "onRowSelected"
-    },
-    {
       "key": "primaryColumns.EditActions1.isSaveDisabled"
     },
     {
@@ -185,7 +182,7 @@
   "mobileRightColumn": 36,
   "mobileTopRow": 24,
   "needsErrorInfo": false,
-  "onRowSelected": "/*\n\n(() => {\n  const docId = capitalcusteioterceiros.selectedRow.documentId;\n\n  const itensRelacionados = getItensDoFluxoCompleto.data?.data?.filter(\n    item => item.capital_custeio_item?.documentId === docId\n  ) || [];\n\n  showModal(\"VerItens\");\n\n  storeValue(\"documentoDoItemSelecionado\", docId);\n  storeValue(\"itensSelecionados\", itensRelacionados);\n})();\n\n*/",
+  "onRowSelected": "",
   "originalBottomRow": 59,
   "originalTopRow": 11,
   "parentColumnSpace": 14.388281249999999,
@@ -482,7 +479,7 @@
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{\n(() => {\n  const itens = getCapitalCusteioItens.data?.data || [];\n  const movimentos = getItensDoFluxoCompleto.data?.data || [];\n  const projetoSelecionadoId = appsmith.store.projetoSelecionadoDocumentId;\n\n  const itensFiltrados = projetoSelecionadoId === \"TODOS\"\n    ? itens\n    : itens.filter(item =>\n        (item.projetos || []).some(proj => proj.documentId === projetoSelecionadoId)\n      );\n\n  const itensOrdenados = [...itensFiltrados].sort((a, b) => {\n    if (a.tipo === \"CAPITAL\" && b.tipo !== \"CAPITAL\") return -1;\n    if (a.tipo !== \"CAPITAL\" && b.tipo === \"CAPITAL\") return 1;\n    return 0;\n  });\n\n  return itensOrdenados.map(item => {\n    const total = Number(item.despesa || 0);\n\n    const gasto = movimentos\n      .filter(mov => mov.capital_custeio_item?.documentId === item.documentId)\n      .reduce((soma, mov) => soma + Math.abs(Number(mov.despesa || 0)), 0);\n\n    const restante = total - gasto;\n\n    return {\n      tipo: item.tipo,\n      item: item.descricao,\n      documentId: item.documentId,\n      total: total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n      gasto: gasto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n      restante: restante.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n    };\n  });\n})()\n}}\n",
   "textSize": "0.875rem",
-  "topRow": 9,
+  "topRow": 10,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

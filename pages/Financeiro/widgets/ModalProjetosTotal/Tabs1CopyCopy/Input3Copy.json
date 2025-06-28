@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 7,
+  "bottomRow": 5,
   "boxShadow": "none",
   "defaultText": "{{\n(() => {\n  const itens = getCapitalCusteioItens.data?.data || [];\n  const movimentos = getItensDoFluxoCompleto.data?.data || [];\n  const projetoSelecionadoId = appsmith.store.projetoSelecionadoDocumentId;\n\n  const restanteTotal = itens\n    .filter(item =>\n      projetoSelecionadoId === \"TODOS\" ||\n      (item.projetos || []).some(p => p.documentId === projetoSelecionadoId)\n    )\n    .reduce((soma, item) => {\n      const total = Number(item.despesa || 0);\n      const gasto = movimentos\n        .filter(mov => mov.capital_custeio_item?.documentId === item.documentId)\n        .reduce((g, mov) => g + Math.abs(Number(mov.despesa || 0)), 0);\n      return soma + (total - gasto);\n    }, 0);\n\n  return restanteTotal.toLocaleString(\"pt-BR\", { style: \"currency\", currency: \"BRL\" });\n})()\n}}\n",
   "dynamicBindingPathList": [
@@ -49,7 +49,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "showStepArrows": false,
-  "topRow": 1,
+  "topRow": 0,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "hse3f7q05d",

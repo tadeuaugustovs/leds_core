@@ -53,7 +53,7 @@
   "placeholderText": "Selecionar",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 23,
+  "rightColumn": 24,
   "serverSideFiltering": false,
   "sourceData": "{{ \n  getFinanciadores.data?.data?.map(f => ({\n    label: f.nome,\n    value: f.id\n  })) || []\n}}\n",
   "topRow": 15,

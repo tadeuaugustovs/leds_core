@@ -53,7 +53,7 @@
   "placeholderText": "Selecionar",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 40,
+  "rightColumn": 43,
   "serverSideFiltering": false,
   "sourceData": "[\n  {\n    \"name\": \"Ativa\",\n    \"code\": \"ATIVA\"\n  },\n  {\n    \"name\": \"Inativa\",\n    \"code\": \"INATIVA\"\n  },\n  {\n    \"name\": \"Planejada\",\n    \"code\": \"PLANEJADA\"\n  }\n]",
   "topRow": 15,

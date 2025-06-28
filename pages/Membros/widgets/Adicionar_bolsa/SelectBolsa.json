@@ -53,7 +53,7 @@
   "placeholderText": "Selecionar ",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 28,
+  "rightColumn": 31,
   "serverSideFiltering": false,
   "sourceData": "{{ getBolsas.data.data.map(item => ({ label: item.nome, value: item.id })) }}\n",
   "topRow": 7,

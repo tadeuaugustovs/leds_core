@@ -46,7 +46,7 @@
     "EditActions1": 60,
     "customColumn1": 122,
     "gasto": 145,
-    "item": 603,
+    "item": 533,
     "orcamento": 136,
     "restante": 132,
     "tipo": 102,
@@ -122,18 +122,12 @@
       "key": "primaryColumns.EditActions1.discardBorderRadius"
     },
     {
-      "key": "primaryColumns.EditActions1.isSaveDisabled"
-    },
-    {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
-    },
-    {
-      "key": "onRowSelected"
     },
     {
       "key": "primaryColumns.tipo.cellBackground"
@@ -155,6 +149,12 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "primaryColumns.total.onSubmit"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onSave"
     }
   ],
   "dynamicTriggerPathList": [
@@ -163,6 +163,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onSave"
     }
   ],
   "enableClientSideSearch": true,
@@ -186,7 +189,7 @@
   "mobileRightColumn": 36,
   "mobileTopRow": 24,
   "needsErrorInfo": false,
-  "onRowSelected": "/*\n(() => {\n  const docId = capitalcusteioterceiros.selectedRow.documentId;\n\n  const itensRelacionados = getItensDoFluxoCompleto.data?.data?.filter(\n    item => item.capital_custeio_item?.documentId === docId\n  ) || [];\n\n  showModal(\"VerItens\");\n\n  storeValue(\"documentoDoItemSelecionado\", docId);\n  storeValue(\"itensSelecionados\", itensRelacionados);\n})();\n*/",
+  "onRowSelected": "",
   "originalBottomRow": 59,
   "originalTopRow": 11,
   "parentColumnSpace": 14.388281249999999,
@@ -218,11 +221,12 @@
       "isDiscardDisabled": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( !capitalcusteioterceiros.updatedRowIndices.includes(currentIndex)))}}",
       "isDiscardVisible": true,
       "isEditable": false,
-      "isSaveDisabled": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( !capitalcusteioterceiros.updatedRowIndices.includes(currentIndex)))}}",
+      "isSaveDisabled": "",
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Save / Discard",
       "notation": "standard",
+      "onSave": "{{ atualizarDespesa.run() }}",
       "originalId": "EditActions1",
       "saveActionLabel": "Save",
       "saveBorderRadius": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -467,6 +471,7 @@
       "isVisible": true,
       "label": "total",
       "notation": "standard",
+      "onSubmit": "{{}}",
       "originalId": "total",
       "sticky": "",
       "textColor": "{{(() => { const tableData = capitalcusteioterceiros.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \"#78350F\" )) :  \"#78350F\"  })()}}",
@@ -482,7 +487,7 @@
   "rightColumn": 64,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{\n(() => {\n  const itens = getCapitalCusteioItens.data?.data || [];\n  const movimentos = getItensDoFluxoCompleto.data?.data || [];\n  const projetoSelecionadoId = Table5.selectedRow?.documentId;\n\n  // Ordenar CAPITAL antes de CUSTEIO\n  const itensOrdenados = [...itens].sort((a, b) => {\n    if (a.tipo === \"CAPITAL\" && b.tipo !== \"CAPITAL\") return -1;\n    if (a.tipo !== \"CAPITAL\" && b.tipo === \"CAPITAL\") return 1;\n    return 0;\n  });\n\n  // Filtrar por projeto selecionado\n  const itensFiltrados = projetoSelecionadoId\n    ? itensOrdenados.filter(item =>\n        Array.isArray(item.projetos) &&\n        item.projetos.some(p => p.documentId === projetoSelecionadoId)\n      )\n    : itensOrdenados;\n\n  return itensFiltrados.map(item => {\n    const total = Number(item.despesa || 0);\n\n    const gasto = movimentos\n      .filter(mov => mov.capital_custeio_item?.documentId === item.documentId)\n      .reduce((soma, mov) => soma + Math.abs(Number(mov.despesa || 0)), 0);\n\n    const restante = total - gasto;\n\n    return {\n      tipo: item.tipo,\n      item: item.descricao,\n      documentId: item.documentId,\n      total: total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n      gasto: gasto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n      restante: restante.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n    };\n  });\n})()\n}}\n",
+  "tableData": "{{ \n(() => {\n\tconst itens = getCapitalCusteioItens.data?.data || [];\n\tconst movimentos = getItensDoFluxoCompleto.data?.data || [];\n\tconst projetoSelecionadoId = Table5.selectedRow?.documentId;\n\n\tconst itensOrdenados = [...itens].sort((a, b) => {\n\t\tif (a.tipo === \"CAPITAL\" && b.tipo !== \"CAPITAL\") return -1;\n\t\tif (a.tipo !== \"CAPITAL\" && b.tipo === \"CAPITAL\") return 1;\n\t\treturn 0;\n\t});\n\n\tconst itensFiltrados = projetoSelecionadoId\n\t? itensOrdenados.filter(item =>\n\t\tArray.isArray(item.projetos) &&\n\t\titem.projetos.some(p => p.documentId === projetoSelecionadoId))\n\t: itensOrdenados;\n\n\treturn itensFiltrados.map(item => {\n\t\tconst total = Number(item.despesa || 0);\n\n\t\tconst gasto = movimentos\n\t\t\t.filter(mov => mov.capital_custeio_item?.documentId === item.documentId)\n\t\t\t.reduce((soma, mov) => soma + Math.abs(Number(mov.despesa || 0)), 0);\n\n\t\tconst restante = total - gasto;\n\n\t\treturn {\n\t\t\ttipo: item.tipo,\n\t\t\titem: item.descricao,\n\t\t\tdocumentId: item.documentId,\n\t\t\ttotal: total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n\t\t\tgasto: gasto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n\t\t\trestante: restante.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),\n\t\t};\n\t});\n})() \n}}\n",
   "textSize": "0.875rem",
   "topRow": 10,
   "totalRecordsCount": 0,

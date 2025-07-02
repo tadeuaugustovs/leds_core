@@ -1,0 +1,5 @@
+{
+  "data": {
+    "despesa": {{ formatUtils.moedaParaNumero(capitalcusteioterceiros.updatedRow.total) }}
+  }
+}

@@ -10,6 +10,7 @@
       "key": "borderRadius"
     }
   ],
+  "dynamicTriggerPathList": [],
   "fillColor": "{{appsmith.theme.colors.primaryColor}}",
   "isCanvas": false,
   "isIndeterminate": false,
@@ -25,7 +26,7 @@
   "parentColumnSpace": 18.826562499999998,
   "parentId": "tjwjdy3629",
   "parentRowSpace": 10,
-  "progress": 50,
+  "progress": "50",
   "progressType": "linear",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",

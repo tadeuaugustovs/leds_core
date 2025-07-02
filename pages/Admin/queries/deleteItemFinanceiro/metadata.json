@@ -21,7 +21,7 @@
       "httpMethod": "DELETE",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/api/item-fluxo-caixas/{{ TabelaItens.selectedRow.documentId }}",
+      "path": "/api/capital-custeio-items/{{ appsmith.store.itemSelecionadoFinanceiro.documentId }}",
       "pluginSpecifiedTemplates": [
         {
           "value": true

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
+  "bottomRow": 9,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -41,7 +41,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 60,
   "shouldTruncate": false,
-  "text": "Você tem certeza que deseja apagar e{{ Table1.selectedRow.descricao }}?",
+  "text": "Você tem certeza que deseja apagar \"{{ appsmith.store.itemSelecionadoFinanceiro?.descricao || 'este item' }}\"?\n",
   "textAlign": "CENTER",
   "textColor": "#231F20",
   "topRow": 5,

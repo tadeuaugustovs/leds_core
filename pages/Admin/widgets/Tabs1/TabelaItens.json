@@ -126,6 +126,9 @@
     },
     {
       "key": "onAddNewRowSave"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -234,7 +237,7 @@
       "label": "Excluir",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{showModal(ExcluirItemFinanceiro.name);}}",
+      "onClick": "{{\n  storeValue('itemSelecionadoFinanceiro', currentRow);\n  showModal('ExcluirItemFinanceiro');\n}}\n",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",

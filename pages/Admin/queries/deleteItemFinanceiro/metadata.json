@@ -1,6 +1,6 @@
 {
   "gitSyncId": "68375c2c56cad916c8fc38e2_adea6a33-57f7-47ef-90f5-22cce1353067",
-  "id": "Admin_deleteItensCusteioCapital",
+  "id": "Admin_deleteItemFinanceiro",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -44,7 +44,7 @@
         "key": "path"
       }
     ],
-    "name": "deleteItensCusteioCapital",
+    "name": "deleteItemFinanceiro",
     "pageId": "Admin",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

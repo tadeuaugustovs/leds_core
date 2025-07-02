@@ -122,9 +122,6 @@
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
     },
     {
-      "key": "primaryColumns.customColumn1.onClick"
-    },
-    {
       "key": "allowAddNewRow"
     },
     {
@@ -237,7 +234,7 @@
       "label": "Excluir",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{ \n  deleteItensCusteioCapital.run(\n    { path: { documentId: currentRow.documentId } },\n    () => {\n      showAlert(\"Item deletado com sucesso!\", \"success\");\n     getItensCusteioCapital.run(); // Atualiza a tabela após deletar\n    },\n    (err) => {\n      showAlert(\"Erro ao deletar item: \" + err.message, \"error\");\n    }\n  ) \n}}\n",
+      "onClick": "{{showModal(ExcluirItemFinanceiro.name);}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",

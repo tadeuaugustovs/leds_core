@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "68375c2c56cad916c8fc38e2_82f46aff-deda-4a30-a7fa-0b9daabfdbf6",
+  "gitSyncId": "68375c2c56cad916c8fc38e2_7b3de1fc-22b4-4604-b057-67e499119b67",
   "id": "Financeiro_getMembrosByDocumentId",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
@@ -69,7 +69,7 @@
         },
         {
           "key": "populate[outra_infomacoes_membros][fields][1]",
-          "value": "valor\n"
+          "value": "valor"
         }
       ],
       "timeoutInMillisecond": 10000
@@ -84,6 +84,9 @@
       "pluginId": "restapi-plugin"
     },
     "dynamicBindingPathList": [
+      {
+        "key": "path"
+      },
       {
         "key": "queryParameters[0].value"
       }

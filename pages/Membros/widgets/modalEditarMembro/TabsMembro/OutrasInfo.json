@@ -377,7 +377,7 @@
   "rightColumn": 64,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{\n  Array.isArray(getMembros.data?.data)\n    ? getMembros.data.data.flatMap(m =>\n        m.outra_infomacoes_membros?.map(o => ({\n          campo: o.label || '-',\n          label: o.label || '-',\n          valor: o.valor || '-',\n          documentId: o.documentId // necessário para update/delete\n        })) || []\n      )\n    : []\n}}\n",
+  "tableData": "{{\n  Array.isArray(getMembros.data?.data)\n    ? getMembros.data.data\n        .filter(m => m.documentId === appsmith.store.documentIdSelecionado)\n        .flatMap(m =>\n          m.outra_infomacoes_membros?.map(o => ({\n            campo: o.label || '-',\n            label: o.label || '-',\n            valor: o.valor || '-',\n            documentId: o.documentId // necessário para update/delete\n          })) || []\n        )\n    : []\n}}\n",
   "textSize": "0.875rem",
   "topRow": 1,
   "totalRecordsCount": 0,

@@ -311,6 +311,8 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 32,
   "needsErrorInfo": false,
+  "originalBottomRow": 54,
+  "originalTopRow": 5,
   "parentColumnSpace": 11.46484375,
   "parentId": "qh28anloed",
   "parentRowSpace": 10,

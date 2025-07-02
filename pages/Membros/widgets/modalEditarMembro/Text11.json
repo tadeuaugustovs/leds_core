@@ -1,9 +1,8 @@
 {
   "animateLoading": true,
-  "backgroundColor": "",
-  "borderColor": "",
+  "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 6,
+  "bottomRow": 4,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -18,43 +17,43 @@
       "key": "text"
     },
     {
-      "key": "textColor"
+      "key": "backgroundColor"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.25rem",
-  "fontStyle": "BOLD",
+  "fontSize": "1rem",
+  "fontStyle": "ITALIC,BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "qbev3hpq6c",
-  "leftColumn": 34,
+  "key": "ktg1re1qwb",
+  "leftColumn": 2,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
   "mobileBottomRow": 4,
-  "mobileLeftColumn": 5,
-  "mobileRightColumn": 21,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 6,
+  "originalBottomRow": 5,
   "originalTopRow": 0,
   "overflow": "NONE",
-  "parentColumnSpace": 1.8828964233398438,
-  "parentId": "acpxl8uaxy",
+  "parentColumnSpace": 11.628124999999999,
+  "parentId": "qh28anloed",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 37,
   "shouldTruncate": false,
-  "text": "{{ \n  Array.isArray(getMembros.data?.data) \n    ? getMembros.data.data.reduce((total, membro) => {\n        const planos = membro.planos_de_trabalho || [];\n        const bolsasValidas = planos.filter(p => p?.bolsa?.nome);\n        return total + bolsasValidas.length;\n      }, 0)\n    : 0 \n}}\n",
-  "textAlign": "CENTER",
-  "textColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "text": "{{ Table1.selectedRow.nome }}",
+  "textAlign": "LEFT",
+  "textColor": "#1e3a8a",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "i3zrnxp952",
-  "widgetName": "Text6Copy2"
+  "widgetId": "l6k56rtxak",
+  "widgetName": "Text11"
 }

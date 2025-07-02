@@ -1,6 +1,6 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "allowAddNewRow": true,
+  "allowAddNewRow": "true",
   "animateLoading": true,
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -123,11 +123,20 @@
     },
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "allowAddNewRow"
+    },
+    {
+      "key": "onAddNewRowSave"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "onAddNewRowSave"
     }
   ],
   "enableClientSideSearch": true,
@@ -151,6 +160,7 @@
   "mobileRightColumn": 36,
   "mobileTopRow": 10,
   "needsErrorInfo": false,
+  "onAddNewRowSave": "{{ addCapitalCusteioItem.run(() => getItensCusteioCapital.run()) }}\n",
   "originalBottomRow": 41,
   "originalTopRow": 8,
   "parentColumnSpace": 6.35986328125,

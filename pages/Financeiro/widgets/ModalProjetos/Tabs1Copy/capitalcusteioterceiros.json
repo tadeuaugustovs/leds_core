@@ -38,19 +38,18 @@
     "total",
     "gasto",
     "restante",
-    "documentId",
-    "EditActions1"
+    "documentId"
   ],
-  "columnUpdatedAt": 1750191079768,
+  "columnUpdatedAt": 1751466137481,
   "columnWidthMap": {
     "EditActions1": 60,
     "customColumn1": 122,
-    "gasto": 145,
-    "item": 533,
+    "gasto": 190,
+    "item": 621,
     "orcamento": 136,
     "restante": 132,
     "tipo": 102,
-    "total": 164
+    "total": 175
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -111,18 +110,6 @@
     },
     {
       "key": "primaryColumns.customColumn1.buttonColor"
-    },
-    {
-      "key": "primaryColumns.EditActions1.saveButtonColor"
-    },
-    {
-      "key": "primaryColumns.EditActions1.saveBorderRadius"
-    },
-    {
-      "key": "primaryColumns.EditActions1.discardBorderRadius"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isDiscardDisabled"
     }
   ],
   "dynamicPropertyPathList": [
@@ -145,16 +132,7 @@
       "key": "primaryColumns.customColumn1.onClick"
     },
     {
-      "key": "primaryColumns.EditActions1.isSaveDisabled"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isDiscardDisabled"
-    },
-    {
       "key": "primaryColumns.total.onSubmit"
-    },
-    {
-      "key": "primaryColumns.EditActions1.onSave"
     }
   ],
   "dynamicTriggerPathList": [
@@ -163,9 +141,6 @@
     },
     {
       "key": "primaryColumns.customColumn1.onClick"
-    },
-    {
-      "key": "primaryColumns.EditActions1.onSave"
     }
   ],
   "enableClientSideSearch": true,
@@ -196,47 +171,6 @@
   "parentId": "f6garpcig4",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "EditActions1": {
-      "alias": "EditActions1",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "buttonStyle": "rgb(3, 179, 101)",
-      "columnType": "editActions",
-      "computedValue": "",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "discardActionLabel": "Discard",
-      "discardBorderRadius": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "discardButtonColor": "#F22B2B",
-      "discardButtonVariant": "TERTIARY",
-      "discardIconAlign": "left",
-      "enableFilter": true,
-      "enableSort": true,
-      "id": "EditActions1",
-      "index": 8,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": true,
-      "isDisabled": false,
-      "isDiscardDisabled": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( !capitalcusteioterceiros.updatedRowIndices.includes(currentIndex)))}}",
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveDisabled": "",
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Save / Discard",
-      "notation": "standard",
-      "onSave": "{{ atualizarDespesa.run() }}",
-      "originalId": "EditActions1",
-      "saveActionLabel": "Save",
-      "saveBorderRadius": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "saveButtonColor": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
-      "saveIconAlign": "left",
-      "sticky": "right",
-      "thousandSeparator": true,
-      "validation": {},
-      "width": 150
-    },
     "customColumn1": {
       "alias": "Visualizar",
       "allowCellWrapping": false,
@@ -245,7 +179,7 @@
       "boxShadow": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
       "buttonColor": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
       "buttonStyle": "rgb(3, 179, 101)",
-      "buttonVariant": "PRIMARY",
+      "buttonVariant": "SECONDARY",
       "columnType": "iconButton",
       "computedValue": "",
       "currencyCode": "USD",
@@ -314,7 +248,7 @@
       "alias": "gasto",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
+      "cellBackground": "#fee2e2",
       "columnType": "text",
       "computedValue": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"gasto\"]))}}",
       "currencyCode": "USD",
@@ -337,7 +271,7 @@
       "notation": "standard",
       "originalId": "gasto",
       "sticky": "",
-      "textColor": "",
+      "textColor": "#7f1d1d",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -382,7 +316,7 @@
       "alias": "restante",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
+      "cellBackground": "#dcfce7",
       "columnType": "text",
       "computedValue": "{{capitalcusteioterceiros.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"restante\"]))}}",
       "currencyCode": "USD",
@@ -405,7 +339,7 @@
       "notation": "standard",
       "originalId": "restante",
       "sticky": "",
-      "textColor": "",
+      "textColor": "#14532d",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -461,12 +395,12 @@
       "horizontalAlignment": "LEFT",
       "id": "total",
       "index": 6,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "total",

@@ -12,7 +12,16 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
@@ -25,6 +34,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
+  "onClick": "{{ \n  deleteItemFinanceiro.run(\n    () => {\n      closeModal('ExcluirItemFinanceiro');\n      getCapitalCusteioItens.run();\n      showAlert('Item excluído com sucesso!', 'success');\n    },\n    (e) => {\n      showAlert('Erro ao excluir: ' + e.message, 'error');\n    }\n  ) \n}}\n",
   "originalBottomRow": 18,
   "originalTopRow": 14,
   "parentId": "n475vw0lmb",

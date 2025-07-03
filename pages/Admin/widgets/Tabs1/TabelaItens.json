@@ -129,6 +129,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onSave"
     }
   ],
   "dynamicTriggerPathList": [
@@ -137,6 +140,9 @@
     },
     {
       "key": "onAddNewRowSave"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onSave"
     }
   ],
   "enableClientSideSearch": true,
@@ -197,6 +203,7 @@
       "isVisible": true,
       "label": "Save / Discard",
       "notation": "standard",
+      "onSave": "{{\n  updateItemFinanceiro.run()\n    .then(() => {\n      showAlert(\"Item financeiro atualizado com sucesso!\", \"success\");\n      getItensCusteioCapital.run();\n    })\n    .catch((err) => {\n      showAlert(\"Erro ao atualizar item: \" + err.message, \"error\");\n    })\n}}\n",
       "originalId": "EditActions1",
       "saveActionLabel": "Save",
       "saveBorderRadius": "{{TabelaItens.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",

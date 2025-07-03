@@ -21,7 +21,7 @@
       "httpMethod": "PUT",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/api/usuarios/{{ Table1.processedTableData[Table1.updatedRowIndices[0]]?.documentId }}\n",
+      "path": "/api/usuarios/{{ Table1.processedTableData[Table1.updatedRowIndices[0]]?.documentId }}",
       "pluginSpecifiedTemplates": [
         {
           "value": true

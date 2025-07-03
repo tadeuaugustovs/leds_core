@@ -3,7 +3,6 @@ export default {
     let usuario = appsmith.store.usuario;
 
     if (!usuario) {
-      // tenta carregar do localStorage
       const usuarioStr = window.localStorage.getItem("usuario");
       if (usuarioStr) {
         usuario = JSON.parse(usuarioStr);

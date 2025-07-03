@@ -235,7 +235,7 @@
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{OutrasInfo.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{OutrasInfo.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "#831843",
+      "buttonColor": "#1e3a8a",
       "buttonStyle": "rgb(3, 179, 101)",
       "buttonVariant": "PRIMARY",
       "columnType": "iconButton",

@@ -3,7 +3,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 4,
   "boxShadow": "none",
-  "buttonColor": "#831843",
+  "buttonColor": "#1e3a8a",
   "buttonVariant": "TERTIARY",
   "dynamicBindingPathList": [
     {
@@ -21,7 +21,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "4xzkak5lgj",
-  "leftColumn": 60,
+  "leftColumn": 58,
   "minWidth": 50,
   "mobileBottomRow": 4,
   "mobileLeftColumn": 58,
@@ -32,7 +32,7 @@
   "parentId": "m5cho3nt09",
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
-  "rightColumn": 64,
+  "rightColumn": 62,
   "topRow": 0,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 62,
+  "bottomRow": 29,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -33,8 +33,8 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 16,
   "needsErrorInfo": false,
-  "originalBottomRow": 31,
-  "originalTopRow": 6,
+  "originalBottomRow": 62,
+  "originalTopRow": 37,
   "overflow": "NONE",
   "parentColumnSpace": 3.913330078125,
   "parentId": "4z4cna7a2o",
@@ -46,7 +46,7 @@
   "text": "{{\n(() => {\n  const projetos = getProjetos.data?.data || [];\n  const membros = getMembros.data?.data || [];\n\n  const totalProjetos = projetos.length;\n\n  const totalProjetosComBolsas = new Set(\n    membros.flatMap(m => m.planos_de_trabalho || [])\n      .filter(p => p.bolsa?.valor && p.statusBolsa === \"ATIVA\")\n      .flatMap(p => p.projetos || [])\n      .map(p => p.documentId)\n  ).size;\n\n  const membrosTotal = membros.length;\n\n  const membrosComAlocacao = membros.filter(m => \n    (m.planos_de_trabalho || []).some(p => (p.projetos || []).length > 0)\n  ).length;\n\n  const membrosSemAlocacao = membrosTotal - membrosComAlocacao;\n\n  const totalAlocacoes = membros.flatMap(m => m.planos_de_trabalho || [])\n    .filter(p => p.projetos?.length).length;\n\n  const bolsasAtivas = membros.flatMap(m => m.planos_de_trabalho || [])\n    .filter(p => p.statusBolsa === \"ATIVA\" && p.bolsa?.valor).length;\n\n  const valorTotalBolsas = membros.flatMap(m => m.planos_de_trabalho || [])\n    .filter(p => p.statusBolsa === \"ATIVA\" && p.bolsa?.valor)\n    .reduce((acc, p) => acc + Number(p.bolsa.valor || 0), 0)\n    .toLocaleString(\"pt-BR\", { style: \"currency\", currency: \"BRL\" });\n\n  const equipes = new Set(\n    membros.flatMap(m => m.equipes || []).map(e => e.nome)\n  );\n\n  return `\nProjetos cadastrados: ${totalProjetos}\nProjetos com bolsas: ${totalProjetosComBolsas}\n\nMembros cadastrados: ${membrosTotal}\nMembros com alocação: ${membrosComAlocacao}\nMembros sem alocação: ${membrosSemAlocacao}\n\nAlocações em projetos: ${totalAlocacoes}\nBolsas ativas: ${bolsasAtivas}\nValor total de bolsas: ${valorTotalBolsas}\n\nEquipes (${equipes.size}): ${[...equipes].join(\", \") || \"-\"}`.trim();\n})()\n}}\n",
   "textAlign": "LEFT",
   "textColor": "#1e3a8a",
-  "topRow": 37,
+  "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

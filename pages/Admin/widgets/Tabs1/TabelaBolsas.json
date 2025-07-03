@@ -185,7 +185,7 @@
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{TabelaBolsas.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{TabelaBolsas.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "#7f1d1d",
+      "buttonColor": "#1e3a8a",
       "buttonStyle": "rgb(3, 179, 101)",
       "columnType": "iconButton",
       "computedValue": "",

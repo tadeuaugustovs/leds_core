@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 10,
+  "bottomRow": 24,
   "boxShadow": "none",
   "buttonColor": "#b91c1c",
   "buttonVariant": "SECONDARY",
@@ -38,7 +38,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 21,
   "text": "Excluir usuário do LEDSHUB",
-  "topRow": 6,
+  "topRow": 20,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "8yuybh3ogm",

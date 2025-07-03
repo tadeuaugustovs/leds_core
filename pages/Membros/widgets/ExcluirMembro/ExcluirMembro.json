@@ -2,7 +2,7 @@
   "animateLoading": true,
   "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
   "borderRadius": "1.5rem",
-  "bottomRow": 246,
+  "bottomRow": 24,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
@@ -83,5 +83,5 @@
   "version": 2,
   "widgetId": "938lxbdqp1",
   "widgetName": "ExcluirMembro",
-  "width": 456
+  "width": 560
 }

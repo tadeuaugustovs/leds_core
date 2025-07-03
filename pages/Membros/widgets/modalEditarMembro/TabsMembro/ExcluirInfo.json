@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 18,
+  "bottomRow": 7,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -45,8 +45,8 @@
   "shouldTruncate": false,
   "text": "Excluir informações de {{ Table1.selectedRow.nome }} do LEDS Core",
   "textAlign": "LEFT",
-  "textColor": "#7f1d1d",
-  "topRow": 14,
+  "textColor": "#1e3a8a",
+  "topRow": 3,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

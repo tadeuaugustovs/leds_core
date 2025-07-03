@@ -4,7 +4,7 @@
   "borderColor": "#dbeafe",
   "borderRadius": "0.375rem",
   "borderWidth": "",
-  "bottomRow": 31,
+  "bottomRow": 33,
   "boxShadow": "none",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -42,12 +42,12 @@
     "updatedAt",
     "publishedAt"
   ],
-  "columnUpdatedAt": 1751558147417,
+  "columnUpdatedAt": 1751564775299,
   "columnWidthMap": {
     "customColumn1": 79,
     "nome": 255
   },
-  "compactMode": "DEFAULT",
+  "compactMode": "TALL",
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,

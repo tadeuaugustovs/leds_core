@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"data\": {\n    \"valor_total\": {{ InputValorTotalGeral.text }}\n  }\n}\n",
+      "body": "{\n  \"data\": {\n    \"valor_total\": {{ \n      Number(\n        InputValorTotalGeral.text\n          .replace(\"R$\", \"\")\n          .replace(/\\./g, \"\")\n          .replace(\",\", \".\")\n          .trim()\n      )\n    }}\n  }\n}\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

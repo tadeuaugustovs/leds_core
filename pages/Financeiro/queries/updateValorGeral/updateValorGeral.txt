@@ -1,5 +1,13 @@
 {
   "data": {
-    "valor_total": {{ InputValorTotalGeral.text }}
+    "valor_total": {{ 
+      Number(
+        InputValorTotalGeral.text
+          .replace("R$", "")
+          .replace(/\./g, "")
+          .replace(",", ".")
+          .trim()
+      )
+    }}
   }
 }

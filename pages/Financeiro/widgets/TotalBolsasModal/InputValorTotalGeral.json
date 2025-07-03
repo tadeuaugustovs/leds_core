@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 17,
   "boxShadow": "none",
-  "defaultText": "{{ getValorGeral.data?.data[0]?.valor_total }}",
+  "defaultText": "{{ \n  getValorGeral.data?.data[0]?.valor_total != null \n    ? \"R$ \" + Number(getValorGeral.data?.data[0]?.valor_total).toLocaleString(\"pt-BR\", {minimumFractionDigits: 2}) \n    : \"\" \n}}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

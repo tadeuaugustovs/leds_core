@@ -1,25 +1,25 @@
 {{
 (() => {
   const data = {
-    statusBolsa: TableBolsas.selectedRow.status,
-    motivoInatividade: TableBolsas.selectedRow.motivo !== '-' ? TableBolsas.selectedRow.motivo : null,
-    inicioBolsa: TableBolsas.selectedRow.inicio,
-    fimBolsa: TableBolsas.selectedRow.fim,
+    statusBolsa: TableBolsas.selectedRow?.status,
+    motivoInatividade: TableBolsas.selectedRow?.motivo !== '-' ? TableBolsas.selectedRow?.motivo : null,
+    inicioBolsa: TableBolsas.selectedRow?.inicio,
+    fimBolsa: TableBolsas.selectedRow?.fim,
     bolsa: {
-      connect: [
+      set: [
         { documentId: SelectBolsaCopy.selectedOptionValue }
       ]
     },
     membro: {
-      connect: [
-        { documentId: Table1.selectedRow.documentId }
+      set: [
+        { documentId: Table1.selectedRow?.documentId }
       ]
     }
   };
 
   if (SelectProjectCopy.selectedOptionValue) {
     data.projetos = {
-      connect: [
+      set: [
         { documentId: SelectProjectCopy.selectedOptionValue }
       ]
     };
@@ -27,12 +27,12 @@
 
   if (SelectFinanciador.selectedOptionValue) {
     data.financiadors = {
-      connect: [
+      set: [
         { documentId: SelectFinanciador.selectedOptionValue }
       ]
     };
   }
 
-  return { data }; // <<< NÃO stringify
+  return { data };
 })()
 }}

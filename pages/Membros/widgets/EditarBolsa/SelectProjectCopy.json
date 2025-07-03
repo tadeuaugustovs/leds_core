@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 14,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n(() => {\n  const documentId = Table1.selectedRow?.documentId;\n  const plano = getPlanoDeTrabalho.data?.data?.find(p => \n    p.membro?.documentId === documentId\n  );\n\n  const projeto = plano?.projetos?.[0];\n  return projeto ? { label: projeto.nome, value: projeto.documentId } : undefined;\n})()\n))(SelectProjectCopy.options, SelectProjectCopy.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \n(() => {\n  const projetoNome = TableBolsas.selectedRow?.projeto;\n  const projetoId = TableBolsas.selectedRow?.projetoId;\n\n  if (projetoNome && projetoId) {\n    return { label: projetoNome, value: projetoId };\n  }\n  return undefined;\n})()\n))(SelectProjectCopy.options, SelectProjectCopy.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

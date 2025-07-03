@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 36,
+  "bottomRow": 35,
   "boxShadow": "none",
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n Array.isArray(getSquads.data?.data) && Table1.selectedRow?.squads\n  ? getSquads.data.data\n      .filter(s => Table1.selectedRow.squads\n        .split(',')\n        .map(item => item.trim())\n        .includes(s.nome)\n      )\n      .map(s => ({\n        label: s.nome,\n        value: s.documentId\n      }))\n  : []\n\n))(Squad.options, Squad.serverSideFiltering) }}",
   "dynamicBindingPathList": [
@@ -57,7 +57,7 @@
   "rightColumn": 21,
   "serverSideFiltering": false,
   "sourceData": "{{ \n  getSquads.data?.data.map(squad => ({\n    label: squad.nome,\n    value: squad.documentId\n  })) \n}}\n",
-  "topRow": 29,
+  "topRow": 28,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
   "widgetId": "k8nqpy8edt",

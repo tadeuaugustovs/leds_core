@@ -33,6 +33,7 @@
     }
   },
   "columnOrder": [
+    "customColumn1",
     "nome",
     "bolsas",
     "equipes",
@@ -53,14 +54,15 @@
     "discord",
     "disc",
     "discAdapt",
-    "termoConfidencialidade",
-    "customColumn1"
+    "termoConfidencialidade"
   ],
-  "columnUpdatedAt": 1751508052208,
+  "columnUpdatedAt": 1751557293236,
   "columnWidthMap": {
-    "bolsas": 294,
+    "bolsas": 198,
+    "customColumn1": 78,
+    "email": 249,
     "equipes": 198,
-    "nome": 274
+    "nome": 318
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -161,12 +163,15 @@
       "key": "tableData"
     },
     {
-      "key": "onRowSelected"
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "onRowSelected"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -190,7 +195,7 @@
   "mobileRightColumn": 38,
   "mobileTopRow": 10,
   "needsErrorInfo": false,
-  "onRowSelected": "{{\n  storeValue(\"documentIdSelecionado\", Table1.selectedRow.documentId);\n  showModal(\"modalEditarMembro\");\n  getPlanoDeTrabalho.run();\n  getMembrosByDocumentId.run();\n}}\n\n",
+  "onRowSelected": "",
   "originalBottomRow": 69,
   "originalTopRow": 21,
   "parentColumnSpace": 12.078125,
@@ -300,13 +305,14 @@
       "width": 150
     },
     "customColumn1": {
-      "alias": "Info",
+      "alias": "Editar",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
       "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
       "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "TERTIARY",
       "columnType": "iconButton",
       "computedValue": "",
       "currencyCode": "USD",
@@ -315,6 +321,7 @@
       "enableFilter": true,
       "enableSort": true,
       "horizontalAlignment": "LEFT",
+      "iconName": "annotation",
       "id": "customColumn1",
       "index": 10,
       "isCellEditable": false,
@@ -325,9 +332,10 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Info",
+      "label": "Editar",
       "labelColor": "#FFFFFF",
       "notation": "standard",
+      "onClick": "{{\n  storeValue(\"documentIdSelecionado\", Table1.selectedRow.documentId);\n  showModal(\"modalEditarMembro\");\n  getPlanoDeTrabalho.run();\n  getMembrosByDocumentId.run();\n}}\n\n",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",

@@ -38,18 +38,24 @@
     "inicio",
     "fim",
     "motivo",
-    "documentId"
+    "customColumn1",
+    "projeto",
+    "documentId",
+    "projetoId",
+    "financiador",
+    "financiadorId"
   ],
-  "columnUpdatedAt": 1749616355812,
+  "columnUpdatedAt": 1751556962736,
   "columnWidthMap": {
     "bolsa": 151,
-    "fim": 204,
+    "fim": 114,
     "financiador": 120,
     "inicio": 112,
     "inicioBolsa": 161,
+    "motivo": 146,
     "projeto": 168,
     "status": 117,
-    "valor": 110
+    "valor": 119
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -98,6 +104,27 @@
     },
     {
       "key": "primaryColumns.valor.computedValue"
+    },
+    {
+      "key": "primaryColumns.projeto.computedValue"
+    },
+    {
+      "key": "primaryColumns.projetoId.computedValue"
+    },
+    {
+      "key": "primaryColumns.financiador.computedValue"
+    },
+    {
+      "key": "primaryColumns.financiadorId.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn1.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonColor"
     }
   ],
   "dynamicPropertyPathList": [
@@ -105,18 +132,21 @@
       "key": "tableData"
     },
     {
-      "key": "onRowSelected"
-    },
-    {
       "key": "primaryColumns.status.cellBackground"
     },
     {
       "key": "primaryColumns.status.textColor"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "onRowSelected"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -140,7 +170,7 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 20,
   "needsErrorInfo": false,
-  "onRowSelected": "{{\n  storeValue(\"bolsaSelecionada\", TableBolsas.selectedRow);\n  showModal(\"EditarBolsa\");\n}}\n",
+  "onRowSelected": "",
   "originalBottomRow": 39,
   "originalTopRow": 6,
   "parentColumnSpace": 10.7940673828125,
@@ -175,6 +205,44 @@
       "originalId": "bolsa",
       "sticky": "",
       "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn1": {
+      "alias": "Info",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{TableBolsas.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{TableBolsas.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{TableBolsas.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customColumn1",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Info",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{\nstoreValue(\"bolsaSelecionada\", currentRow);\nshowModal(\"EditarBolsa\");\n}}\n",
+      "originalId": "customColumn1",
+      "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -250,6 +318,74 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "financiador": {
+      "alias": "financiador",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{TableBolsas.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"financiador\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "financiador",
+      "index": 9,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "financiador",
+      "notation": "standard",
+      "originalId": "financiador",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "financiadorId": {
+      "alias": "financiadorId",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{TableBolsas.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"financiadorId\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "financiadorId",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "financiadorId",
+      "notation": "standard",
+      "originalId": "financiadorId",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "inicio": {
       "alias": "inicio",
       "allowCellWrapping": false,
@@ -312,6 +448,74 @@
       "label": "motivo",
       "notation": "standard",
       "originalId": "motivo",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "projeto": {
+      "alias": "projeto",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{TableBolsas.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"projeto\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "projeto",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "projeto",
+      "notation": "standard",
+      "originalId": "projeto",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "projetoId": {
+      "alias": "projetoId",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{TableBolsas.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"projetoId\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "projetoId",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "projetoId",
+      "notation": "standard",
+      "originalId": "projetoId",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -392,9 +596,9 @@
   "searchKey": "",
   "serverSidePaginationEnabled": false,
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{\n(() => {\n  const membroSelecionado = Table1?.selectedRow;\n  const todosMembros = getMembros.data?.data || [];\n\n  if (!membroSelecionado || !membroSelecionado.documentId) return [];\n\n  const membro = todosMembros.find(m => m.documentId === membroSelecionado.documentId);\n  const planos = membro?.planos_de_trabalho || [];\n\n  const formatarData = data => {\n    if (!data) return '-';\n    const dateObj = new Date(data);\n    if (isNaN(dateObj)) return '-';\n    return dateObj.toISOString().split('T')[0];\n  };\n\n  const ordem = { \"ATIVA\": 0, \"PLANEJADA\": 1, \"INATIVA\": 2 };\n\n  return planos\n    .sort((a, b) => (ordem[a.statusBolsa] ?? 3) - (ordem[b.statusBolsa] ?? 3))\n    .map(plano => ({\n      documentId: plano?.documentId, // necessário para a query PUT\n      bolsa: plano?.bolsa?.nome || '-',\n      status: plano?.statusBolsa || '-',\n      inicio: formatarData(plano?.inicioBolsa),\n      fim: formatarData(plano?.fimBolsa),\n      motivo: plano?.motivoInatividade || '-',\n      valor: plano?.bolsa?.valor\n        ? Number(plano.bolsa.valor).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })\n        : '-'\n    }));\n})()\n}}\n",
+  "tableData": "{{\n(() => {\n  const membroSelecionado = Table1?.selectedRow;\n  const todosMembros = getMembros.data?.data || [];\n\n  if (!membroSelecionado || !membroSelecionado.documentId) return [];\n\n  const membro = todosMembros.find(m => m.documentId === membroSelecionado.documentId);\n  const planos = membro?.planos_de_trabalho || [];\n\n  const formatarData = data => {\n    if (!data) return '-';\n    const dateObj = new Date(data);\n    if (isNaN(dateObj)) return '-';\n    return dateObj.toISOString().split('T')[0];\n  };\n\n  const ordem = { \"ATIVA\": 0, \"PLANEJADA\": 1, \"INATIVA\": 2 };\n\n  return planos\n    .sort((a, b) => (ordem[a.statusBolsa] ?? 3) - (ordem[b.statusBolsa] ?? 3))\n    .map(plano => ({\n      documentId: plano?.documentId, // necessário para PUT\n      bolsa: plano?.bolsa?.nome || '-',\n      status: plano?.statusBolsa || '-',\n      inicio: formatarData(plano?.inicioBolsa),\n      fim: formatarData(plano?.fimBolsa),\n      motivo: plano?.motivoInatividade || '-',\n      valor: plano?.bolsa?.valor\n        ? Number(plano.bolsa.valor).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })\n        : '-',\n      projeto: plano?.projetos?.[0]?.nome || '-', \n      projetoId: plano?.projetos?.[0]?.documentId || '', \n      financiador: plano?.bolsa?.financiador?.nome || '-', \n      financiadorId: plano?.bolsa?.financiador?.documentId || ''\n    }));\n})()\n}}\n",
   "textSize": "0.875rem",
-  "topRow": 6,
+  "topRow": 5,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

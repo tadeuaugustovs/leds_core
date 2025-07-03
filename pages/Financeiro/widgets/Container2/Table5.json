@@ -3,12 +3,12 @@
   "animateLoading": true,
   "borderColor": "#dbeafe",
   "borderRadius": "0.375rem",
-  "borderWidth": "1",
+  "borderWidth": "",
   "bottomRow": 33,
   "boxShadow": "none",
   "cachedTableData": {},
   "canFreezeColumn": true,
-  "cellBackground": "#dbeafe",
+  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
   "childStylesheet": {
     "button": {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -33,16 +33,20 @@
     }
   },
   "columnOrder": [
+    "customColumn1",
+    "nome",
     "id",
     "documentId",
-    "nome",
     "descricao",
     "createdAt",
     "updatedAt",
     "publishedAt"
   ],
-  "columnUpdatedAt": 1751378670670,
-  "columnWidthMap": {},
+  "columnUpdatedAt": 1751558147417,
+  "columnWidthMap": {
+    "customColumn1": 83,
+    "nome": 255
+  },
   "compactMode": "TALL",
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -79,6 +83,42 @@
     },
     {
       "key": "primaryColumns.publishedAt.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn1.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonColor"
+    },
+    {
+      "key": "cellBackground"
+    },
+    {
+      "key": "primaryColumns.createdAt.cellBackground"
+    },
+    {
+      "key": "primaryColumns.publishedAt.cellBackground"
+    },
+    {
+      "key": "primaryColumns.documentId.cellBackground"
+    },
+    {
+      "key": "primaryColumns.nome.cellBackground"
+    },
+    {
+      "key": "primaryColumns.id.cellBackground"
+    },
+    {
+      "key": "primaryColumns.descricao.cellBackground"
+    },
+    {
+      "key": "primaryColumns.updatedAt.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn1.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -87,11 +127,17 @@
     },
     {
       "key": "onRowSelected"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "onRowSelected"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -116,7 +162,7 @@
   "mobileRightColumn": 36,
   "mobileTopRow": 23,
   "needsErrorInfo": false,
-  "onRowSelected": "{{\n  storeValue(\"projetoSelecionadoDocumentId\", Table5.selectedRow?.documentId);\n\n  setTimeout(() => {\n    Promise.all([\n      getCapitalCusteioItens.run(),\n      getControleBolsaDoProjeto.run(() => {\n        const dados = getControleBolsaDoProjeto.data?.data?.[0];\n\n        storeValue(\"controleDeBolsaId\", dados?.documentId);\n        storeValue(\"valorTotalProjeto\", dados?.valor_total || 0);\n        storeValue(\"valorPlanejadoProjeto\", dados?.valor_planejado || 0);\n      })\n    ])\n    .then(() => {\n      showModal(\"ModalProjetos\");\n    })\n    .catch((err) => {\n      showAlert(\"Erro ao carregar dados do projeto: \" + err.message, \"error\");\n    });\n  }, 5);\n}}\n",
+  "onRowSelected": "",
   "originalBottomRow": 33,
   "originalTopRow": 7,
   "parentColumnSpace": 24.265625,
@@ -127,7 +173,7 @@
       "alias": "createdAt",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#dbeafe",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "date",
       "computedValue": "{{Table5.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"createdAt\"]))}}",
       "currencyCode": "USD",
@@ -157,11 +203,54 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "customColumn1": {
+      "alias": "Editar",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{Table5.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{Table5.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{Table5.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "TERTIARY",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "BOLD",
+      "horizontalAlignment": "LEFT",
+      "iconName": "annotation",
+      "id": "customColumn1",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Editar",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{\n  storeValue(\"projetoSelecionadoDocumentId\", Table5.selectedRow?.documentId);\n\n  setTimeout(() => {\n    Promise.all([\n      getCapitalCusteioItens.run(),\n      getControleBolsaDoProjeto.run(() => {\n        const dados = getControleBolsaDoProjeto.data?.data?.[0];\n\n        storeValue(\"controleDeBolsaId\", dados?.documentId);\n        storeValue(\"valorTotalProjeto\", dados?.valor_total || 0);\n        storeValue(\"valorPlanejadoProjeto\", dados?.valor_planejado || 0);\n      })\n    ])\n    .then(() => {\n      showModal(\"ModalProjetos\");\n    })\n    .catch((err) => {\n      showAlert(\"Erro ao carregar dados do projeto: \" + err.message, \"error\");\n    });\n  }, 5);\n}}\n",
+      "originalId": "customColumn1",
+      "sticky": "",
+      "textColor": "#1e3a8a",
+      "textSize": "1rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "descricao": {
       "alias": "descricao",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#dbeafe",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "text",
       "computedValue": "{{Table5.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"descricao\"]))}}",
       "currencyCode": "USD",
@@ -195,7 +284,7 @@
       "alias": "documentId",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#dbeafe",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "text",
       "computedValue": "{{Table5.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"documentId\"]))}}",
       "currencyCode": "USD",
@@ -229,7 +318,7 @@
       "alias": "id",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#dbeafe",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "number",
       "computedValue": "{{Table5.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
       "currencyCode": "USD",
@@ -263,7 +352,7 @@
       "alias": "nome",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#dbeafe",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "text",
       "computedValue": "{{Table5.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nome\"]))}}",
       "currencyCode": "USD",
@@ -297,7 +386,7 @@
       "alias": "publishedAt",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#dbeafe",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "date",
       "computedValue": "{{Table5.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"publishedAt\"]))}}",
       "currencyCode": "USD",
@@ -331,7 +420,7 @@
       "alias": "updatedAt",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#dbeafe",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "date",
       "computedValue": "{{Table5.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"updatedAt\"]))}}",
       "currencyCode": "USD",

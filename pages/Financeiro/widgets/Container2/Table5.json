@@ -4,7 +4,7 @@
   "borderColor": "#dbeafe",
   "borderRadius": "0.375rem",
   "borderWidth": "",
-  "bottomRow": 33,
+  "bottomRow": 31,
   "boxShadow": "none",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -47,7 +47,7 @@
     "customColumn1": 79,
     "nome": 255
   },
-  "compactMode": "TALL",
+  "compactMode": "DEFAULT",
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,

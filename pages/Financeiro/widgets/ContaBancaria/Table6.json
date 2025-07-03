@@ -259,7 +259,7 @@
       "allowSameOptionsInNewRow": true,
       "borderRadius": "0.375rem",
       "boxShadow": "none",
-      "buttonColor": "#7f1d1d",
+      "buttonColor": "#1e3a8a",
       "buttonStyle": "rgb(3, 179, 101)",
       "buttonVariant": "PRIMARY",
       "cellBackground": "\n",

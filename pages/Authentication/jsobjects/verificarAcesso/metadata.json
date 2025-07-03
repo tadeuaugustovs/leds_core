@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68375c2c56cad916c8fc38e2_c4dbf017-86d9-4187-9a2f-e9a214bd4775",
+  "id": "Authentication_verificarAcesso",
+  "unpublishedCollection": {
+    "name": "verificarAcesso",
+    "pageId": "Authentication",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

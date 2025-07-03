@@ -37,10 +37,10 @@
     "nome",
     "bolsas",
     "equipes",
-    "projetos",
     "squads",
     "email",
     "telefone",
+    "projetos",
     "documentId",
     "dataNascimento",
     "equipeDesejada",
@@ -56,13 +56,13 @@
     "discAdapt",
     "termoConfidencialidade"
   ],
-  "columnUpdatedAt": 1751557293236,
+  "columnUpdatedAt": 1751558953220,
   "columnWidthMap": {
     "bolsas": 198,
     "customColumn1": 78,
     "email": 249,
-    "equipes": 198,
-    "nome": 318
+    "equipes": 156,
+    "nome": 282
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -842,7 +842,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "projetos",
       "notation": "standard",
       "originalId": "projetos",

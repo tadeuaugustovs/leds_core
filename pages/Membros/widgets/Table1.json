@@ -5,7 +5,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 69,
+  "bottomRow": 68,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -62,7 +62,9 @@
     "customColumn1": 84,
     "email": 259,
     "equipes": 113,
-    "nome": 283
+    "nome": 283,
+    "squads": 130,
+    "telefone": 149
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -196,7 +198,7 @@
   "mobileTopRow": 10,
   "needsErrorInfo": false,
   "onRowSelected": "",
-  "originalBottomRow": 69,
+  "originalBottomRow": 68,
   "originalTopRow": 21,
   "parentColumnSpace": 12.078125,
   "parentId": "0",

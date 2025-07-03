@@ -39,11 +39,15 @@
     "receita",
     "despesa",
     "contacorrente",
-    "documentId"
+    "documentId",
+    "customColumn2"
   ],
-  "columnUpdatedAt": 1749671270927,
+  "columnUpdatedAt": 1751506593197,
   "columnWidthMap": {
-    "descricao": 200,
+    "customColumn1": 106,
+    "data": 122,
+    "descricao": 247,
+    "receita": 130,
     "situacao": 114
   },
   "customIsLoading": false,
@@ -96,6 +100,12 @@
     },
     {
       "key": "primaryColumns.documentId.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn2.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn2.borderRadius"
     }
   ],
   "dynamicPropertyPathList": [
@@ -104,11 +114,17 @@
     },
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn2.onClick"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn2.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -204,6 +220,45 @@
       "notation": "standard",
       "onClick": "{{ \nstoreValue(\"itemSelecionado\", {\n  documentId: currentRow.documentId,\n  descricao: currentRow.descricao\n});\n\ngetItemComArquivos.run(() => {\n  showModal(\"ArquivosItens\");\n});\n\n}}\n",
       "originalId": "customColumn1",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn2": {
+      "alias": "Excluir",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{TabelaDeItens.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{TabelaDeItens.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "#7f1d1d",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "iconName": "cross",
+      "id": "customColumn2",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Excluir",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{storeValue(\"itemParaExcluir\", currentRow);\nshowModal(\"ExcluirItem2\");\n\n}}",
+      "originalId": "customColumn2",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,

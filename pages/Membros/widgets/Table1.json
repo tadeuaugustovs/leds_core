@@ -56,7 +56,7 @@
     "discAdapt",
     "termoConfidencialidade"
   ],
-  "columnUpdatedAt": 1751565651944,
+  "columnUpdatedAt": 1751565732508,
   "columnWidthMap": {
     "bolsas": 133,
     "customColumn1": 84,
@@ -778,7 +778,7 @@
       "label": "nome",
       "notation": "standard",
       "originalId": "nome",
-      "sticky": "left",
+      "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,

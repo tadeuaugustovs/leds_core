@@ -38,7 +38,7 @@
   "mobileRightColumn": 41,
   "mobileTopRow": 65,
   "needsErrorInfo": false,
-  "onClick": "{{ \n  clearStore(); \n  showAlert(\"Logout realizado com sucesso\", \"success\");\n  navigateTo(\"Authentication\", \"SAME_WINDOW\");\n}}\n",
+  "onClick": "{{ \n(() => {\n  storeValue(\"usuario\", null);\n  window.localStorage.removeItem(\"usuario\");\n  navigateTo(\"Authentication\", \"SAME_WINDOW\");\n})();\n\n}}\n",
   "parentColumnSpace": 2.3564453125,
   "parentId": "muoto0lxj5",
   "parentRowSpace": 10,

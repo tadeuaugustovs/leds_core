@@ -56,13 +56,13 @@
     "discAdapt",
     "termoConfidencialidade"
   ],
-  "columnUpdatedAt": 1751558953220,
+  "columnUpdatedAt": 1751565651944,
   "columnWidthMap": {
-    "bolsas": 198,
-    "customColumn1": 78,
-    "email": 249,
-    "equipes": 156,
-    "nome": 282
+    "bolsas": 133,
+    "customColumn1": 84,
+    "email": 259,
+    "equipes": 113,
+    "nome": 283
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -337,7 +337,7 @@
       "notation": "standard",
       "onClick": "{{\n  storeValue(\"documentIdSelecionado\", Table1.selectedRow.documentId);\n  showModal(\"modalEditarMembro\");\n  getPlanoDeTrabalho.run();\n  getMembrosByDocumentId.run();\n}}\n\n",
       "originalId": "customColumn1",
-      "sticky": "",
+      "sticky": "left",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -778,7 +778,7 @@
       "label": "nome",
       "notation": "standard",
       "originalId": "nome",
-      "sticky": "",
+      "sticky": "left",
       "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,

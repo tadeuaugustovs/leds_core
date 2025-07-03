@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68375c2c56cad916c8fc38e2_333c526b-f8cc-4e74-b84f-e830b0feaca1",
+  "id": "Financeiro_BodyFluxoCaixa",
+  "unpublishedCollection": {
+    "name": "BodyFluxoCaixa",
+    "pageId": "Financeiro",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

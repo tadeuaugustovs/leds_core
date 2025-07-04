@@ -1,7 +1,7 @@
 export default {
   async verificarAcesso(email, senha) {
     if (!email || !senha) {
-      throw new Error("Preencha o email e a senha.");
+      //throw new Error("Preencha o email e a senha.");
     }
 
     const resposta = await LogarUsuario.run();

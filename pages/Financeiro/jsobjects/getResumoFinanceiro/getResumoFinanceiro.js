@@ -19,7 +19,7 @@ export default {
       passagens: 0
     };
 
-    // 🧠 Somar bolsas
+    // Somar bolsas
     membros.forEach(membro => {
       (membro.planos_de_trabalho || []).forEach(plano => {
         const valor = plano?.bolsa?.valor;
@@ -29,7 +29,7 @@ export default {
       });
     });
 
-    // 💼 Somar itens de custeio/capital (menos bolsas)
+    //  Somar itens de custeio/capital (menos bolsas)
     itens.forEach(item => {
       const nome = item.item?.toLowerCase() || "";
       const gasto = Number(item.gasto || 0);

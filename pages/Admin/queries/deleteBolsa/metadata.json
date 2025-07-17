@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "68375c2c56cad916c8fc38e2_9404b81c-bba1-4ba2-bb93-1ef810370e5a",
-  "id": "Admin_updateItemFinanceiro",
+  "gitSyncId": "68375c2c56cad916c8fc38e2_af648798-fbd8-41c3-8d73-ace481e47f6d",
+  "id": "Admin_deleteBolsa",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,17 +11,17 @@
           "value": "application/json"
         }
       ],
-      "body": "{{financeiroUtils.getUpdatedItemBody()}}",
+      "body": "",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
         "apiContentType": "application/json"
       },
       "headers": [],
-      "httpMethod": "PUT",
+      "httpMethod": "DELETE",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/api/capital-custeio-items/{{ Excluir.processedTableData[Excluir.updatedRowIndices[0]]?.documentId }}",
+      "path": "/api/bolsas/{{ appsmith.store.Bolsinhas.documentId }}",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -41,13 +41,10 @@
     },
     "dynamicBindingPathList": [
       {
-        "key": "body"
-      },
-      {
         "key": "path"
       }
     ],
-    "name": "updateItemFinanceiro",
+    "name": "deleteBolsa",
     "pageId": "Admin",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

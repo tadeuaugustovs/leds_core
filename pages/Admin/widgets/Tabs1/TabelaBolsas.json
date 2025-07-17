@@ -109,9 +109,16 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -209,6 +216,7 @@
       "label": "Excluir",
       "labelColor": "#FFFFFF",
       "notation": "standard",
+      "onClick": "{{\n  storeValue('Bolsinhas', currentRow);\n  showModal('ExcluirBolsa');\n}}\n",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",

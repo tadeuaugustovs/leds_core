@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"data\": {\n    \"descricao\": {{ TabelaItens.newRow.descricao }},\n    \"tipo\": {{ TabelaItens.newRow.tipo }}\n  }\n}\n",
+      "body": "{\n  \"data\": {\n    \"descricao\": {{ Excluir.newRow.descricao }},\n    \"tipo\": {{ Excluir.newRow.tipo }}\n  }\n}\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

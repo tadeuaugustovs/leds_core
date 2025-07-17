@@ -1,7 +1,7 @@
 export default {
   getUpdatedItemBody: () => {
     const row =
-      TabelaItens.processedTableData[TabelaItens.updatedRowIndices[0]];
+      Excluir.processedTableData[Excluir.updatedRowIndices[0]];
 
     const data = {};
     if (row?.descricao) {

@@ -1,6 +1,6 @@
 {
   "data": {
-    "descricao": {{ TabelaItens.newRow.descricao }},
-    "tipo": {{ TabelaItens.newRow.tipo }}
+    "descricao": {{ Excluir.newRow.descricao }},
+    "tipo": {{ Excluir.newRow.tipo }}
   }
 }

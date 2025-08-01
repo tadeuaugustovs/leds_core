@@ -36,7 +36,7 @@
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "{{ SelectStatusBolsa.selectedOptionValue === 'INATIVA' }}\n",
+  "isVisible": "{{ SelectStatusBolsa.selectedOptionValue === 'INATIVA' }}",
   "key": "0sehfjp33x",
   "labelAlignment": "left",
   "labelPosition": "Top",

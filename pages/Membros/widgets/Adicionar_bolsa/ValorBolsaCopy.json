@@ -1,0 +1,60 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 16,
+  "boxShadow": "none",
+  "defaultText": "{{\n(() => {\n  // pega o id da bolsa (é o item.id, não documentId)\n  const id = SelectBolsa.selectedOptionValue;\n\n  // encontra no resultado bruto de getBolsas\n  const bolsa = getBolsas.data?.data.find(b => b.id === id);\n\n  // formata em R$ 1.800,00 ou retorna vazio\n  return bolsa\n    ? Intl.NumberFormat(\"pt-BR\", {\n        style: \"currency\",\n        currency: \"BRL\"\n      }).format(bolsa.valor)\n    : \"\";\n})()\n}}\n",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "gp9cwhwcjv",
+  "label": "Valor da bolsa",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "ITALIC",
+  "labelTextColor": "green",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 25,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 14,
+  "mobileLeftColumn": 28,
+  "mobileRightColumn": 48,
+  "mobileTopRow": 7,
+  "needsErrorInfo": false,
+  "originalBottomRow": 14,
+  "originalTopRow": 7,
+  "parentColumnSpace": 8.575781249999999,
+  "parentId": "rdr2xyjw6v",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 44,
+  "showStepArrows": false,
+  "topRow": 9,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "zqwj7r22as",
+  "widgetName": "ValorBolsaCopy"
+}

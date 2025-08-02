@@ -56,10 +56,10 @@
     "discAdapt",
     "termoConfidencialidade"
   ],
-  "columnUpdatedAt": 1751565732508,
+  "columnUpdatedAt": 1754146976808,
   "columnWidthMap": {
     "bolsas": 133,
-    "customColumn1": 84,
+    "customColumn1": 77,
     "email": 259,
     "equipes": 113,
     "nome": 283,
@@ -151,6 +151,9 @@
       "key": "tableData"
     },
     {
+      "key": "primaryColumns.customColumn1.computedValue"
+    },
+    {
       "key": "primaryColumns.customColumn1.boxShadow"
     },
     {
@@ -196,6 +199,7 @@
   "mobileLeftColumn": 4,
   "mobileRightColumn": 38,
   "mobileTopRow": 10,
+  "multiRowSelection": false,
   "needsErrorInfo": false,
   "onRowSelected": "",
   "originalBottomRow": 68,
@@ -313,10 +317,11 @@
       "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
       "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonLabel": "Editar",
       "buttonStyle": "rgb(3, 179, 101)",
       "buttonVariant": "TERTIARY",
       "columnType": "iconButton",
-      "computedValue": "",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ('')) : '' })()}}",
       "currencyCode": "USD",
       "customAlias": "",
       "decimals": 0,
@@ -337,9 +342,9 @@
       "label": "Editar",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{\n  storeValue(\"documentIdSelecionado\", Table1.selectedRow.documentId);\n  showModal(\"modalEditarMembro\");\n  getPlanoDeTrabalho.run();\n  getMembrosByDocumentId.run();\n}}\n\n",
+      "onClick": "{{\n  storeValue(\"documentIdSelecionado\", Table1.selectedRow.documentId);\n  showModal(\"modalEditarMembro\");\n  getPlanoDeTrabalho.run();\n  getMembrosByDocumentId.run();\n}}\n",
       "originalId": "customColumn1",
-      "sticky": "left",
+      "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},

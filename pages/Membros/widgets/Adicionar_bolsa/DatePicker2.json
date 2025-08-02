@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 30,
+  "bottomRow": 23,
   "boxShadow": "none",
   "closeOnSelection": true,
   "dateFormat": "DD/MM/YY",
@@ -20,6 +20,12 @@
   "dynamicPropertyPathList": [
     {
       "key": "defaultDate"
+    },
+    {
+      "key": "minDate"
+    },
+    {
+      "key": "maxDate"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -34,10 +40,10 @@
   "labelPosition": "Top",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 30,
-  "maxDate": "2121-12-31T18:29:00.000Z",
+  "leftColumn": 21,
+  "maxDate": "",
   "maxDynamicHeight": 9000,
-  "minDate": "1920-12-31T18:30:00.000Z",
+  "minDate": "",
   "minDynamicHeight": 4,
   "minWidth": 450,
   "mobileBottomRow": 24,
@@ -52,10 +58,10 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 57,
+  "rightColumn": 39,
   "shortcuts": false,
-  "timePrecision": "minute",
-  "topRow": 23,
+  "timePrecision": "None",
+  "topRow": 16,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
   "widgetId": "dzojczjsev",

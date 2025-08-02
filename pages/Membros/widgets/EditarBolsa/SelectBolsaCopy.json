@@ -56,7 +56,7 @@
   "placeholderText": "Selecionar ",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 27,
+  "rightColumn": 25,
   "serverSideFiltering": false,
   "sourceData": "{{ \n  getBolsas.data?.data.map(b => ({\n    label: b.nome,\n    value: b.documentId\n  })) \n}}\n",
   "topRow": 7,

@@ -1,15 +1,32 @@
 {{
 (() => {
   const data = {
-    statusBolsa: TableBolsas.selectedRow?.status,
-    motivoInatividade: TableBolsas.selectedRow?.motivo !== '-' ? TableBolsas.selectedRow?.motivo : null,
-    inicioBolsa: TableBolsas.selectedRow?.inicio,
-    fimBolsa: TableBolsas.selectedRow?.fim,
+    /* mantém o valor original, mas usa o novo se o usuário trocar */
+    statusBolsa:
+      SelectStatusBolsaCopy.selectedOptionValue
+        || TableBolsas.selectedRow?.status,
+
+    motivoInatividade:
+      MotivoCopy.selectedOptionValue
+        ? MotivoCopy.selectedOptionValue
+        : TableBolsas.selectedRow?.motivo !== "-"
+            ? TableBolsas.selectedRow?.motivo
+            : null,
+
+    /* datas ficam no mesmo formato que já vem da tabela */
+    inicioBolsa:
+      DatePicker1_1.selectedDate || TableBolsas.selectedRow?.inicio,
+
+    fimBolsa:
+      DatePicker2_1.selectedDate || TableBolsas.selectedRow?.fim,
+
     bolsa: {
       set: [
-        { documentId: SelectBolsaCopy.selectedOptionValue }
+        { documentId: SelectBolsaCopy.selectedOptionValue
+                      || TableBolsas.selectedRow?.bolsaDocumentId }
       ]
     },
+
     membro: {
       set: [
         { documentId: Table1.selectedRow?.documentId }

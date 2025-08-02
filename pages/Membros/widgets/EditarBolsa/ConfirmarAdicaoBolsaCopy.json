@@ -34,7 +34,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{ \nupdatePlanoDeTrabalho.run()\n  .then(() => {\n    getMembros.run();\n    showAlert(\"Bolsa atualizada com sucesso!\", \"success\");\n    closeModal(\"EditarBolsa\");\n  })\n  .catch(err => {\n    showAlert(\"Erro ao atualizar bolsa: \" + err.message, \"error\");\n  });\n}}\n",
+  "onClick": "{{ \nupdatePlanoDeTrabalho.run()\n  .then(() => {\n    getMembros.run();                         // atualiza a lista na página\n    showAlert(\"Bolsa atualizada com sucesso!\", \"success\");\n    closeModal(\"EditarBolsa\");                // fecha o modal de bolsa\n\n    /* --- \"f5\" na própria rota e reabre o modal de membro --- */\n    navigateTo(appsmith.URL.fullPath, {}, \"SELF\")\n      .then(() => showModal(\"modalEditarMembro\"));\n  })\n  .catch(err => {\n    showAlert(\"Erro ao atualizar bolsa: \" + err.message, \"error\");\n  });\n}}\n",
   "originalBottomRow": 40,
   "originalTopRow": 36,
   "parentId": "fy1dmivih0",

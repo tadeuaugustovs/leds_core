@@ -93,7 +93,7 @@
     ],
     "name": "getMembrosByDocumentId",
     "pageId": "Membros",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
 }

@@ -35,7 +35,7 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 36,
   "needsErrorInfo": false,
-  "onClick": "{{ \n  storeValue(\"idBolsaSelecionada\", TableBolsas.selectedRow?.documentId); \n  showModal(\"modalConfirmarExclusaoBolsa\"); \n}}\n",
+  "onClick": "{{\n  storeValue(\"idBolsaSelecionada\",    TableBolsas.selectedRow?.documentId);\n  storeValue(\"nomeBolsaSelecionada\",  TableBolsas.selectedRow?.bolsa);\n  storeValue(\"valorBolsaSelecionada\", TableBolsas.selectedRow?.valor);\n  storeValue(\"inicioBolsaSelecionada\", TableBolsas.selectedRow?.inicio);\n  storeValue(\"fimBolsaSelecionada\",    TableBolsas.selectedRow?.fim);\n  showModal(\"modalConfirmarExclusaoBolsa\");\n}}\n",
   "originalBottomRow": 40,
   "originalTopRow": 36,
   "parentColumnSpace": 8.575781249999999,

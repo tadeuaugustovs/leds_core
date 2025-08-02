@@ -1,0 +1,48 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 12,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "System Default",
+  "fontSize": "1rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "3xs6wfi63f",
+  "leftColumn": 3,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "overflow": "NONE",
+  "parentId": "86atlnqdmo",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 60,
+  "shouldTruncate": false,
+  "text": "{{\n(() => {\n  const membro = getMembrosByDocumentId.data?.data?.[0]?.nome || \"—\";\n  const nomeBolsa = appsmith.store.nomeBolsaSelecionada  || \"—\";\n  const valor     = appsmith.store.valorBolsaSelecionada || \"\";\n  const rawInicio = appsmith.store.inicioBolsaSelecionada;\n  const rawFim    = appsmith.store.fimBolsaSelecionada;\n\n  const inicio = rawInicio\n    ? moment(rawInicio, [\"DD/MM/YYYY\",\"DD/MM/YY\",\"YYYY-MM-DD\"])\n        .format(\"DD/MM/YYYY\")\n    : \"—\";\n  const fim = rawFim\n    ? moment(rawFim,    [\"DD/MM/YYYY\",\"DD/MM/YY\",\"YYYY-MM-DD\"])\n        .format(\"DD/MM/YYYY\")\n    : \"—\";\n\n  return [\n    \"Dados da Bolsa:\",\n    `- Nome do Bolsista: ${membro}`,\n    `- Bolsa: ${nomeBolsa} (${valor})`,\n    `- Período: ${inicio} a ${fim}`\n  ].join(\"\\n\");\n})()\n}}\n",
+  "textAlign": "LEFT",
+  "textColor": "#001652",
+  "topRow": 0,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "kyom5ga66e",
+  "widgetName": "Text2"
+}

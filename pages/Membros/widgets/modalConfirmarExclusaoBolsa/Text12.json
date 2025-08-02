@@ -1,45 +1,52 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 7,
+  "bottomRow": 8,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
     },
     {
+      "key": "fontFamily"
+    },
+    {
       "key": "borderRadius"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
-  "fontFamily": "Open Sans",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "3xs6wfi63f",
-  "leftColumn": 9,
+  "key": "gqk66e1xoh",
+  "leftColumn": 20,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 5,
-  "mobileLeftColumn": 1,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 25,
   "mobileRightColumn": 41,
-  "mobileTopRow": 1,
+  "mobileTopRow": 3,
   "needsErrorInfo": false,
+  "originalBottomRow": 7,
+  "originalTopRow": 3,
   "overflow": "NONE",
+  "parentColumnSpace": 10.09375,
   "parentId": "ophue7qy6f",
+  "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 53,
+  "rightColumn": 43,
   "shouldTruncate": false,
-  "text": "Tem certeza que deseja excluir esta bolsa?",
-  "textAlign": "LEFT",
-  "textColor": "#b91c1c",
-  "topRow": 3,
+  "text": "Excluir Bolsa",
+  "textAlign": "CENTER",
+  "textColor": "#7f1d1d",
+  "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "kyom5ga66e",
-  "widgetName": "Text2"
+  "widgetId": "6l069azrfp",
+  "widgetName": "Text12"
 }

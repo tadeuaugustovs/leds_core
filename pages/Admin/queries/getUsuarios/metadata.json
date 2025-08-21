@@ -35,7 +35,7 @@
     "dynamicBindingPathList": [],
     "name": "getUsuarios",
     "pageId": "Admin",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

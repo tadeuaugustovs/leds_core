@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 89,
+  "bottomRow": 86,
   "boxShadow": "none",
   "defaultImage": "https://strapi.conectafapes.leds.dev.br/uploads/1740701605520_1_2_cf8feb70d2.jpeg",
   "dynamicBindingPathList": [
